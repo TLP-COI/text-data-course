@@ -1,2 +1,3 @@
 # Course Syllabus
 
+Syllabus
