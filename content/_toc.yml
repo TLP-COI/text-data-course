@@ -2,8 +2,21 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: markdown
-- file: Presentation Test
-- file: notebooks
+root: home
+parts:
+  - caption: Introduction
+    chapters:
+      - file: syllabus
+      - file: intro
+  - caption: Goals & Approach
+    chapters:
+      - glob: goals-approach/*
+  - caption: Assumptions
+    chapters:
+      - glob: assumptions/*
+  - caption: Measure & Evaluate
+    chapters:
+      - glob: measure-evaluate/*
+  - caption: Validate
+    chapters:
+      - glob: validation/*
