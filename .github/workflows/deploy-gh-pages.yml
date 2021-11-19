@@ -16,7 +16,9 @@ on:
 # This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
-    runs-on: ghcr.io/tlp-coi/continuous-scientific-python:master
+    runs-on: ubuntu-latest
+    container: ghcr.io/tlp-coi/continuous-scientific-python:master
+    
     steps:
     - uses: actions/checkout@v2
 
