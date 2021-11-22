@@ -14,6 +14,10 @@ exclude_patterns:
   - "**.ipynb"
 
 parse:
+  myst_enable_extensions:
+    - deflist
+    - replacements
+    - substitution
   myst_substitutions:
     course: PPOL 628
     semester: Spring 2022
