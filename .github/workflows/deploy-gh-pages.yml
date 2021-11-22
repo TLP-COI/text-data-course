@@ -17,20 +17,22 @@ on:
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
-    container: ghcr.io/tlp-coi/continuous-scientific-python:master
-    
+    # container: ghcr.io/tlp-coi/continuous-scientific-python:master
+    container: continuumio/miniconda3
+
     steps:
     - uses: actions/checkout@v2
 
     # Install dependencies
     - name: Install dependencies
       run: |
-        conda env update --file env.yaml
+        conda env update --file env-deploy.yaml
+        conda env update --file env.yaml --name base
 
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build content/
+        jupyter-book build  --kernel base content/
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
