@@ -10,3 +10,4 @@ dependencies:
   - tectonic
   - jupytext
   - rise
+  - nb_conda_kernels
