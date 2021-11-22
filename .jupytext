@@ -1,6 +1,5 @@
 # Always pair ipynb notebooks to md:myst files
 formats = "ipynb,md:myst"
-notebook_metadata_filter = "-kernelspec"
 
 # [formats]
 # "notebooks/" = "ipynb"
