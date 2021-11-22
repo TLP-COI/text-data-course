@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Text as Data
-author: The Jupyter Book Community
+author: Thurston Sexton
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -12,6 +12,12 @@ execute:
 
 exclude_patterns:
   - "**.ipynb"
+
+parse:
+  myst_substitutions:
+    course: PPOL 628
+    semester: Spring 2022
+
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
@@ -23,7 +29,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
+  url: https://github.com/TLP-COI/text-data-course  # Online location of your book
   path_to_book: content  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
