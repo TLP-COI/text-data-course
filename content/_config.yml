@@ -18,9 +18,32 @@ parse:
     - deflist
     - replacements
     - substitution
+    - linkify
   myst_substitutions:
     course: PPOL 628
     semester: Spring 2022
+    info_panel: |
+      Section
+      : {{course}}, Spring 2022 ([Link to Syllabus](syllabus))
+
+      Meeting Room/Time
+      : TBD, Tuesdays (6:30-9:00PM EST)
+
+      Course Website
+      : tlp-coi.github.io/text-data-course
+
+      Teaching Assistant
+      : TBD
+    instructor_panel: |
+      Name
+      : Thurston Sexton
+
+      Email
+      : thurston.b.sexton@gmail.com
+
+      Twitter
+      : @ArchaeoEngineer
+
 
 # Define the name of the latex output file for PDF builds
 latex:

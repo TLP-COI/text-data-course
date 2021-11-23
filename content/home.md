@@ -1,26 +1,17 @@
-# {{course}} Text as Data
+# Text as Data -- {{course}} 
 
-## Course Information
+## Course and Conact Information
 
-Section
-:  {{course}}
+```{panels}
+**Course Information**
+^^^
+{{info_panel}}
+---
+**Instructor Information**
+^^^
+{{instructor_panel}}
+```
 
-Semester
-:  {{semester}}
+## Acknowledgements
 
-## Instructor Information
-
-Name
-: Thurston Sexton
-
-Email
-: tbd
-
-Twitter
-: @ArchaeoEngineer
-
-| Name    | Thurston Sexton  |
-|---------|------------------|
-| Email   | tbd              |
-| Twitter | @ArchaeoEngineer |
-|         |                  |
+## Contributing
