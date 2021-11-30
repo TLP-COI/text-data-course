@@ -1,14 +1,13 @@
-# Syllabus
-
-## {{course}}: Text as Data for Technical Language Processing
+# {{course}}: Syllabus
 
 ```{margin}
 {{info_panel}}
 ```
 
-```{note}
-intro paragraph here
-```
+##  Text as Data for Technical Language Processing
+
+
+
 
 ## Prerequisites
 
@@ -26,8 +25,8 @@ Bring a laptop every week, as the section material will be largely interactive a
 ```
 
 - Week 1: Introduction and Logistics 
-- Week 2-3: Goals & Approaches in Text Analyses
 - Week 4-5: Assumptions (and some implications)
+- Week 2-3: Goals & Approaches in Text Analyses
 - Week 6-7: Measuring & Evaluating NLP "Systems"
 - Week 8-9: Validation (and the role of expertise)
 - Week 10-12: Case Studies, Special topics, & Guest Lectures

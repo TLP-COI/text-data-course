@@ -8,15 +8,15 @@ parts:
     chapters:
       - file: syllabus
       - file: intro
-  - caption: Goals & Approach
-    chapters:
-      - glob: goals-approach/*
   - caption: Assumptions
     chapters:
-      - glob: assumptions/*
+      - glob: 01-assumptions/*
+  - caption: Goals & Approach
+    chapters:
+      - glob: 02-goals-approach/*
   - caption: Measure & Evaluate
     chapters:
-      - glob: measure-evaluate/*
+      - glob: 03-measure-evaluate/*
   - caption: Validate
     chapters:
-      - glob: validation/*
+      - glob: 04-validation/*
