@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trouble in Paradise &#8212; Text as Data</title>
+    <title>Assumptions &#8212; Text as Data</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Content with notebooks" href="../measure-evaluate/notebooks.html" />
+    <link rel="next" title="Writing the Rules" href="01-rules-nb.html" />
+    <link rel="prev" title="The Road to TLP" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,12 +104,29 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
-   Syllabus
+   PPOL 628: Syllabus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Understanding &amp; Evaluating Informed NLP Systems
+   The Road to TLP
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assumptions
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Assumptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-rules-nb.html">
+   Writing the Rules
   </a>
  </li>
 </ul>
@@ -119,20 +137,8 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../goals-approach/Presentation%20Test.html">
+  <a class="reference internal" href="../02-goals-approach/presentation-test-nb.html">
    Testing Presentations
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Assumptions
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../assumptions/markdown.html">
-   Markdown Files
   </a>
  </li>
 </ul>
@@ -143,7 +149,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../measure-evaluate/notebooks.html">
+  <a class="reference internal" href="../03-measure-evaluate/notebooks-nb.html">
    Content with notebooks
   </a>
  </li>
@@ -153,9 +159,9 @@
   Validate
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-validation/trouble.html">
    Trouble in Paradise
   </a>
  </li>
@@ -200,7 +206,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/validation/trouble.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/01-assumptions/00-overview.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -220,7 +226,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/TLP-COI/text-data-course/issues/new?title=Issue%20on%20page%20%2Fvalidation/trouble.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/TLP-COI/text-data-course/issues/new?title=Issue%20on%20page%20%2F01-assumptions/00-overview.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -249,8 +255,26 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="trouble-in-paradise">
-<h1>Trouble in Paradise<a class="headerlink" href="#trouble-in-paradise" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="assumptions">
+<h1>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p><em>Things that turn “natural language” into something worth processing</em></p>
+<p>Table of Contents</p>
+<ol class="simple">
+<li><p>Rules-based before Data-driven</p>
+<ul class="simple">
+<li><p>Tokenization: Rules for Matching &amp; Splitting</p></li>
+<li><p>Ontology: Rules for Relationship &amp; Meaning</p></li>
+</ul>
+</li>
+<li><p>Data drives the need for context</p>
+<ul class="simple">
+<li><p>Local Sequences and Probabilities</p></li>
+<li><p>Global Frequencies and Context</p></li>
+<li><p>Perfectly Balanced?</p></li>
+</ul>
+</li>
+</ol>
 </div>
 
     <script type="text/x-thebe-config">
@@ -266,7 +290,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./validation"
+            path: "./01-assumptions"
         },
         predefinedOutput: true
     }
@@ -278,12 +302,19 @@
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../measure-evaluate/notebooks.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Content with notebooks</p>
+            <p class="prev-next-title">The Road to TLP</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="01-rules-nb.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Writing the Rules</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         
