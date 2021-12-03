@@ -19,6 +19,7 @@ parse:
     - replacements
     - substitution
     - linkify
+    - colon_fence
   myst_substitutions:
     course: PPOL 628
     semester: Spring 2022
@@ -26,6 +27,7 @@ parse:
       - **Section**: {{course}}, Spring 2022 ([Link to Syllabus](syllabus))
       - **Meeting Room/Time**: TBD, 01/12-05/31, Tuesdays (6:30-9:00PM EST)
       - **Course Website**: tlp-coi.github.io/text-data-course
+      - **Course Repository**: https://github.com/TLP-COI/text-data-course
 
     instructor_panel: |
       - **Name**: Thurston Sexton
