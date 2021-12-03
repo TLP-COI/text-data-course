@@ -1,13 +1,24 @@
-# {{course}}: Syllabus
+# Syllabus
 
-```{margin}
-{{info_panel}}
-```
 
 ##  Text as Data for Technical Language Processing
 
+::::{margin}
+:::{admonition} Course Information
+{{info_panel}}
+:::
+::::
 
+This syllabus is a draft, and subject to change. 
+Use it as a guide for course expectations, but always clarify with a question if something seems uncertain!
 
+::::{margin}
+:::{admonition} Instructor Contact
+:class: tip
+
+{{instructor_panel}}
+:::
+::::
 
 ## Prerequisites
 
@@ -18,17 +29,19 @@
 - Those unfamiliar with one or more of the above are welcome to take the course! Links to resources might be available, but responsibility for catching up will rest with *you*, and all students will be held to the same standard of work. 
 
 ## Course Schedule
-The Sections are broken down slightly different from most NLP or text analysis courses. By using problem-solving frameworks from e.g. engineering disciplines, I hope to bring a flavor of just how _important_ context is to your applications of these technicques to technical text. 
+
+The Sections are broken down slightly different from most NLP or text analysis courses. 
+By using problem-solving frameworks from e.g. engineering disciplines, I hope to bring a flavor of just how _important_ context is to your applications of these technicques to technical text. 
 
 ```{margin}
 Bring a laptop every week, as the section material will be largely interactive and easy to follow along with, yourself.
 ```
 
 - Week 1: Introduction and Logistics 
-- Week 4-5: Assumptions (and some implications)
-- Week 2-3: Goals & Approaches in Text Analyses
-- Week 6-7: Measuring & Evaluating NLP "Systems"
-- Week 8-9: Validation (and the role of expertise)
+- Week 4-5: Unit 1 --- Assumptions (to "P" the "NL")
+- Week 2-3: Unit 2 --- Goals & Approaches in Text Analyses
+- Week 6-7: Unit 3 --- Measuring & Evaluating NLP "Systems"
+- Week 8-9: Unit 4 --- Validation (and the role of expertise)
 - Week 10-12: Case Studies, Special topics, & Guest Lectures
 - Week 13-14: Project Discussions, Q&A, and Final Presentations
 
@@ -36,10 +49,13 @@ Bring a laptop every week, as the section material will be largely interactive a
 ## Evaluation
 
 Participation - 20%
-: participate in class discussions, analysing the impacts and nuance of various techniques and datasets we use or read about. 
+: Participate in class discussions, analysing the impacts and nuance of various techniques and datasets we use or read about. 
+  Much of the lecture is intented to operate similar to a lab, getting hands-on experience using the data, tools, and techniques described. 
 
 Homework - 30%
-: Apply concepts to your own data each section
+: Apply concepts to your own data each of the four content-sections. 
+  A lot of the this course will center around not only applying NLP and other analysis types, but interpreting and critically engaging with assumptions, flaws, and possibilities they present in the context of your domain. 
+  Always report on your thoughts and methods, think outside-the-box, and get help ahead-of-time if you're feeling stuck. 
 
 Project - 50%
 : One project, likely broken into two staged "submissions" (20% each) during the semester, and a final presentation to the class (10%).
