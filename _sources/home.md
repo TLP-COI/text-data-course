@@ -2,6 +2,17 @@
 
 > Welcome to the open course content for _Text as Data: the Road to Technical Language Processing_! 
 
+::::{sidebar} Course and Conact Information
+:::{admonition} Course Information
+{{info_panel}}
+:::
+
+:::{admonition} Instructor Contact
+:class: tip
+{{instructor_panel}}
+:::
+::::
+
 This course is intended for those wanting to apply various modern text analysis techniques to gain domain-specific insights from their natural language data. 
 Natural Language Processing (NLP) requires special care to apply in a useful, reprocucible, and ethical way. 
 This is especially true when context becomes a large factor in how the text is written or understood --- for instance, technical fields like Social Science, Medicine, Engineering, Policy, Digital Humanities, and many more.
@@ -13,16 +24,6 @@ This is a class about how the broader NLP Socio-technical system can or even _sh
 For a more in-depth overview of the class, see the [Syllabus](syllabus.md). 
 Alternatively, get started down the road to TLP by reading the [Introduction](intro.md)!
 
-::::{sidebar} Course and Conact Information
-:::{admonition} Course Information
-{{info_panel}}
-:::
-
-:::{admonition} Instructor Contact
-:class: tip
-{{instructor_panel}}
-:::
-::::
 
 ## Contributing
 These materials are open source, and all contributions that help improve its usefulness are welcome! 
