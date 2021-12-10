@@ -2200,98 +2200,96 @@ if (window.Jupyter !== undefined) {
 <span class="c1"># dvc.api.Repo().update()</span>
 <span class="n">data_fname</span> <span class="o">=</span> <span class="s1">&#39;resources/data/mtg.csv&#39;</span>
 <span class="n">rootdir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">dvc</span><span class="o">.</span><span class="n">Repo</span><span class="p">()</span><span class="o">.</span><span class="n">find_root</span><span class="p">())</span>
-<span class="n">cards_layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">pick_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;flavorText&#39;</span><span class="p">,</span> <span class="s1">&#39;originalText&#39;</span><span class="p">,</span><span class="s1">&#39;originalReleaseDate&#39;</span><span class="p">])</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">Resource</span><span class="p">(</span><span class="n">rootdir</span><span class="o">/</span><span class="n">data_fname</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">cards_layout</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+
+
+<span class="k">with</span> <span class="n">dvc</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">data_fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="c1">#.fillna(&#39;&#39;)</span>
+
+<span class="c1"># cards_layout = Layout(pick_fields=[&#39;name&#39;, &#39;text&#39;, &#39;flavorText&#39;, &#39;originalText&#39;,&#39;originalReleaseDate&#39;])</span>
+<span class="c1"># df = Resource(df, layout=cards_layout).to_pandas()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NoRemoteError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
+<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/dvc/fs/dvc.py</span> in <span class="ni">_get_fs_path</span><span class="nt">(self, path, remote)</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">86</span>                 <span class="n">remote_odb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">repo</span><span class="o">.</span><span class="n">cloud</span><span class="o">.</span><span class="n">get_remote_odb</span><span class="p">(</span><span class="n">remote</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span>             <span class="k">except</span> <span class="n">NoRemoteError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+
+<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/dvc/data_cloud.py</span> in <span class="ni">get_remote_odb</span><span class="nt">(self, name, command)</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span> 
+<span class="ne">---&gt; </span><span class="mi">55</span>         <span class="k">raise</span> <span class="n">NoRemoteError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> 
+
+<span class="ne">NoRemoteError</span>: config file error: no remote specified. Create a default remote with
+    <span class="n">dvc</span> <span class="n">remote</span> <span class="n">add</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">remote</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">remote</span> <span class="n">url</span><span class="o">&gt;</span>
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/loader.py</span> in <span class="ni">read_byte_stream</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">124</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">125</span>             <span class="n">byte_stream</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_byte_stream_create</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">126</span>             <span class="n">byte_stream</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_byte_stream_process</span><span class="p">(</span><span class="n">byte_stream</span><span class="p">)</span>
+<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/dvc/repo/__init__.py</span> in <span class="ni">open_by_relpath</span><span class="nt">(self, path, remote, mode, encoding)</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">495</span>             <span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>                 <span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">remote</span><span class="o">=</span><span class="n">remote</span>
 
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/plugins/local.py</span> in <span class="ni">read_byte_stream_create</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span>             <span class="n">fullpath</span> <span class="o">=</span> <span class="n">fullpath</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">scheme</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">76</span>         <span class="n">byte_stream</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fullpath</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span>         <span class="k">return</span> <span class="n">byte_stream</span>
+<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/dvc/fs/repo.py</span> in <span class="ni">open</span><span class="nt">(self, path, mode, encoding, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">226</span> 
+<span class="ne">--&gt; </span><span class="mi">227</span>         <span class="k">return</span> <span class="n">dvc_fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path_info</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span> 
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/home/runner/work/text-data-course/text-data-course/resources/data/mtg.csv&#39;
+<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/dvc/fs/dvc.py</span> in <span class="ni">open</span><span class="nt">(self, path, mode, encoding, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>     <span class="p">):</span>  <span class="c1"># pylint: disable=arguments-renamed</span>
+<span class="ne">--&gt; </span><span class="mi">106</span>         <span class="n">fs</span><span class="p">,</span> <span class="n">fspath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_fs_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span>         <span class="k">return</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fspath</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
 
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/dvc/fs/dvc.py</span> in <span class="ni">_get_fs_path</span><span class="nt">(self, path, remote)</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span>             <span class="k">except</span> <span class="n">NoRemoteError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">88</span>                 <span class="k">raise</span> <span class="ne">FileNotFoundError</span> <span class="kn">from</span> <span class="nn">exc</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span>             <span class="k">if</span> <span class="n">out</span><span class="o">.</span><span class="n">is_dir_checksum</span><span class="p">:</span>
 
-<span class="ne">FrictionlessException</span><span class="g g-Whitespace">                     </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6462</span><span class="o">/</span><span class="mf">2188405930.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">rootdir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">dvc</span><span class="o">.</span><span class="n">Repo</span><span class="p">()</span><span class="o">.</span><span class="n">find_root</span><span class="p">())</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">cards_layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">pick_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;flavorText&#39;</span><span class="p">,</span> <span class="s1">&#39;originalText&#39;</span><span class="p">,</span><span class="s1">&#39;originalReleaseDate&#39;</span><span class="p">])</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">df</span> <span class="o">=</span> <span class="n">Resource</span><span class="p">(</span><span class="n">rootdir</span><span class="o">/</span><span class="n">data_fname</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">cards_layout</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+<span class="ne">FileNotFoundError</span>: 
 
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/resource.py</span> in <span class="ni">to_pandas</span><span class="nt">(self, dialect)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">dialect</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1179</span>         <span class="sd">&quot;&quot;&quot;Helper to export resource as an Pandas dataframe&quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1180</span>         <span class="n">target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">Resource</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;pandas&quot;</span><span class="p">,</span> <span class="n">dialect</span><span class="o">=</span><span class="n">dialect</span><span class="p">))</span>
-<span class="g g-Whitespace">   </span><span class="mi">1181</span>         <span class="k">return</span> <span class="n">target</span><span class="o">.</span><span class="n">data</span>
-<span class="g g-Whitespace">   </span><span class="mi">1182</span> 
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/resource.py</span> in <span class="ni">write</span><span class="nt">(self, target, **options)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1102</span>         <span class="n">target</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">to_copy</span><span class="p">()</span> <span class="k">if</span> <span class="n">native</span> <span class="k">else</span> <span class="n">Resource</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1103</span>         <span class="n">parser</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">create_parser</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1104</span>         <span class="n">parser</span><span class="o">.</span><span class="n">write_row_stream</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_copy</span><span class="p">())</span>
-<span class="g g-Whitespace">   </span><span class="mi">1105</span>         <span class="k">return</span> <span class="n">target</span>
-<span class="g g-Whitespace">   </span><span class="mi">1106</span> 
+<span class="ne">FileMissingError</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6375</span><span class="o">/</span><span class="mf">3593886999.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="k">with</span> <span class="n">dvc</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">data_fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="c1">#.fillna(&#39;&#39;)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> 
 
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/plugins/pandas.py</span> in <span class="ni">write_row_stream</span><span class="nt">(self, resource)</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>         <span class="n">index_rows</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span>         <span class="n">fixed_types</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="ne">--&gt; </span><span class="mi">184</span>         <span class="k">with</span> <span class="n">source</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">185</span>             <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">source</span><span class="o">.</span><span class="n">row_stream</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">186</span>                 <span class="n">data_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/contextlib.py</span> in <span class="ni">__enter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">135</span>             <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span>         <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">137</span>             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
 
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/resource.py</span> in <span class="ni">__enter__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">286</span>     <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">closed</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">288</span>             <span class="bp">self</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">289</span>         <span class="k">return</span> <span class="bp">self</span>
-<span class="g g-Whitespace">    </span><span class="mi">290</span> 
+<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/dvc/api.py</span> in <span class="ni">_open</span><span class="nt">(path, repo, rev, remote, mode, encoding)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span> <span class="k">def</span> <span class="nf">_open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">repo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rev</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remote</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span>     <span class="k">with</span> <span class="n">Repo</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">repo</span><span class="p">,</span> <span class="n">rev</span><span class="o">=</span><span class="n">rev</span><span class="p">,</span> <span class="n">subrepos</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">uninitialized</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">_repo</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">76</span>         <span class="k">with</span> <span class="n">_repo</span><span class="o">.</span><span class="n">open_by_relpath</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span>             <span class="n">path</span><span class="p">,</span> <span class="n">remote</span><span class="o">=</span><span class="n">remote</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span>
+<span class="g g-Whitespace">     </span><span class="mi">78</span>         <span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
 
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/resource.py</span> in <span class="ni">open</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">767</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tabular</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">768</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">__parser</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">create_parser</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">769</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">__parser</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">770</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">__read_detect_layout</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">771</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">__read_detect_schema</span><span class="p">()</span>
+<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/contextlib.py</span> in <span class="ni">__enter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">135</span>             <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span>         <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">137</span>             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
 
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/parser.py</span> in <span class="ni">open</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span>         <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">75</span>             <span class="bp">self</span><span class="o">.</span><span class="n">__loader</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_loader</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">76</span>             <span class="bp">self</span><span class="o">.</span><span class="n">__list_stream</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_list_stream</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span>             <span class="k">return</span> <span class="bp">self</span>
+<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/dvc/repo/__init__.py</span> in <span class="ni">open_by_relpath</span><span class="nt">(self, path, remote, mode, encoding)</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>                 <span class="k">yield</span> <span class="n">fobj</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span>         <span class="k">except</span> <span class="ne">FileNotFoundError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">500</span>             <span class="k">raise</span> <span class="n">FileMissingError</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">exc</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>         <span class="k">except</span> <span class="ne">IsADirectoryError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>             <span class="k">raise</span> <span class="n">DvcIsADirectoryError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&#39; is a directory&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">exc</span>
 
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/parser.py</span> in <span class="ni">read_loader</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires_loader</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">105</span>             <span class="n">loader</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">create_loader</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">106</span>             <span class="k">return</span> <span class="n">loader</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">107</span> 
-<span class="g g-Whitespace">    </span><span class="mi">108</span>     <span class="k">def</span> <span class="nf">read_list_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/loader.py</span> in <span class="ni">open</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span>         <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">95</span>             <span class="bp">self</span><span class="o">.</span><span class="n">__byte_stream</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_byte_stream</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>             <span class="k">return</span> <span class="bp">self</span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span>         <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-
-<span class="nn">/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/loader.py</span> in <span class="ni">read_byte_stream</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">137</span>         <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">138</span>             <span class="n">error</span> <span class="o">=</span> <span class="n">errors</span><span class="o">.</span><span class="n">SchemeError</span><span class="p">(</span><span class="n">note</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">exception</span><span class="p">))</span>
-<span class="ne">--&gt; </span><span class="mi">139</span>             <span class="k">raise</span> <span class="n">FrictionlessException</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span>         <span class="k">return</span> <span class="n">byte_stream</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span> 
-
-<span class="ne">FrictionlessException</span>: [scheme-error] The data source could not be successfully loaded: [Errno 2] No such file or directory: &#39;/home/runner/work/text-data-course/text-data-course/resources/data/mtg.csv&#39;
+<span class="ne">FileMissingError</span>: Can&#39;t find &#39;../../../resources/data/mtg.csv&#39; neither locally nor on remote
 </pre></div>
 </div>
 </div>
