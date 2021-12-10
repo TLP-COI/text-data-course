@@ -1,10 +1,10 @@
-md5: cd351369b9bee4eb64e1dc98cd804115
+md5: 9af853f868c0488d04de803d8ee75eee
 frozen: true
 deps:
-- checksum: '"61ae9ebf-3e00a28"'
-  size: 65014312
+- checksum: '"61b29821-3dff24b"'
+  size: 65008203
   path: https://mtgjson.com/api/v5/csv/cards.csv
 outs:
-- md5: 99736dc15ab228d2197e7eb665daf212
-  size: 65014312
+- md5: 77c83e046ece8cfab2b5a3ddb4ae02ae
+  size: 65008203
   path: mtg.csv

@@ -2,7 +2,7 @@ encoding: utf-8
 format: csv
 hashing: md5
 name: mtg
-path: mtg.csv
+path: https://mtgjson.com/api/v5/csv/cards.csv
 profile: tabular-data-resource
 schema:
   fields:

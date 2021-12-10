@@ -18,7 +18,7 @@ kernelspec:
 > [mtgjson.com](mtgjson.com)
 
 ```{code-cell} ipython3
-from frictionless import extract, Layout, Resource
+from frictionless import extract, Layout, Resource, Schema
 import dvc.api as dvc
 from pathlib import Path
 import pandas as pd
@@ -30,13 +30,19 @@ import hvplot.pandas
 # dvc.api.Repo().update()
 data_fname = 'resources/data/mtg.csv'
 rootdir = Path(dvc.Repo().find_root())
-
+dvc.Repo().update()
 
 with dvc.open(data_fname) as csv:
-    df = pd.read_csv(csv, index_col=0)#.fillna('')
-
-# cards_layout = Layout(pick_fields=['name', 'text', 'flavorText', 'originalText','originalReleaseDate'])
-# df = Resource(df, layout=cards_layout).to_pandas()
+#     df = pd.read_csv(csv, index_col=0)#.fillna('')
+    cards_layout = Layout(pick_fields=[
+        'name', 
+        'text', 
+        'flavorText', 
+        'originalText',
+        'originalReleaseDate'
+    ])
+#     card_schema = Schema(rootdir/)
+    df = Resource(csv, layout=cards_layout, format='csv').to_pandas()
 ```
 
 ```{code-cell} ipython3
@@ -67,4 +73,8 @@ resample = (df
 (resample.sum()/(resample.count()+1)
 ).hvplot(kind='step', rot=45)
 # hvplot.converter.HoloViewsConverter(rot=45)
+```
+
+```{code-cell} ipython3
+
 ```
