@@ -1,0 +1,173 @@
+encoding: utf-8
+format: csv
+hashing: md5
+name: mtg
+path: mtg.csv
+profile: tabular-data-resource
+schema:
+  fields:
+    - name: index
+      type: integer
+    - name: id
+      type: integer
+    - name: artist
+      type: string
+    - name: asciiName
+      type: any
+    - name: availability
+      type: string
+    - name: borderColor
+      type: string
+    - name: cardKingdomEtchedId
+      type: any
+    - name: cardKingdomFoilId
+      type: integer
+    - name: cardKingdomId
+      type: integer
+    - name: colorIdentity
+      type: string
+    - name: colorIndicator
+      type: any
+    - name: colors
+      type: string
+    - name: convertedManaCost
+      type: number
+    - name: duelDeck
+      type: any
+    - name: edhrecRank
+      type: number
+    - name: faceConvertedManaCost
+      type: any
+    - name: faceFlavorName
+      type: any
+    - name: faceManaValue
+      type: any
+    - name: faceName
+      type: any
+    - name: finishes
+      type: string
+    - name: flavorName
+      type: any
+    - name: flavorText
+      type: string
+    - name: frameEffects
+      type: any
+    - name: frameVersion
+      type: integer
+    - name: hand
+      type: any
+    - name: hasAlternativeDeckLimit
+      type: integer
+    - name: hasContentWarning
+      type: integer
+    - name: hasFoil
+      type: integer
+    - name: hasNonFoil
+      type: integer
+    - name: isAlternative
+      type: integer
+    - name: isFullArt
+      type: integer
+    - name: isOnlineOnly
+      type: integer
+    - name: isOversized
+      type: integer
+    - name: isPromo
+      type: integer
+    - name: isReprint
+      type: integer
+    - name: isReserved
+      type: integer
+    - name: isStarter
+      type: integer
+    - name: isStorySpotlight
+      type: integer
+    - name: isTextless
+      type: integer
+    - name: isTimeshifted
+      type: integer
+    - name: keywords
+      type: string
+    - name: layout
+      type: string
+    - name: leadershipSkills
+      type: any
+    - name: life
+      type: any
+    - name: loyalty
+      type: any
+    - name: manaCost
+      type: string
+    - name: manaValue
+      type: number
+    - name: mcmId
+      type: integer
+    - name: mcmMetaId
+      type: integer
+    - name: mtgArenaId
+      type: any
+    - name: mtgjsonV4Id
+      type: string
+    - name: mtgoFoilId
+      type: integer
+    - name: mtgoId
+      type: integer
+    - name: multiverseId
+      type: integer
+    - name: name
+      type: string
+    - name: number
+      type: string
+    - name: originalReleaseDate
+      type: date
+    - name: originalText
+      type: string
+    - name: originalType
+      type: string
+    - name: otherFaceIds
+      type: any
+    - name: power
+      type: string
+    - name: printings
+      type: string
+    - name: promoTypes
+      type: any
+    - name: purchaseUrls
+      type: string
+    - name: rarity
+      type: string
+    - name: scryfallId
+      type: string
+    - name: scryfallIllustrationId
+      type: string
+    - name: scryfallOracleId
+      type: string
+    - name: setCode
+      type: string
+    - name: side
+      type: any
+    - name: signature
+      type: any
+    - name: subtypes
+      type: string
+    - name: supertypes
+      type: any
+    - name: tcgplayerEtchedProductId
+      type: any
+    - name: tcgplayerProductId
+      type: integer
+    - name: text
+      type: string
+    - name: toughness
+      type: string
+    - name: type
+      type: string
+    - name: types
+      type: string
+    - name: uuid
+      type: string
+    - name: variations
+      type: string
+    - name: watermark
+      type: any
+scheme: file

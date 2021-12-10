@@ -20,3 +20,8 @@ parts:
   - caption: Validate
     chapters:
       - glob: 04-validation/*
+  - caption: Appendix
+    chapters:
+      - file: appendix/datasets
+        sections:
+          - file: appendix/datasets/mtgjson-nb
