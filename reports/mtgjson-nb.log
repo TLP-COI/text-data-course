@@ -1,0 +1,115 @@
+Traceback (most recent call last):
+  File "/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/nbclient/client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/share/miniconda/envs/text-data/lib/python3.10/asyncio/base_events.py", line 641, in run_until_complete
+    return future.result()
+  File "/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/nbclient/client.py", line 559, in async_execute
+    await self.async_execute_cell(
+  File "/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# get_url('resources/data/mtg.csv')
+# dvc.api.Repo().update()
+data_fname = 'resources/data/mtg.csv'
+rootdir = Path(dvc.Repo().find_root())
+cards_layout = Layout(pick_fields=['name', 'text', 'flavorText', 'originalText','originalReleaseDate'])
+df = Resource(rootdir/data_fname, layout=cards_layout).to_pandas()
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/loader.py[0m in [0;36mread_byte_stream[0;34m(self)[0m
+[1;32m    124[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 125[0;31m             [0mbyte_stream[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mread_byte_stream_create[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    126[0m             [0mbyte_stream[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mread_byte_stream_process[0m[0;34m([0m[0mbyte_stream[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/plugins/local.py[0m in [0;36mread_byte_stream_create[0;34m(self)[0m
+[1;32m     75[0m             [0mfullpath[0m [0;34m=[0m [0mfullpath[0m[0;34m.[0m[0mreplace[0m[0;34m([0m[0mscheme[0m[0;34m,[0m [0;34m""[0m[0;34m,[0m [0;36m1[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 76[0;31m         [0mbyte_stream[0m [0;34m=[0m [0mio[0m[0;34m.[0m[0mopen[0m[0;34m([0m[0mfullpath[0m[0;34m,[0m [0;34m"rb"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     77[0m         [0;32mreturn[0m [0mbyte_stream[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/home/runner/work/text-data-course/text-data-course/resources/data/mtg.csv'
+
+During handling of the above exception, another exception occurred:
+
+[0;31mFrictionlessException[0m                     Traceback (most recent call last)
+[0;32m/tmp/ipykernel_6462/2188405930.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      4[0m [0mrootdir[0m [0;34m=[0m [0mPath[0m[0;34m([0m[0mdvc[0m[0;34m.[0m[0mRepo[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0mfind_root[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mcards_layout[0m [0;34m=[0m [0mLayout[0m[0;34m([0m[0mpick_fields[0m[0;34m=[0m[0;34m[[0m[0;34m'name'[0m[0;34m,[0m [0;34m'text'[0m[0;34m,[0m [0;34m'flavorText'[0m[0;34m,[0m [0;34m'originalText'[0m[0;34m,[0m[0;34m'originalReleaseDate'[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 6[0;31m [0mdf[0m [0;34m=[0m [0mResource[0m[0;34m([0m[0mrootdir[0m[0;34m/[0m[0mdata_fname[0m[0;34m,[0m [0mlayout[0m[0;34m=[0m[0mcards_layout[0m[0;34m)[0m[0;34m.[0m[0mto_pandas[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/resource.py[0m in [0;36mto_pandas[0;34m(self, dialect)[0m
+[1;32m   1178[0m     [0;32mdef[0m [0mto_pandas[0m[0;34m([0m[0mself[0m[0;34m,[0m [0;34m*[0m[0;34m,[0m [0mdialect[0m[0;34m=[0m[0;32mNone[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1179[0m         [0;34m"""Helper to export resource as an Pandas dataframe"""[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1180[0;31m         [0mtarget[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mwrite[0m[0;34m([0m[0mResource[0m[0;34m([0m[0mformat[0m[0;34m=[0m[0;34m"pandas"[0m[0;34m,[0m [0mdialect[0m[0;34m=[0m[0mdialect[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1181[0m         [0;32mreturn[0m [0mtarget[0m[0;34m.[0m[0mdata[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1182[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/resource.py[0m in [0;36mwrite[0;34m(self, target, **options)[0m
+[1;32m   1102[0m         [0mtarget[0m [0;34m=[0m [0mtarget[0m[0;34m.[0m[0mto_copy[0m[0;34m([0m[0;34m)[0m [0;32mif[0m [0mnative[0m [0;32melse[0m [0mResource[0m[0;34m([0m[0mtarget[0m[0;34m,[0m [0;34m**[0m[0moptions[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1103[0m         [0mparser[0m [0;34m=[0m [0msystem[0m[0;34m.[0m[0mcreate_parser[0m[0;34m([0m[0mtarget[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1104[0;31m         [0mparser[0m[0;34m.[0m[0mwrite_row_stream[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mto_copy[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1105[0m         [0;32mreturn[0m [0mtarget[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1106[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/plugins/pandas.py[0m in [0;36mwrite_row_stream[0;34m(self, resource)[0m
+[1;32m    182[0m         [0mindex_rows[0m [0;34m=[0m [0;34m[[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m    183[0m         [0mfixed_types[0m [0;34m=[0m [0;34m{[0m[0;34m}[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 184[0;31m         [0;32mwith[0m [0msource[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    185[0m             [0;32mfor[0m [0mrow[0m [0;32min[0m [0msource[0m[0;34m.[0m[0mrow_stream[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    186[0m                 [0mdata_values[0m [0;34m=[0m [0;34m[[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/resource.py[0m in [0;36m__enter__[0;34m(self)[0m
+[1;32m    286[0m     [0;32mdef[0m [0m__enter__[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    287[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0mclosed[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 288[0;31m             [0mself[0m[0;34m.[0m[0mopen[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    289[0m         [0;32mreturn[0m [0mself[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    290[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/resource.py[0m in [0;36mopen[0;34m(self)[0m
+[1;32m    767[0m             [0;32mif[0m [0mself[0m[0;34m.[0m[0mtabular[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    768[0m                 [0mself[0m[0;34m.[0m[0m__parser[0m [0;34m=[0m [0msystem[0m[0;34m.[0m[0mcreate_parser[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 769[0;31m                 [0mself[0m[0;34m.[0m[0m__parser[0m[0;34m.[0m[0mopen[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    770[0m                 [0mself[0m[0;34m.[0m[0m__read_detect_layout[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    771[0m                 [0mself[0m[0;34m.[0m[0m__read_detect_schema[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/parser.py[0m in [0;36mopen[0;34m(self)[0m
+[1;32m     73[0m         [0mself[0m[0;34m.[0m[0mclose[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     74[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 75[0;31m             [0mself[0m[0;34m.[0m[0m__loader[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mread_loader[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     76[0m             [0mself[0m[0;34m.[0m[0m__list_stream[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mread_list_stream[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     77[0m             [0;32mreturn[0m [0mself[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/parser.py[0m in [0;36mread_loader[0;34m(self)[0m
+[1;32m    104[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0mrequires_loader[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    105[0m             [0mloader[0m [0;34m=[0m [0msystem[0m[0;34m.[0m[0mcreate_loader[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mresource[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 106[0;31m             [0;32mreturn[0m [0mloader[0m[0;34m.[0m[0mopen[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    107[0m [0;34m[0m[0m
+[1;32m    108[0m     [0;32mdef[0m [0mread_list_stream[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/loader.py[0m in [0;36mopen[0;34m(self)[0m
+[1;32m     93[0m         [0mself[0m[0;34m.[0m[0mclose[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     94[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 95[0;31m             [0mself[0m[0;34m.[0m[0m__byte_stream[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mread_byte_stream[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     96[0m             [0;32mreturn[0m [0mself[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     97[0m         [0;32mexcept[0m [0mException[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/envs/text-data/lib/python3.10/site-packages/frictionless/loader.py[0m in [0;36mread_byte_stream[0;34m(self)[0m
+[1;32m    137[0m         [0;32mexcept[0m [0mIOError[0m [0;32mas[0m [0mexception[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    138[0m             [0merror[0m [0;34m=[0m [0merrors[0m[0;34m.[0m[0mSchemeError[0m[0;34m([0m[0mnote[0m[0;34m=[0m[0mstr[0m[0;34m([0m[0mexception[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 139[0;31m             [0;32mraise[0m [0mFrictionlessException[0m[0;34m([0m[0merror[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    140[0m         [0;32mreturn[0m [0mbyte_stream[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    141[0m [0;34m[0m[0m
+
+[0;31mFrictionlessException[0m: [scheme-error] The data source could not be successfully loaded: [Errno 2] No such file or directory: '/home/runner/work/text-data-course/text-data-course/resources/data/mtg.csv'
+FrictionlessException: [scheme-error] The data source could not be successfully loaded: [Errno 2] No such file or directory: '/home/runner/work/text-data-course/text-data-course/resources/data/mtg.csv'
+
