@@ -38,6 +38,7 @@ jobs:
     - name: Build the book
       run: |
         jupytext --set-kernel - content/**/*nb.md
+        jupytext --set-kernel - content/appendix/**/*nb.md
         jupyter-book build content/
 
     # Push the book's HTML to github-pages
