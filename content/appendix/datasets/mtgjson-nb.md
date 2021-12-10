@@ -30,8 +30,13 @@ import hvplot.pandas
 # dvc.api.Repo().update()
 data_fname = 'resources/data/mtg.csv'
 rootdir = Path(dvc.Repo().find_root())
-cards_layout = Layout(pick_fields=['name', 'text', 'flavorText', 'originalText','originalReleaseDate'])
-df = Resource(rootdir/data_fname, layout=cards_layout).to_pandas()
+
+
+with dvc.open(data_fname) as csv:
+    df = pd.read_csv(csv, index_col=0)#.fillna('')
+
+# cards_layout = Layout(pick_fields=['name', 'text', 'flavorText', 'originalText','originalReleaseDate'])
+# df = Resource(df, layout=cards_layout).to_pandas()
 ```
 
 ```{code-cell} ipython3
