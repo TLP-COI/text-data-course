@@ -1,0 +1,4 @@
+outs:
+- md5: b613d3a06d188100a30041489143e055
+  size: 64113910
+  path: mtg.json.gz

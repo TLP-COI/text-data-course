@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Text as Data
+title: ""
 author: Thurston Sexton
 logo: logo.png
 
@@ -23,6 +23,7 @@ parse:
   myst_substitutions:
     course: PPOL 628
     semester: Spring 2022
+    institution: Georgetown
     info_panel: |
       - **Section**: {{course}}, Spring 2022 ([Link to Syllabus](syllabus))
       - **Meeting Room/Time**: TBD, 01/12-05/31, Tuesdays (6:30-9:00PM EST)
@@ -60,3 +61,4 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  home_page_in_navbar: false
