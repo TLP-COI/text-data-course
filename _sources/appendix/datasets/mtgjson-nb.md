@@ -18,63 +18,44 @@ kernelspec:
 > [mtgjson.com](mtgjson.com)
 
 ```{code-cell}
-from frictionless import extract, Layout, Resource, Schema
 import dvc.api as dvc
 from pathlib import Path
 import pandas as pd
+
 import hvplot.pandas
+import seaborn as sns
+import pandera as pa
+
+data_dir = Path(dvc.Repo().find_root())/'resources'/'data'/'mtg'
+```
+
+We've done some work to extract out a useful tabular form from the original (nested) json format. 
+
+Validation is done using the following `pandera` schema:
+
+```{code-cell}
+# TODO: `AttributeError: module 'pandera' has no attribute 'io'`
+# print(pa.io.from_yaml(data_dir/'mtg.schema.yaml'))
 ```
 
 ```{code-cell}
-# get_url('resources/data/mtg.csv')
-# dvc.api.Repo().update()
-data_fname = 'resources/data/mtg.csv'
-rootdir = Path(dvc.Repo().find_root())
-dvc.Repo().update()
-
-with dvc.open(data_fname) as csv:
-#     df = pd.read_csv(csv, index_col=0)#.fillna('')
-    cards_layout = Layout(pick_fields=[
-        'name', 
-        'text', 
-        'flavorText', 
-        'originalText',
-        'originalReleaseDate'
-    ])
-#     card_schema = Schema(rootdir/)
-    df = Resource(csv, layout=cards_layout, format='csv').to_pandas()
-```
-
-```{code-cell}
-df#[df.originalReleaseDate.notna()]
-# Resource.to_pandas()
+df = pd.read_feather(data_dir/'mtg.feather')
+df.sample(10, random_state=2)
 ```
 
 ```{code-cell}
 (df
- .originalReleaseDate
- .notna()  # is the original release date null?
- .value_counts()
- .to_frame().T.plot(kind='barh', stacked=True)
-)
-# df.plot()
-```
-
-```{code-cell}
-resample = (df
- .set_index(df.originalReleaseDate.astype('datetime64[ns]'))
- .dropna(subset=['originalReleaseDate'])
+ .set_index(df.release_date.astype('datetime64[ns]'))
+#  .dropna(subset=['originalReleaseDate'])
  .sort_index()
- 
- .text.str.contains('tap')
  .resample('Y')
-)
+#  .text.apply(lambda s: s.str.contains('attack').sum())
+ .apply(lambda grp: grp.flavor_text.notna().sum()/grp.shape[0])
+#  .pipe(lambda g: g.sum()/g.size())
+#  .transform
+).hvplot( rot=45, title='What fraction of cards have Flavor Text?')
 
-(resample.sum()/(resample.count()+1)
-).hvplot(kind='step', rot=45)
+# (resample.sum()/(resample.size()+1)
+
 # hvplot.converter.HoloViewsConverter(rot=45)
-```
-
-```{code-cell}
-
 ```
