@@ -24,16 +24,22 @@ import pandas as pd
 
 import hvplot.pandas
 import seaborn as sns
+import pandera as pa
 
-```
-
-```{code-cell} ipython3
 data_dir = Path(dvc.Repo().find_root())/'resources'/'data'/'mtg'
+```
 
-df = pd.read_feather(data_dir/'mtg.feather')
+We've done some work to extract out a useful tabular form from the original (nested) json format. 
+
+Validation is done using the following `pandera` schema:
+
+```{code-cell} ipython3
+# TODO: `AttributeError: module 'pandera' has no attribute 'io'`
+# print(pa.io.from_yaml(data_dir/'mtg.schema.yaml'))
 ```
 
 ```{code-cell} ipython3
+df = pd.read_feather(data_dir/'mtg.feather')
 df.sample(10, random_state=2)
 ```
 
