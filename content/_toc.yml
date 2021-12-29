@@ -8,6 +8,7 @@ parts:
     chapters:
       - file: syllabus
       - file: intro
+      - file: tools
   - caption: Assumptions
     chapters:
       - glob: 01-assumptions/*
