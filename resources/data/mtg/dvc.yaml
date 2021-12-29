@@ -3,7 +3,6 @@ stages:
     cmd: python -m mtg-preprocess
     deps:
       - mtg.json.gz
-      - mtg.schema.yaml
       - mtg-preprocess.py
     outs:
       - mtg.feather
