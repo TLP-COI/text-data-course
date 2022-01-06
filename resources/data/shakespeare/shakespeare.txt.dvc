@@ -1,0 +1,4 @@
+outs:
+- md5: 6fb458f1232090904fb40fe944165e91
+  size: 1115394
+  path: shakespeare.txt
