@@ -26,3 +26,4 @@ parts:
       - file: appendix/datasets
         sections:
           - file: appendix/datasets/mtgjson-nb
+          - file: appendix/datasets/tiny-shakespeare-nb
