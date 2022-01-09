@@ -21,8 +21,8 @@ With that in mind, this course does not take a traditional, theory-heavy approac
 Instead, the goal is to guide newcomers through the plethora of tools, theoretical assumptions, data types, and ethical questions that arise when NLP is used as descision-support for experts and decision makers. 
 This is a class about how the broader NLP Socio-technical system can or even _should_ function: Technical Language Processing. 
 
-For a more in-depth overview of the class, see the [Syllabus](syllabus.md). 
-Alternatively, get started down the road to TLP by reading the [Introduction](intro.md)!
+For a more in-depth overview of the class, see the [Syllabus](00-introduction/syllabus.md). 
+Alternatively, get started down the road to TLP by reading the [Introduction](00-introduction/intro.md)!
 
 
 ## Contributing
