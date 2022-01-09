@@ -25,7 +25,7 @@ parse:
     semester: Spring 2022
     institution: Georgetown
     info_panel: |
-      - **Section**: {{course}}, Spring 2022 ([Link to Syllabus](syllabus))
+      - **Section**: {{course}}, Spring 2022 ([Link to Syllabus](00-introduction/syllabus))
       - **Meeting Room/Time**: TBD, 01/12-05/31, Tuesdays (6:30-9:00PM EST)
       - **Course Website**: tlp-coi.github.io/text-data-course
       - **Course Repository**: https://github.com/TLP-COI/text-data-course
@@ -33,8 +33,8 @@ parse:
     instructor_panel: |
       - **Name**: Thurston Sexton
       - **Email**: thurston.b.sexton@gmail.com
-      - **Twitter**: [@ArchaeoEngineer]()
-      - **Github**: [@tbsexton]()
+      - **Twitter**: [@ArchaeoEngineer](https://twitter.com/ArchaeoEngineer)
+      - **Github**: [@tbsexton](https://github.com/tbsexton)
 
 # sphinx options
 sphinx:

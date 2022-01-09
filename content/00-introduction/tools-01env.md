@@ -1,35 +1,10 @@
-# First Tools of the Trade
-
-_Tips, Tricks, & Unsolicited Data Science Opinions for the Aspiring Text Analyst_
-
-
-:::{admonition} Reading Materials Referenced 
-
-- [Practical Data Science](https://www.practicaldatascience.org/html/index.html)
-- [On writing clean Jupyter notebooks](https://ploomber.io/blog/clean-nbs/)
-- [Scikit-Learn Course](https://inria.github.io/scikit-learn-mooc/index.html#)
-:::
-
-
-A recurring theme of this course, if there is one: 
-
-> Text analysis is, fundamentally, an _applied_ discipline. 
-
-This means a huge component of actually learning text analysis, NLP, etc., will necessarily focus on hands-on _application_. 
-While there is certainly a need and place for deep, theoretical foundations of various algorithms and semantic structure theories... I hope this course will contribute to a holistic view of what _doing_ text analysis involves: from the daily tricks to the dastardly pitfalls. 
-
-_Unfortunately..._
-
-This focus on application will also mean familiarizing yourself with the **tools** that perform the application for you. 
-So while a lot of time will be invested in discussing tangential tools and contexts, realize that these are all part of building professionalism and unification around what _doing text analysis_ looks like. 
-
-
-## Setting up a Computing Environment
+# Setting up a Computing Environment
 
 _Opinionated, (hopefully) sane, defaults to build on_
 
 :::{admonition} TL;DR
-:class: tip
+:class: tip, dropdown
+
 1. read background: 
    - [Setting up your computer](https://www.practicaldatascience.org/html/setting_up_your_computer.html) by Practical Data Science
    - [On writing clean Jupyter notebooks](https://ploomber.io/blog/clean-nbs/)
@@ -66,7 +41,7 @@ _Remember: 1-environment-per-project!_
 If the words you are reading are not familiar, this is an excellent opportunity to check out the [Practical Data Science](https://www.practicaldatascience.org/html/setting_up_your_computer.html) guide to setting this up on your machine. 
 I will not duplicate Nick's guide here, but I do have a few additional tips for this course (and years of trial-and-error). 
 
-### (Ana?)Conda, but it's Mamba
+## (Ana?)Conda, but it's Mamba
 
 First, terminology: 
 - **Anaconda** is a data science corporation that develops a huge amount of open-source software, along with maintaining the "anaconda" repository channel of tools/packages that one could install using:
@@ -83,7 +58,7 @@ To keep your "base" conda environment clean (and running as fast as possible), l
 A simple way to get `conda` installed with _minimal_ fluff, as well as a default channel with community-driven package curation, see the installable downlads on the  [`conda-forge/miniforge`](https://github.com/conda-forge/miniforge) page. 
 Pick your OS and get going, _much faster than the old-days_!
 
-### Modern Literate Programming with Jupyter
+## Modern Literate Programming with Jupyter
 
 I remember the first time I encountered a so-called "notebook" for code, was in a calculus class with a professor absolutely _obsessed_ with [Mathematica](https://www.wolfram.com/mathematica/).
 After using these new-fangled "cells" for my code and having results, comments, figures, and functions all interwoven togther in a beautifu tapestry for a semester, I became obsessed too. Alas, for I was but a poor student, and if I'm honest, unduly suspicious of licensed software. 
@@ -91,6 +66,7 @@ After using these new-fangled "cells" for my code and having results, comments, 
 At the time, I came accross this fascinating alternative built on a web-browser stack and the "python" language I had been trying out, called IPython Notebooks. 
 
 > Hacky? Yes.
+> 
 > Free and Open Source? You bet!
 
 Today, that project has absolutely exploded into the de-facto method for data science experimentation, reporting, and communication, now called Jupyter.
@@ -106,21 +82,9 @@ Jupyter `{lab|notebook}`
 - Clean NB's
 - project structure, installables
 
-### Server Sanity, Kernel Correctness
+## Server Sanity, Kernel Correctness
 
 - `nb_conda_kernels`
 - yaml env spec's
 
 
-## Dev & Data Operations
-
-- version control (git)
-- git forges and branch workflow
-- data packages (dvc, frictionless)
-- Special: this repository!
-
-
-## Data Science
-
-- Mostly introduced throughout the course, as needed. 
-- Archtypes: pandas, sklearn, nn frameworks
