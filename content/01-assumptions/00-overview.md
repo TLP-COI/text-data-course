@@ -1,5 +1,7 @@
 # Assumptions 
+
 ---
+
 _Things that turn "natural language" into something worth processing_
 
 Table of Contents
