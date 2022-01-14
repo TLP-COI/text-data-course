@@ -311,9 +311,30 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#server-sanity-kernel-correctness">
-   Server Sanity, Kernel Correctness
+  <a class="reference internal nav-link" href="#version-veracity-server-sanity-kernel-correctness">
+   Version Veracity, Server Sanity, Kernel Correctness
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupytext">
+     Jupytext
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nb-conda-kernels">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       nb_conda_kernels
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#yaml-environment-specifications">
+     YAML Environment specifications
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -346,9 +367,30 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#server-sanity-kernel-correctness">
-   Server Sanity, Kernel Correctness
+  <a class="reference internal nav-link" href="#version-veracity-server-sanity-kernel-correctness">
+   Version Veracity, Server Sanity, Kernel Correctness
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupytext">
+     Jupytext
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nb-conda-kernels">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       nb_conda_kernels
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#yaml-environment-specifications">
+     YAML Environment specifications
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -378,8 +420,12 @@
 <li><p>Don’t forget to list a kernel for the language(s) you want to use in the <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code>, such as <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code>, <code class="docutils literal notranslate"><span class="pre">irkernel</span></code>, <code class="docutils literal notranslate"><span class="pre">coconut[kernel]</span></code>, etc.</p></li>
 </ol>
 </div>
-<p>The material in this course is written primarily using Python.
-Python has become somewhat of a “lingua franca” of the data science world, though other languages like R, Julia, or even MatLab are also widely used, loved, and powerful.
+<p>The material in this course is written primarily using Python.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>On occaision, and especially during in-person lectures or labs, I will also use <a class="reference external" href="https://www.coconut-lang.org">Coconut</a></p>
+</div>
+<p>Python has become somewhat of a “lingua franca” of the data science world, though other languages like R, Julia, or even MatLab are also widely used, loved, and powerful.
 Which you use will likely depend on the community you interact with most.</p>
 <p>With that aside, <em>managing</em> Python as an interpreter and a set of libraries on your computer has historically been, shall we say… labarynthian?</p>
 <div class="figure align-default" id="xkcd-python">
@@ -402,13 +448,14 @@ I will not duplicate Nick’s guide here, but I do have a few additional tips fo
 <ul class="simple">
 <li><p><strong>Anaconda</strong> is a data science corporation that develops a huge amount of open-source software, along with maintaining the “anaconda” repository channel of tools/packages that one could install using:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">conda</span></code>, which is a program on your computer called a <em>package manager</em>, used through command-line.
-Apart from installing libraries and versions of Python (or R or Julia or Haskell or many others), it will also help you to encapsulate these into isolated <em>conda environments</em>.</p></li>
+Apart from installing libraries and versions of Python (or R or Julia or Haskell or <a class="reference external" href="https://www.coconut-lang.org">Coconut</a>, or many others), it will also help you to encapsulate these into isolated <em>conda environments</em>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mamba</span></code> is a recent re-implementation of <code class="docutils literal notranslate"><span class="pre">conda</span></code> that’s faster and has some nice features.</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
 <p>The default way to install <code class="docutils literal notranslate"><span class="pre">conda</span></code> in tutorials and lessons online will likely be the “full” or “large” installation from Anaconda, which contains a huge number of pre-installed packages from the <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> channel.
-<strong>I generally do not recommend this!</strong></p>
+<strong>I generally do not recommend this!</strong>
+Often it is much better to install the minimum and spin up environments with use-case specific packages/languages as needed.</p>
 </div>
 <p>To keep your “base” conda environment clean (and running as fast as possible), look for a small installation like <code class="docutils literal notranslate"><span class="pre">miniconda</span></code>.
 A simple way to get <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed with <em>minimal</em> fluff, as well as a default channel with community-driven package curation, see the installable downlads on the  <a class="reference external" href="https://github.com/conda-forge/miniforge"><code class="docutils literal notranslate"><span class="pre">conda-forge/miniforge</span></code></a> page.
@@ -418,7 +465,17 @@ Pick your OS and get going, <em>much faster than the old-days</em>!</p>
 <h2>Modern Literate Programming with Jupyter<a class="headerlink" href="#modern-literate-programming-with-jupyter" title="Permalink to this headline">¶</a></h2>
 <p>I remember the first time I encountered a so-called “notebook” for code, was in a calculus class with a professor absolutely <em>obsessed</em> with <a class="reference external" href="https://www.wolfram.com/mathematica/">Mathematica</a>.
 After using these new-fangled “cells” for my code and having results, comments, figures, and functions all interwoven togther in a beautifu tapestry for a semester, I became obsessed too. Alas, for I was but a poor student, and if I’m honest, unduly suspicious of licensed software.</p>
-<p>At the time, I came accross this fascinating alternative built on a web-browser stack and the “python” language I had been trying out, called IPython Notebooks.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Emacs gets a bad rap for its age and alternative binding schemes, but for the adventurous among you there are <em>modern</em> distributions of emacs that become quite ergonomic and comfortable to use.
+You can even avoid the <code class="docutils literal notranslate"><span class="pre">vim</span></code>-vs-<code class="docutils literal notranslate"><span class="pre">emacs</span></code> holy war entirely by emulating vim-keybindings <em>inside</em> emacs.
+Now both sides can hate you!
+See: <a class="reference external" href="https://github.com/hlissner/doom-emacs">Doom</a> or <a class="reference external" href="https://www.spacemacs.org/">Spacemacs</a> for some cool examples.</p>
+</div>
+<p>This paradigm, of keeping your <strong>code</strong>, <strong>story</strong>, and <strong>results</strong> all interwoven in one file is typically called <em>literate programming</em>.
+It’s a powerful way to both explore your programming ideas, and document them as a cohesive narrative once better defined.
+Literate programming was championed by <a class="reference external" href="https://orgmode.org/">Org-Mode</a> (an <em>extremely powerful</em> plain-text system for note taking, authoring, and knowledge management built on <code class="docutils literal notranslate"><span class="pre">emacs</span></code>)
+By the time I was discovering literate programming through Mathematica, the open source alternative I came accross was a fascinating web-browser stack built on the “python” language: IPython Notebooks.</p>
 <blockquote>
 <div><p>Hacky? Yes.</p>
 <p>Free and Open Source? You bet!</p>
@@ -429,19 +486,62 @@ Heck, this book is <em>written</em> entirely using <a class="reference external"
 <p class="sidebar-title"></p>
 <p>Jupyter, as an attempt to unify the statistical language communities, stood for <strong>Ju</strong>(lia)<strong>Py</strong>(thon)<strong>R</strong>.</p>
 </div>
-<p>Jupyter <code class="docutils literal notranslate"><span class="pre">{lab|notebook}</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Jupyter is a <em>server</em>-based coding interface.</p>
 <ul class="simple">
-<li></li>
-<li><p>Clean NB’s</p></li>
-<li><p>project structure, installables</p></li>
+<li><p>Start a jupyter server: <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> or <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p></li>
+<li><p>Access the running server through your browser: <code class="docutils literal notranslate"><span class="pre">localhos:8888</span></code>, or automatic</p></li>
 </ul>
 </div>
-<div class="section" id="server-sanity-kernel-correctness">
-<h2>Server Sanity, Kernel Correctness<a class="headerlink" href="#server-sanity-kernel-correctness" title="Permalink to this headline">¶</a></h2>
+<p>A common misunderstanding: Jupter is <em>not</em> “python”, and using it isn’t really dependent on your python installation above.
+Instead, the jupyter server frontend communicates with a programming language/interpreter <em>of your choosing</em> through a jupyter <em>language kernel</em>.
+This architecture lets jupyter operate as a rich interface to <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels"><em>many languages</em></a>, not just python.
+That link has kernels to use anything from R and Julia to Haskell, Common Lisp, Clojure, MatLab, Ruby, or Fortran.</p>
+<p>In addition, being a web-first interface, Jupyter has a <a class="reference external" href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">huge number of extensions</a>, like adding scratchpads, widgets, bibtex citation support, and even live Reveal.js presentation mode through <a class="reference external" href="https://rise.readthedocs.io/en/stable/">RISE</a>, so you can live-demo <em>in style</em>!</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<blockquote>
+<div><p><em>with great power, comes great responsibility…</em></p>
+</div></blockquote>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The freedom to mix code and notes in “cells” on a kernel-based web interface is <em>very</em> easy to abuse.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code></p></li>
-<li><p>yaml env spec’s</p></li>
+<li><p>Beware using lots of variable assignments. <strong>Global State is the enemy.</strong></p></li>
+<li><p>Keep notebooks short and focused; new notebooks are free, so use them!</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file format is not human-friendly or easy to diff in version-control… more of a json/hashstring/<em>mess</em>, needing the frontend to interpret.</p></li>
 </ul>
+</div>
+</div>
+<div class="section" id="version-veracity-server-sanity-kernel-correctness">
+<h2>Version Veracity, Server Sanity, Kernel Correctness<a class="headerlink" href="#version-veracity-server-sanity-kernel-correctness" title="Permalink to this headline">¶</a></h2>
+<p>In this course, I have adopted a few popular mechanisms to combat the proliferation of “junk notebooks”.
+Avoid addressing these problems at your peril!</p>
+<p>First, it is helpful to review this <a class="reference external" href="https://ploomber.io/blog/clean-nbs/">guide to writing “Clean Notebooks”</a>:</p>
+<blockquote>
+<div><p>Notebooks are a magnificent tool to explore data, but such a powerful tool can become hard to manage quickly.
+Ironically, the ability to interact with our data rapidly (modify code cells, run, and repeat) is the exact reason why a notebook may become an obscure entanglement of variables that are hard to understand, even to the notebook’s author.
+But it doesn’t have to be that way.
+This post summarizes my learnings over the past few years on writing clean notebooks.</p>
+</div></blockquote>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>This textbook repository uses <span class="xref myst">Poetry</span> to create installable source code for notebooks to import.</p>
+</div>
+<p>I don’t follow everything in this post exactly (for instance, I typically use <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> files over <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, based on the now-standard PEP 518).
+But the advice is generally good and well worth a read-through.</p>
+<p>Additional tools used for this book, and worth adopting when doing Data Science in Jupyter Notebooks, are below.</p>
+<div class="section" id="jupytext">
+<h3>Jupytext<a class="headerlink" href="#jupytext" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="nb-conda-kernels">
+<h3><code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code><a class="headerlink" href="#nb-conda-kernels" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="yaml-environment-specifications">
+<h3>YAML Environment specifications<a class="headerlink" href="#yaml-environment-specifications" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 </div>
 
