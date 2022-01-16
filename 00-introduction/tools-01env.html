@@ -321,17 +321,17 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#yaml-environment-specifications">
+     YAML Environment specifications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nb-conda-kernels">
      <code class="docutils literal notranslate">
       <span class="pre">
        nb_conda_kernels
       </span>
      </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#yaml-environment-specifications">
-     YAML Environment specifications
     </a>
    </li>
   </ul>
@@ -377,17 +377,17 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#yaml-environment-specifications">
+     YAML Environment specifications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nb-conda-kernels">
      <code class="docutils literal notranslate">
       <span class="pre">
        nb_conda_kernels
       </span>
      </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#yaml-environment-specifications">
-     YAML Environment specifications
     </a>
    </li>
   </ul>
@@ -444,19 +444,19 @@ In that case, which is what Data Science (and by extension, text analysis) falls
 I will not duplicate Nick’s guide here, but I do have a few additional tips for this course (and years of trial-and-error).</p>
 <div class="section" id="ana-conda-but-it-s-mamba">
 <h2>(Ana?)Conda, but it’s Mamba<a class="headerlink" href="#ana-conda-but-it-s-mamba" title="Permalink to this headline">¶</a></h2>
-<p>First, terminology:</p>
-<ul class="simple">
-<li><p><strong>Anaconda</strong> is a data science corporation that develops a huge amount of open-source software, along with maintaining the “anaconda” repository channel of tools/packages that one could install using:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conda</span></code>, which is a program on your computer called a <em>package manager</em>, used through command-line.
-Apart from installing libraries and versions of Python (or R or Julia or Haskell or <a class="reference external" href="https://www.coconut-lang.org">Coconut</a>, or many others), it will also help you to encapsulate these into isolated <em>conda environments</em>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mamba</span></code> is a recent re-implementation of <code class="docutils literal notranslate"><span class="pre">conda</span></code> that’s faster and has some nice features.</p></li>
-</ul>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>The default way to install <code class="docutils literal notranslate"><span class="pre">conda</span></code> in tutorials and lessons online will likely be the “full” or “large” installation from Anaconda, which contains a huge number of pre-installed packages from the <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> channel.
 <strong>I generally do not recommend this!</strong>
 Often it is much better to install the minimum and spin up environments with use-case specific packages/languages as needed.</p>
 </div>
+<p>First, terminology:</p>
+<ul class="simple">
+<li><p><strong>Anaconda</strong> is a data science corporation that develops a huge amount of open-source software, along with maintaining the “anaconda” repository channel of tools/packages that one could install using:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span></code>, which is a program on your computer called a <em>package manager</em>, used through command-line.
+Apart from installing libraries and versions of Python (or R or Julia or Haskell or <a class="reference external" href="https://www.coconut-lang.org">Coconut</a>, or many others), it will also help you to encapsulate these into isolated <em>conda environments</em>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mamba</span></code> is a recent re-implementation of <code class="docutils literal notranslate"><span class="pre">conda</span></code> that’s <a class="reference external" href="https://mamba.readthedocs.io/en/latest/index.html">faster and has some nice features</a>.</p></li>
+</ul>
 <p>To keep your “base” conda environment clean (and running as fast as possible), look for a small installation like <code class="docutils literal notranslate"><span class="pre">miniconda</span></code>.
 A simple way to get <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed with <em>minimal</em> fluff, as well as a default channel with community-driven package curation, see the installable downlads on the  <a class="reference external" href="https://github.com/conda-forge/miniforge"><code class="docutils literal notranslate"><span class="pre">conda-forge/miniforge</span></code></a> page.
 Pick your OS and get going, <em>much faster than the old-days</em>!</p>
@@ -464,7 +464,7 @@ Pick your OS and get going, <em>much faster than the old-days</em>!</p>
 <div class="section" id="modern-literate-programming-with-jupyter">
 <h2>Modern Literate Programming with Jupyter<a class="headerlink" href="#modern-literate-programming-with-jupyter" title="Permalink to this headline">¶</a></h2>
 <p>I remember the first time I encountered a so-called “notebook” for code, was in a calculus class with a professor absolutely <em>obsessed</em> with <a class="reference external" href="https://www.wolfram.com/mathematica/">Mathematica</a>.
-After using these new-fangled “cells” for my code and having results, comments, figures, and functions all interwoven togther in a beautifu tapestry for a semester, I became obsessed too. Alas, for I was but a poor student, and if I’m honest, unduly suspicious of licensed software.</p>
+After using these new-fangled “cells” for my code and having results, comments, figures, and functions all interwoven togther in a beautiful tapestry for a semester, I became obsessed too. Alas, for I was but a poor student, and if I’m honest, unduly suspicious of licensed software.</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Emacs gets a bad rap for its age and alternative binding schemes, but for the adventurous among you there are <em>modern</em> distributions of emacs that become quite ergonomic and comfortable to use.
@@ -480,7 +480,7 @@ By the time I was discovering literate programming through Mathematica, the open
 <div><p>Hacky? Yes.</p>
 <p>Free and Open Source? You bet!</p>
 </div></blockquote>
-<p>Today, that project has absolutely exploded into the de-facto method for data science experimentation, reporting, and communication, now called Jupyter.
+<p>Today, that project has absolutely exploded into the de-facto method for data science experimentation, reporting, and communication, now called <strong>Jupyter</strong>.
 Heck, this book is <em>written</em> entirely using <a class="reference external" href="https://jupyterbook.org/intro.html"> Jupyter(-book) </a>!</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -499,48 +499,101 @@ Instead, the jupyter server frontend communicates with a programming language/in
 This architecture lets jupyter operate as a rich interface to <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels"><em>many languages</em></a>, not just python.
 That link has kernels to use anything from R and Julia to Haskell, Common Lisp, Clojure, MatLab, Ruby, or Fortran.</p>
 <p>In addition, being a web-first interface, Jupyter has a <a class="reference external" href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">huge number of extensions</a>, like adding scratchpads, widgets, bibtex citation support, and even live Reveal.js presentation mode through <a class="reference external" href="https://rise.readthedocs.io/en/stable/">RISE</a>, so you can live-demo <em>in style</em>!</p>
+</div>
+<div class="section" id="version-veracity-server-sanity-kernel-correctness">
+<h2>Version Veracity, Server Sanity, Kernel Correctness<a class="headerlink" href="#version-veracity-server-sanity-kernel-correctness" title="Permalink to this headline">¶</a></h2>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <blockquote>
 <div><p><em>with great power, comes great responsibility…</em></p>
 </div></blockquote>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The freedom to mix code and notes in “cells” on a kernel-based web interface is <em>very</em> easy to abuse.</p>
-<ul class="simple">
-<li><p>Beware using lots of variable assignments. <strong>Global State is the enemy.</strong></p></li>
-<li><p>Keep notebooks short and focused; new notebooks are free, so use them!</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file format is not human-friendly or easy to diff in version-control… more of a json/hashstring/<em>mess</em>, needing the frontend to interpret.</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="version-veracity-server-sanity-kernel-correctness">
-<h2>Version Veracity, Server Sanity, Kernel Correctness<a class="headerlink" href="#version-veracity-server-sanity-kernel-correctness" title="Permalink to this headline">¶</a></h2>
 <p>In this course, I have adopted a few popular mechanisms to combat the proliferation of “junk notebooks”.
 Avoid addressing these problems at your peril!</p>
 <p>First, it is helpful to review this <a class="reference external" href="https://ploomber.io/blog/clean-nbs/">guide to writing “Clean Notebooks”</a>:</p>
 <blockquote>
 <div><p>Notebooks are a magnificent tool to explore data, but such a powerful tool can become hard to manage quickly.
 Ironically, the ability to interact with our data rapidly (modify code cells, run, and repeat) is the exact reason why a notebook may become an obscure entanglement of variables that are hard to understand, even to the notebook’s author.
-But it doesn’t have to be that way.
-This post summarizes my learnings over the past few years on writing clean notebooks.</p>
+But it doesn’t have to be that way.</p>
+<p>— Eduardo Blancas (2021)</p>
 </div></blockquote>
+<div class="warning dropdown admonition">
+<p class="admonition-title">Keep your Notebooks <em>Clean</em></p>
+<p>The freedom to mix code and notes in “cells” on a kernel-based web interface is <em>very</em> easy to abuse.</p>
+<ul class="simple">
+<li><p>Beware using lots of variable assignments. <strong>Global State is the enemy.</strong></p></li>
+<li><p>Instead, capture reusable logic into <strong>functions</strong>, save them in <strong>source files</strong>, and <strong>apply</strong> them in the notebook all at once.</p></li>
+<li><p>Keep notebooks short and focused. Import functions+data, tell your story, make your point, end-of-notebook. New notebooks are free, so use them!</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file format is not human-friendly or easy to diff in version-control… more of a json/hashstring/<em>mess</em>, needing the frontend to interpret. <em>Plain-text is your friend!</em></p></li>
+</ul>
+</div>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>This textbook repository uses <span class="xref myst">Poetry</span> to create installable source code for notebooks to import.</p>
+<p>This textbook repository uses <a class="reference external" href="http://www.python-poetry.org">Poetry</a> to create installable source code for notebooks to import.</p>
 </div>
-<p>I don’t follow everything in this post exactly (for instance, I typically use <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> files over <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, based on the now-standard PEP 518).
+<p>I don’t follow everything in this post exactly (for instance, I typically use <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> over <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> to make source-code files for python functions/types, based on the now-standard PEP 518).
 But the advice is generally good and well worth a read-through.</p>
-<p>Additional tools used for this book, and worth adopting when doing Data Science in Jupyter Notebooks, are below.</p>
+<p>Additional tools used for this book to help you stay sane in the wonderful journey to productive notebook use are below.</p>
 <div class="section" id="jupytext">
-<h3>Jupytext<a class="headerlink" href="#jupytext" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="nb-conda-kernels">
-<h3><code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code><a class="headerlink" href="#nb-conda-kernels" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a><a class="headerlink" href="#jupytext" title="Permalink to this headline">¶</a></h3>
+<p>Creates and syncs <code class="docutils literal notranslate"><span class="pre">.md</span></code> files (or, script files for each kernel’s language) that can roundtrip to/from <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files. This lets you **add <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> to your <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> (see <a class="reference internal" href="tools-02ops.html"><span class="doc std std-doc">DevOps</span></a>) and never deal with unmergeable diff files again. Also great for collaboration, since your colleague only needs to edit a plain text file (e.g. on GitHub) and you will recieve a fresh, edited notebook, locally.</p>
 </div>
 <div class="section" id="yaml-environment-specifications">
 <h3>YAML Environment specifications<a class="headerlink" href="#yaml-environment-specifications" title="Permalink to this headline">¶</a></h3>
+<p>Remember:</p>
+<blockquote>
+<div><p><em>1-environment-per-project!</em></p>
+</div></blockquote>
+<p>So, you will have a lot of environments running around, with you and collaborators needing to add or remove dependencies, constantly.
+If only there was a way to make some kind of <em>recipe</em> file, that could read a list of things you want, and then “update” the environment whenever you want…</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Personally, I add <code class="docutils literal notranslate"><span class="pre">.conda_env_base.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">.conda_env_notebooks.yml</span></code> to my <a class="reference external" href="https://gitlab.com/tbsexton/dotfiles"><em>dotfiles</em> repository</a> so every computer can have the same setup, automatically!</p>
+</div>
+<p>In case you didn’t see this in the mountain of conda documentation, <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually">this exists</a>, and should probably be the <em>only way</em> you make environments.</p>
+<p>These <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code> files are incredibly powerful, and <em>will save you time and sanity working with other people</em>.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Example <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code></p>
+<p>Here’s an example file that governs a conda/mamba environment named <code class="docutils literal notranslate"><span class="pre">test</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="nt">channels</span><span class="p">:</span> 
+  <span class="c1"># This is where stuff gets downloaded from</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pyviz</span>
+
+<span class="nt">dependencies</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">python=3.9</span>  <span class="c1"># can lock version numbers</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ipykernel</span>  <span class="c1"># needed to use &quot;python&quot; from a notebook</span>
+<span class="c1">#  - irkernel  # could&#39;ve been &quot;R&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pandas</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">panel</span>  <span class="c1"># comes from the pyviz channel</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip</span>  <span class="c1"># ALWAYS INSTALL PIP if you want to use `pip install` inside the environment!</span>
+  <span class="p p-Indicator">-</span> <span class="nt">pip</span><span class="p">:</span>  <span class="c1"># now we can tell `pip` to install its own package list automatically</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">textacy</span>
+    <span class="c1"># - -e .  # if we wanted to install local directory (e.g. pyproject.toml/setup.py)</span>
+    <span class="c1"># - frictionless[json]  # can use standard pip syntax for e.g. options</span>
+</pre></div>
+</div>
+<p>In the directory containing this file, say, <code class="docutils literal notranslate"><span class="pre">test-env.yml</span></code>, you would create/update the environment <code class="docutils literal notranslate"><span class="pre">test</span></code> with the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env update -f test-env.yml
+</pre></div>
+</div>
+<p>Now is a good time to try making your own environment for this course… see if you can make a <code class="docutils literal notranslate"><span class="pre">text-data-env.yml</span></code> on your own!</p>
+</div>
+</div>
+<div class="section" id="nb-conda-kernels">
+<h3><a class="reference external" href="https://github.com/Anaconda-Platform/nb_conda_kernels"><code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code></a><a class="headerlink" href="#nb-conda-kernels" title="Permalink to this headline">¶</a></h3>
+<p>However, due to being largely implemented <em>in python</em>, the Jupyter server is installed into a base environment, and has no idea about other environments while running.
+In practice, this means everyone ends up re-installing Jupyter into every project’s environment, which is both</p>
+<ol class="simple">
+<li><p>wasteful of space, and memory, and terminal tabs (running <em>many</em> instances of jupyter at once)</p></li>
+<li><p>loses any extensions/custom settings you might have had in another environment.</p></li>
+</ol>
+<p>Instead, the folks at Anaconda have created a (temporary) fix for this hell: <code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code>.
+This extension gets installed <em>once</em>, alongside a single installation of <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> (e.g. in <code class="docutils literal notranslate"><span class="pre">base</span></code> or a custom <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> environment).
+Then, any time you create an environment with a valid language kernel (<code class="docutils literal notranslate"><span class="pre">ipykernel</span></code>, <code class="docutils literal notranslate"><span class="pre">irkernel</span></code>, <code class="docutils literal notranslate"><span class="pre">coconut[kernel]</span></code>, etc. ), you will see that kernel and be able to run <em>any</em> notebook inside its corresponding environment.
+Switch between kernels from inside the notebook with <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">&gt;</span> <span class="pre">Change</span> <span class="pre">kernel</span></code></p>
+<p><em>Feels good, man.</em></p>
 </div>
 </div>
 </div>
