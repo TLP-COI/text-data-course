@@ -20,6 +20,7 @@ parse:
     - substitution
     - linkify
     - colon_fence
+    # - strikethrough
   myst_substitutions:
     course: PPOL 628
     semester: Spring 2022
@@ -38,6 +39,8 @@ parse:
 
 # sphinx options
 sphinx:
+  extra_extensions:
+    - sphinxcontrib.mermaid
   config:
     bibtex_reference_style: author_year
 

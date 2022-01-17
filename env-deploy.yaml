@@ -12,3 +12,6 @@ dependencies:
   - jupytext
   - rise
   - nb_conda_kernels
+  - pip
+  - pip:
+      - sphinxcontrib-mermaid
