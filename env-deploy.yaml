@@ -1,3 +1,4 @@
+# DEPRECATED/IN-PROGRESS... see .github/workflows/deploy-gh-pages.yml
 # Used for CI/CD (GH Actions, GitLab, netlify, etc.)
 # I.e. not a local, already working nb_conda_kernel/jupytext/jupyter-book
 # Install this first, then install the `env.yaml` spec and activate with --stack

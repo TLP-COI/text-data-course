@@ -56,7 +56,7 @@ jobs:
         
     - run: |
         conda info
-        conta list
+        conda list
         
     - name: Get Data
       run: dvc pull
