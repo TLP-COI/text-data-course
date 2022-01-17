@@ -25,12 +25,14 @@ Which you use will likely depend on the community you interact with most.
 
 With that aside, _managing_ Python as an interpreter and a set of libraries on your computer has historically been, shall we say... labarynthian? 
 
+::::{sidebar}
 :::{figure-md} xkcd-python
 ![XKCD Python Environment](https://imgs.xkcd.com/comics/python_environment.png)
 
 Yes, things are actually _better_ now, than they used to be!
 From Randall Munroe, [_XKCD_](https://xkcd.com/1987/)
 :::
+::::
 
 How you approach the problem of dependency management for your projects depends on your community, and more specifically whether you lean toward _development_ of python tools (e.g. use [Poetry](https://python-poetry.org/)), or more toward _using_ those tools. 
 In that case, which is what Data Science (and by extension, text analysis) falls under, the most common tool is `conda`. Either way, the key insight to both is liberal use of _environment isolation_. 
@@ -142,7 +144,7 @@ Additional tools used for this book to help you stay sane in the wonderful journ
 
 ### [Jupytext](https://jupytext.readthedocs.io/en/latest/)
 
-Creates and syncs `.md` files (or, script files for each kernel's language) that can roundtrip to/from `.ipynb` files. This lets you **add `*.ipynb` to your `.gitignore` (see [DevOps](tools-02ops.md)) and never deal with unmergeable diff files again. Also great for collaboration, since your colleague only needs to edit a plain text file (e.g. on GitHub) and you will recieve a fresh, edited notebook, locally.
+Creates and syncs `.md` files (or, script files for each kernel's language) that can roundtrip to/from `.ipynb` files. This lets you add `*.ipynb` to your `.gitignore` (see [DevOps](tools-02ops.md)) and never deal with unmergeable diff files again. Also great for collaboration, since your colleague only needs to edit a plain text file (e.g. on GitHub) and you will recieve a fresh, edited notebook, locally.
 
 ### YAML Environment specifications
 Remember:

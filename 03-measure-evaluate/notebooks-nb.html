@@ -43,6 +43,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -50,6 +52,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Trouble in Paradise" href="../04-validation/trouble.html" />
@@ -101,7 +105,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../00-introduction/intro.html">
-   The Road to TLP
+   Introduction
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -387,17 +391,19 @@ code blocks and their outputs in your book.</p>
 <h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this headline">¶</a></h2>
 <p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
 <p><img alt="" src="https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg" /></p>
-<p>You can also $add_{math}$ and</p>
-<p>$$
+<p>You can also <span class="math notranslate nohighlight">\(add_{math}\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
 math^{blocks}
-$$</p>
+\]</div>
 <p>or</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
-\mbox{mean} la_{tex} \ \
+\mbox{mean} la_{tex} \\ \\
 math blocks
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
 </div>
 <div class="section" id="myst-markdown">
@@ -420,7 +426,7 @@ For example, here’s some sample Matplotlib code:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.pyplot._IonContext at 0x7fef92c67b80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.pyplot._IonContext at 0x7f4b39f8a640&gt;
 </pre></div>
 </div>
 </div>

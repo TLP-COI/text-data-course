@@ -43,6 +43,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -50,6 +52,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Data Science" href="tools-03sci.html" />
@@ -101,7 +105,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   The Road to TLP
+   Introduction
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -295,6 +299,44 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-theory">
+   In Theory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-practice">
+   In Practice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lesson-from-history">
+   Lesson from History
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#containerize-data-packages">
+   Containerize — Data Packages!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-as-code">
+   Data-as-Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation-driven-development">
+   Documentation-driven “Development”
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -307,6 +349,44 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-theory">
+   In Theory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-practice">
+   In Practice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lesson-from-history">
+   Lesson from History
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#containerize-data-packages">
+   Containerize — Data Packages!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-as-code">
+   Data-as-Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation-driven-development">
+   Documentation-driven “Development”
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -321,6 +401,72 @@
 <li><p>data packages (dvc, frictionless)</p></li>
 <li><p>Special: this repository!</p></li>
 </ul>
+<blockquote>
+<div><p>Digital infrastructure promoting data sharing and consumption</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Data</p></li>
+<li><p>Tools (for the data)</p></li>
+<li><p>Guides (Documentation)</p></li>
+</ul>
+<div class="section" id="in-theory">
+<h2>In Theory<a class="headerlink" href="#in-theory" title="Permalink to this headline">¶</a></h2>
+<p>Analysts, data scientists, etc.:</p>
+<ul class="simple">
+<li><p>Load their data</p></li>
+<li><p>Grab their trusty libraries of well-documented tools</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rightarrow\)</span> <em>pipeline</em> <span class="math notranslate nohighlight">\(\rightarrow\)</span></p></li>
+<li><p>Report out <em>results</em> that anyone can use and trust!</p></li>
+</ul>
+<p><img alt="Alchemy is so clean!" src="../_images/clean-pipe-transp.png" /></p>
+</div>
+<div class="section" id="in-practice">
+<h2>In Practice<a class="headerlink" href="#in-practice" title="Permalink to this headline">¶</a></h2>
+<p><strong>~80%</strong> of an Analyst’s time is spent wrangling and preprocessing their data… everyone re-invents the wheel <em>for almost every analysis</em>!</p>
+<p><img alt="the pain..." src="../_images/messy-pipe-transp.png" /></p>
+</div>
+<div class="section" id="lesson-from-history">
+<h2>Lesson from History<a class="headerlink" href="#lesson-from-history" title="Permalink to this headline">¶</a></h2>
+<p>Shipping cargo pre-1956</p>
+<ul class="simple">
+<li><p>costs skewed 10-to-1 for loading/unloading</p></li>
+<li><p>Teams of dock-workers in the 100’s</p></li>
+<li><p>custom loading per-cargo-type (bananas? vehicles? oil?)</p></li>
+<li><p>custom loading per-ship (length? width? fuel cost?)</p></li>
+</ul>
+<p>…</p>
+<p>Shipping containers changed this completely! <span id="id1">[]</span></p>
+<ul class="simple">
+<li><p>Uniform loading/unloading interfaces</p></li>
+<li><p>modular storage shape, unified ship design needs</p></li>
+<li><p>Interiors still a mess… but solving was asynchronous &amp; distributed</p></li>
+</ul>
+</div>
+<div class="section" id="containerize-data-packages">
+<h2>Containerize — Data Packages!<a class="headerlink" href="#containerize-data-packages" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Bundle the data with the libraries, documentation that you have already finished, to share with others in a uniform way!" src="../_images/containerize.png" /></p>
+</div>
+<div class="section" id="data-as-code">
+<h2>Data-as-Code<a class="headerlink" href="#data-as-code" title="Permalink to this headline">¶</a></h2>
+<p>How do we do this, in practice? One way… <strong>DataOps</strong></p>
+<p>Treat <strong>Data-as-Code</strong> to exploit existing DevOps infrastructure</p>
+<ul class="simple">
+<li><p>Dependency management and provision</p></li>
+<li><p>Version Control and releases</p></li>
+<li><p>Reproducibility and programmatic access</p></li>
+</ul>
+<p><img alt="Example Tools for DataOps" src="../_images/dataops-logos.png" /></p>
+</div>
+<div class="section" id="documentation-driven-development">
+<h2>Documentation-driven “Development”<a class="headerlink" href="#documentation-driven-development" title="Permalink to this headline">¶</a></h2>
+<p><strong>Documentation</strong>, of data infrastructure is a container’s “cargo manifest”</p>
+<ul class="simple">
+<li><p>distributed and asynchronous collaboration? <strong>Version control</strong> (<code class="docutils literal notranslate"><span class="pre">git</span></code>)</p></li>
+<li><p>separation of form and content? <strong>Plain text</strong> (<code class="docutils literal notranslate"><span class="pre">markdown</span></code>)</p></li>
+<li><p>Deploy PDF’s, websites, etc? <strong>Static site generators</strong></p></li>
+</ul>
+<p><img alt="Example Tools for DataOps" src="../_images/docs-logos.png" /></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
