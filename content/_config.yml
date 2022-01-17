@@ -20,6 +20,8 @@ parse:
     - substitution
     - linkify
     - colon_fence
+    - dollarmath
+    - amsmath
     # - strikethrough
   myst_substitutions:
     course: PPOL 628

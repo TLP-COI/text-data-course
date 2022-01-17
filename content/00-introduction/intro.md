@@ -1,8 +1,11 @@
-# The Road to TLP
+# Introduction
+
+_The Road to Technical Language Processing_
+
 
 :::{sidebar} Text analysis?
 ```{mermaid}
-graph LR
+graph TD
 text --> ta(["text analysis?"])
 style ta stroke-dasharray: 5 5
 ta --> analyses
@@ -18,9 +21,9 @@ It's often thought of as a "popular data mining technique": something that, taut
 
 Less trivially, text analysis might be some set of "mutually agreed-upon" assumptions and patterns, all of which try to assist in _using_ text in computational or statistical ways.
 
-:::{sidebar} Again, with _holistic_...
+:::{sidebar} Once more, with feeling: 
 ```{mermaid} 
-graph LR
+graph TD
 
 assumptions --> ta(["text analysis?"])
 style ta stroke-dasharray: 5 5
@@ -119,8 +122,27 @@ All models are wrong, some are useful
 -- _every data scientist, all of the time_
 ```
 
+
+:::{admonition} Engineering Practice
+:class: tip
+
+- Goals & Approaches
+  :  _"State the methods followed & why."_
+
+- Assumptions
+  :  _"State your assumptions._
+
+- Measure & Evaluate 
+  :  _"Apply adequate factors of safety."_
+
+- Validate
+  : _"Always get a second opinion"_
+
+:::
+
 ## Putting Things Together
 
+View the use of _text-as-data_, and especially the application of NLP, as a **socio-technical system**, rather than as an algorithmic pipeline.
 
 
 
