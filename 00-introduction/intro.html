@@ -302,19 +302,26 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#do-you-believe-in-magic">
-   Do you believe in Magic?
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-you-believe-in-magic">
+     Do you believe in Magic?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-view-from-engineering">
+     A View from Engineering
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-view-from-engineering">
-   A View from Engineering
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#putting-things-together">
-   Putting Things Together
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -337,19 +344,26 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#do-you-believe-in-magic">
-   Do you believe in Magic?
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-you-believe-in-magic">
+     Do you believe in Magic?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-view-from-engineering">
+     A View from Engineering
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-view-from-engineering">
-   A View from Engineering
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#putting-things-together">
-   Putting Things Together
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -367,7 +381,7 @@
 <div class="sidebar">
 <p class="sidebar-title">Text analysis?</p>
 <div class="mermaid">
-            graph TD
+            graph LR
 text --&gt; ta([&quot;text analysis?&quot;])
 style ta stroke-dasharray: 5 5
 ta --&gt; analyses
@@ -379,13 +393,13 @@ ta --&gt; analyses
 <div class="sidebar">
 <p class="sidebar-title">Once more, with feeling: </p>
 <div class="mermaid">
-            graph TD
+            graph LR
 
 assumptions --&gt; ta([&quot;text analysis?&quot;])
 style ta stroke-dasharray: 5 5
 patterns --&gt; ta
-text --&gt; comp[&quot;usable&quot; computation/statistics]
-ta --&gt; comp
+text --&gt; results 
+ta --&gt; results
         </div></div>
 <p>This is nothing to sneeze at.
 After all, using text —especially <em>natural language</em> text,  which can be full of symbolic and semantic meaning, written and intended <em>for</em> humans to read and understand — as a source of data?</p>
@@ -394,16 +408,17 @@ After all, using text —especially <em>natural language</em> text,  which can b
 <div class="section" id="do-you-believe-in-magic">
 <h2>Do you believe in Magic?<a class="headerlink" href="#do-you-believe-in-magic" title="Permalink to this headline">¶</a></h2>
 <p>If we look at this definition again, though, “magical” can start to feel a bit <em>on the nose</em>…</p>
-<div class="mermaid">
+<div align="center" class="mermaid align-center">
             graph LR
 subgraph magic
   assumptions --&gt; ta([&quot;text analysis?&quot;])
   style ta stroke-dasharray: 5 5
   patterns --&gt; ta
 end
-text --&gt; comp[&quot;usable&quot; computation/statistics]
-ta --&gt; comp
-        </div><div class="margin sidebar">
+text --&gt; results
+ta --&gt; results
+        </div>
+        <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="figure align-default" id="xkcd-ml">
 <img alt="XKCD  Machine Learning" src="https://imgs.xkcd.com/comics/machine_learning.png" />
@@ -439,7 +454,7 @@ They get applied to technical domains like engineering, medicine, policy, threat
 <blockquote>
 <div><p>Despite recent dramatic successes, natural language processing (NLP) is not ready to address a variety of real-world problems.
 Its reliance on large standard corpora, a training and evaluation paradigm that favors the learning of shallow heuristics, and large computational resource requirements, makes domain-specific application of even the most successful NLP techniques difficult.</p>
-<p>— <em><span id="id1">Dima <em>et al.</em> [<a class="reference internal" href="#id4">2021</a>]</span></em></p>
+<p>— <em><span id="id1">Dima <em>et al.</em> [<a class="reference internal" href="#id7">2021</a>]</span></em></p>
 </div></blockquote>
 <p>Without asking those pedantic questions about assumptions and patterns, treating our text as “data” that <em>awoke in the darkness of ~~Khazad-dum~~ someone’s NLP model</em> will fundamentally contradict the purpose of those evidence-based fields.</p>
 </div>
@@ -449,11 +464,45 @@ Its reliance on large standard corpora, a training and evaluation paradigm that 
 They can be quite beneficial to us!
 The key is applying them critically and transparently.</p>
 <blockquote class="epigraph">
-<div><p>All models are wrong, some are useful</p>
+<div><p>All models are wrong; some are useful.</p>
 <p class="attribution">—<em>every data scientist, all of the time</em></p>
 </div></blockquote>
+<p>The key is measuring and adjusting the model based on its <em>usefulness</em>.
+I like to call engineering <em>“the art of applying science to solving people’s problems”</em>.<a class="footnote-reference brackets" href="#artofscience" id="id2">1</a>
+I think this turn of phrase captures something important about using science to problem solve, whether that is building cities, designing cars, or doing data analysis for a policy firm: it’s somewhat of an <em>artform</em>.
+There are many, <em>many</em> subjective and context-sensitive decisions that <em>will get made</em> throughout the entire process.
+But engineers, typically as positions of public trust, have developed systems, checks, and communities, that all overlap to try and mitigate the inherent risk in subjective decision-making.<a class="footnote-reference brackets" href="#practicalengineer" id="id3">2</a></p>
+<p>So we might say engineering is applying science, but</p>
+<blockquote>
+<div><p>supplemented by necessary art […] the know-how built up and handed down from past experience.</p>
+<p>[The know-how] is also called <em>engineering practice</em>.
+In civil engineering, engineering practice refers to a body of knowledge, methods, and rules of thumb that consist of accepted techniques for solving problems and conducting business.</p>
+<p>The reason for the existence of this body of knowledge, engineering practice, is that engineers are accountable.
+If a structure fails, the engineer is the one who is probably going to be held responsible.
+Nobody knows everything, and mistakes will happen despite the best preparation possible.
+Engineers must show that they performed their duties according to the best of their abilities in accordance with accepted standards.
+This is called performance.
+The engineer’s defense will be based on demonstrating that he or she followed acceptable engineering practice.</p>
+<p>— <span id="id4">[<a class="reference internal" href="#id9">Hutcheson, 2003</a>]</span></p>
+</div></blockquote>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Some reading this may think “of course not, those are <em>dangerous</em> things, they <em>need</em> all of that stuff!”.
+I hope to cover some reasons that text analysis can be just as “dangerous” without proper oversight and critical thinking, in the case-studies chapter.</p>
+</div>
+<p>Unfortunately, such “bodies of knowledge” and <em>practice</em> are sorely lacking within data science and text analysis as it is in, say, building a dam, an aircraft, or a nuclear power plant.
+How does an analyst show they performed their duty according to their best ability?
+What <em>is</em> “accepted text-as-data practice?”</p>
+<div class="dropdown tip admonition">
+<p class="admonition-title">Technical Language Processing (TLP) Community of Interest</p>
+<p>The TLP <a class="reference external" href="https://www.nist.gov/el/technical-language-processing-community-interest">community of interest</a> is a group of researchers, academics, and industry professionals, largely from reliability engineering, that are trying to build and connect these “bodies of knowledge” to give analysts a better sense of accepted practice when applying text processing to technical domains.</p>
+</div>
+<p>This is why I have organized this textbook with chapters named after steps of the “Engineering Approach”.
+It is not an Engineering course, and you most definitely do not need to care about becoming an engineer to finish it. For the record, computer science has been applying engineering principles for a long time (thus the book reference used above).</p>
+<p>Instead, these sections are meant to be an, admittedly unorthodox, way to introduce text analysis fundamentals in an application-centered way.
+Always remember <em>who</em> might be trusting you with their data, their language, and their ear, when you analyse <em>text-as-data</em>.</p>
 <div class="tip admonition">
-<p class="admonition-title">Engineering Practice</p>
+<p class="admonition-title">Steps in Practicing the <em>Engineering Approach</em></p>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt>Goals &amp; Approaches</dt><dd><p><em>“State the methods followed &amp; why.”</em></p>
@@ -478,16 +527,38 @@ The key is applying them critically and transparently.</p>
 </ul>
 </div>
 </div>
-<div class="section" id="putting-things-together">
-<h2>Putting Things Together<a class="headerlink" href="#putting-things-together" title="Permalink to this headline">¶</a></h2>
-<p>View the use of <em>text-as-data</em>, and especially the application of NLP, as a <strong>socio-technical system</strong>, rather than as an algorithmic pipeline.</p>
-<p id="id2"><dl class="citation">
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p id="id5"><dl class="citation">
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id1">DLH+21</a></span></dt>
 <dd><p>Alden Dima, Sarah Lukens, Melinda Hodkiewicz, Thurston Sexton, and Michael P. Brundage. Adapting natural language processing for technical text. <em>Applied AI Letters</em>, 2(3):e33, 2021. URL: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ail2.33">https://onlinelibrary.wiley.com/doi/abs/10.1002/ail2.33</a>, <a class="reference external" href="https://arxiv.org/abs/https://onlinelibrary.wiley.com/doi/pdf/10.1002/ail2.33">arXiv:https://onlinelibrary.wiley.com/doi/pdf/10.1002/ail2.33</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1002/ail2.33">doi:https://doi.org/10.1002/ail2.33</a>.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id4">Hut03</a></span></dt>
+<dd><p>Marnie L Hutcheson. <em>Software testing fundamentals: Methods and metrics</em>. John Wiley &amp; Sons, 2003.</p>
 </dd>
 </dl>
 </p>
-</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="artofscience"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>I discovered a much more elegant version of this, recently.
+From Jashree Seth’s <a class="reference external" href="https://alltogether.swe.org/2021/01/the-art-of-applying-science-to-life/">award letter</a>
+to the Society of Women Engineers:</p>
+<blockquote>
+<div><p>the art of applying science to life.</p>
+</div></blockquote>
+</dd>
+<dt class="label" id="practicalengineer"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=jxNM4DGBRMU">This video</a> by Grady Hillhouse (<em>Practical Engineering</em>) is a succinct insight into this complex web of decisions and checks/balances that were <em>intended</em> to prevent disaster, as well as the processes that kick into gear as soon as disaster occurs to understand <em>why</em>.
+If you watch this video, pay attention to how many times subjective decisions were <em>necessary</em>, but also transparent enough that future instances could use this failure event as a solid case study.
+As Grady says in the video description:</p>
+<blockquote>
+<div><p>Whether they realized it or not, the people living and working downstream of Oroville Dam put their trust in the engineers, operators, and regulators to keep them safe and sound against disaster.
+In this case, that trust was broken.</p>
+</div></blockquote>
+</dd>
+</dl>
 </div>
 
     <script type="text/x-thebe-config">
