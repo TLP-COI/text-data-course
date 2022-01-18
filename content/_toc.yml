@@ -11,6 +11,7 @@ parts:
       - file: 00-introduction/tools
         sections:
           - glob: 00-introduction/tools-0*
+      - file: 00-introduction/references
   - caption: Assumptions
     chapters:
       - glob: 01-assumptions/*

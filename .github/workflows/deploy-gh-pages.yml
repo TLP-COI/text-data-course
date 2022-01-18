@@ -39,7 +39,7 @@ jobs:
             ] |
             (.dependencies[] | select(tag=="!!map"))
             .pip |= . + [
-                "sphinxcontrib-mermaid"
+                "sphinxcontrib-mermaid",
             ]
           ' env.yaml
         
