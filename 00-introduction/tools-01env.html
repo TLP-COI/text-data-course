@@ -435,11 +435,19 @@
 <p>Python has become somewhat of a “lingua franca” of the data science world, though other languages like R, Julia, or even MatLab are also widely used, loved, and powerful.
 Which you use will likely depend on the community you interact with most.</p>
 <p>With that aside, <em>managing</em> Python as an interpreter and a set of libraries on your computer has historically been, shall we say… labarynthian?</p>
+<div class="sidebar">
+<p class="sidebar-title">Enter the Labyrinth</p>
+<div class="figure align-default" id="xkcd-python">
+<img alt="XKCD Python Environment" src="https://imgs.xkcd.com/comics/python_environment.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Yes, things are actually <em>better</em> now, than they used to be!
+From Randall Munroe, <a class="reference external" href="https://xkcd.com/1987/"><em>XKCD</em></a></span><a class="headerlink" href="#xkcd-python" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 <p>How you approach the problem of dependency management for your projects depends on your community, and more specifically whether you lean toward <em>development</em> of python tools (e.g. use <a class="reference external" href="https://python-poetry.org/">Poetry</a>), or more toward <em>using</em> those tools.
 In that case, which is what Data Science (and by extension, text analysis) falls under, the most common tool is <code class="docutils literal notranslate"><span class="pre">conda</span></code>. Either way, the key insight to both is liberal use of <em>environment isolation</em>.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>If that spaghetti in <code class="xref std std-numref docutils literal notranslate"><span class="pre">xkcd-python</span></code> scares you, the trick is to keep everything separated by <em>what you want to DO with it</em>.</p>
+<p>If that spaghetti in <a class="reference internal" href="#xkcd-python"><span class="std std-numref">Fig. 3</span></a> scares you, the trick is to keep everything separated by <em>what you want to DO with it</em>.</p>
 <p><em>Remember: 1-environment-per-project!</em></p>
 </div>
 <p>If the words you are reading are not familiar, this is an excellent opportunity to check out the <a class="reference external" href="https://www.practicaldatascience.org/html/setting_up_your_computer.html">Practical Data Science</a> guide to setting this up on your machine.
