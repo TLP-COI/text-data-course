@@ -25,7 +25,7 @@ Which you use will likely depend on the community you interact with most.
 
 With that aside, _managing_ Python as an interpreter and a set of libraries on your computer has historically been, shall we say... labarynthian? 
 
-::::{sidebar}
+::::{sidebar} Enter the Labyrinth
 :::{figure-md} xkcd-python
 ![XKCD Python Environment](https://imgs.xkcd.com/comics/python_environment.png)
 
