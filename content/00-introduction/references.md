@@ -1,5 +1,6 @@
 # Chapter Resources
 
+
 ## Slides
 
 Talk from the NRC _Data Science and Artificial Intelligence Regulatory Applications Workshops_

@@ -1,13 +1,6 @@
-yq e -i '
-    .dependencies |= . + [
-      "poetry",
-      "jupyter-book",
-	  "jupytext",
-	  "rise",
-	  "nb_conda_kernels"
-   ] |
-   (.dependencies[] | select(tag=="!!map"))
-   .pip |= . + [
-      "sphinxcontrib-mermaid"
-   ]
-' env.yaml
+yq ea '
+    select(fi==0).dependencies |= . * select(fi==1).dependencies
+   |
+   (select(fi==0).dependencies[] | select(tag=="!!map"))
+   .pip |= . * (select(fi==1).dependencies[]|select(tag=="!!map")).pip
+' env.yaml env-deploy.yaml
