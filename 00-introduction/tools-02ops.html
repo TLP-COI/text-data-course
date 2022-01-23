@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dev &amp; Data Operations</title>
+    <title>Tools for Data Infrastructure</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -43,8 +43,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -56,7 +56,7 @@
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Science" href="tools-03sci.html" />
+    <link rel="next" title="Tools for Data Science" href="tools-03sci.html" />
     <link rel="prev" title="Setting up a Computing Environment" href="tools-01env.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -125,12 +125,12 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Dev &amp; Data Operations
+     Tools for Data Infrastructure
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="tools-03sci.html">
-     Data Science
+     Tools for Data Science
     </a>
    </li>
   </ul>
@@ -310,33 +310,42 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-theory">
-   In Theory
+  <a class="reference internal nav-link" href="#what-s-the-big-idea">
+   What’s the Big Idea?
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theory-vs-practice">
+     Theory vs. Practice
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#containerize-data-packages">
+     Containerize — Data Packages!
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-practice">
-   In Practice
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting Started
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-as-code">
+     Data-as-Code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentation-and-test-driven-development">
+     Documentation- and Test-driven “Development”
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lesson-from-history">
-   Lesson from History
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#containerize-data-packages">
-   Containerize — Data Packages!
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-as-code">
-   Data-as-Code
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#documentation-driven-development">
-   Documentation-driven “Development”
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
   </a>
  </li>
 </ul>
@@ -349,7 +358,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Dev & Data Operations</h1>
+                <h1>Tools for Data Infrastructure</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -360,33 +369,42 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-theory">
-   In Theory
+  <a class="reference internal nav-link" href="#what-s-the-big-idea">
+   What’s the Big Idea?
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theory-vs-practice">
+     Theory vs. Practice
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#containerize-data-packages">
+     Containerize — Data Packages!
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#in-practice">
-   In Practice
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting Started
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-as-code">
+     Data-as-Code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentation-and-test-driven-development">
+     Documentation- and Test-driven “Development”
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lesson-from-history">
-   Lesson from History
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#containerize-data-packages">
-   Containerize — Data Packages!
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-as-code">
-   Data-as-Code
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#documentation-driven-development">
-   Documentation-driven “Development”
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
   </a>
  </li>
 </ul>
@@ -398,79 +416,203 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="dev-data-operations">
-<h1>Dev &amp; Data Operations<a class="headerlink" href="#dev-data-operations" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>version control (git)</p></li>
-<li><p>git forges and branch workflow</p></li>
-<li><p>data packages (dvc, frictionless)</p></li>
-<li><p>Special: this repository!</p></li>
-</ul>
-<blockquote>
-<div><p>Digital infrastructure promoting data sharing and consumption</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>Data</p></li>
-<li><p>Tools (for the data)</p></li>
-<li><p>Guides (Documentation)</p></li>
-</ul>
-<div class="section" id="in-theory">
-<h2>In Theory<a class="headerlink" href="#in-theory" title="Permalink to this headline">¶</a></h2>
-<p>Analysts, data scientists, etc.:</p>
-<ul class="simple">
+  <div class="tex2jax_ignore mathjax_ignore section" id="tools-for-data-infrastructure">
+<h1>Tools for Data Infrastructure<a class="headerlink" href="#tools-for-data-infrastructure" title="Permalink to this headline">¶</a></h1>
+<div class="tip dropdown admonition">
+<p class="admonition-title">TL;DR</p>
+<ol class="simple">
+<li><p>Make sure your Source Control Management (SCM) is ready to use; we’re using <code class="docutils literal notranslate"><span class="pre">git</span></code></p></li>
+<li><p>Sign up for a “git forge”; we’re using <a class="reference external" href="http://GitHub.com">GitHub.com</a></p></li>
+<li><p>In relevant projects, use and build <em>data packages</em> wherever possible; we’re using <code class="docutils literal notranslate"><span class="pre">dvc</span></code>, since it’s language-agnostic.</p></li>
+<li><p>(<strong>optional</strong>, but highly recommended) Document and share your project; we’re using <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code></p></li>
+<li><p>(<strong>optional</strong>, but highly recommended) Schemas and testing for your data; we’re using <code class="docutils literal notranslate"><span class="pre">pandera</span></code></p></li>
+</ol>
+</div>
+<p>In the last section, we talked about the <em>engineering practice</em>, a body of “art” that consists of knowledge and accepted best-practice that supports experts in making context-sensitive decisions.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Even with a known heading, getting from point A to point B is a lot easier with a nicely paved road.</p>
+</div>
+<p>The other key component to problem solving in-context is a suite of tools in your “toolbox”.
+Tools enable experts to efficiently accomplish their goals, and understanding the tools being used within your community will help you critique and contribute to other work, as well.
+If the <em>practice</em> is a technical community’s mutual direction or heading, we might think of these tools as the <em>infrastructure</em> of a technical community.</p>
+<p>Data Science tools, and text-analysis tools, by extentsion, care a great deal about how data gets used, so, let’s call this idea <em>data infrastructure</em>.</p>
+<dl class="simple myst">
+<dt>Data Infrastructure</dt><dd><p>digital infrastructure promoting data sharing and consumption</p>
+</dd>
+</dl>
+<p>This, like the section before, is worth a course of it’s own: spanning <a class="reference external" href="https://aws.amazon.com/devops/what-is-devops/">development</a>- and <a class="reference external" href="https://databand.ai/blog/dataops-org-structure/">data</a>-operations, software engineering principles, <a class="reference external" href="https://themaintainers.org/information-maintenance-as-a-practice-of-care-an-invitation-to-reflect-and-share/">information maintainers</a>, human factors, and plenty of <a class="reference external" href="https://timharford.com/2021/05/cautionary-tales-wrong-tools-cost-lives/">cautionary tales</a>.</p>
+<div class="section" id="what-s-the-big-idea">
+<h2>What’s the Big Idea?<a class="headerlink" href="#what-s-the-big-idea" title="Permalink to this headline">¶</a></h2>
+<p>Rather than delving too deep here, it’s important to get an idea of what the “big challenge” is, and some basic tools to get started for this course, specifically.</p>
+<div class="section" id="theory-vs-practice">
+<h3>Theory vs. Practice<a class="headerlink" href="#theory-vs-practice" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title">“We have data science at home”</p>
+<div class="figure align-default" id="alchemy">
+<img alt="Alchemy is so clean!" src="../_images/clean-pipe-transp.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Alchemy, like magic, looks so <em>clean</em>!</span><a class="headerlink" href="#alchemy" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<p>Analysts, data scientists, etc., would like to:</p>
+<ol class="simple">
 <li><p>Load their data</p></li>
 <li><p>Grab their trusty libraries of well-documented tools</p></li>
 <li><p><span class="math notranslate nohighlight">\(\rightarrow\)</span> <em>pipeline</em> <span class="math notranslate nohighlight">\(\rightarrow\)</span></p></li>
 <li><p>Report out <em>results</em> that anyone can use and trust!</p></li>
-</ul>
-<p><img alt="Alchemy is so clean!" src="../_images/clean-pipe-transp.png" /></p>
+</ol>
+<div class="sidebar">
+<p class="sidebar-title">The data science at home</p>
+<div class="figure align-default" id="messy">
+<img alt="the pain..." src="../_images/messy-pipe-transp.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">The <em>pain</em>…</span><a class="headerlink" href="#messy" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="in-practice">
-<h2>In Practice<a class="headerlink" href="#in-practice" title="Permalink to this headline">¶</a></h2>
-<p><strong>~80%</strong> of an Analyst’s time is spent wrangling and preprocessing their data… everyone re-invents the wheel <em>for almost every analysis</em>!</p>
-<p><img alt="the pain..." src="../_images/messy-pipe-transp.png" /></p>
 </div>
-<div class="section" id="lesson-from-history">
-<h2>Lesson from History<a class="headerlink" href="#lesson-from-history" title="Permalink to this headline">¶</a></h2>
-<p>Shipping cargo pre-1956</p>
-<ul class="simple">
-<li><p>costs skewed 10-to-1 for loading/unloading</p></li>
-<li><p>Teams of dock-workers in the 100’s</p></li>
-<li><p>custom loading per-cargo-type (bananas? vehicles? oil?)</p></li>
-<li><p>custom loading per-ship (length? width? fuel cost?)</p></li>
-</ul>
-<p>…</p>
-<p>Shipping containers changed this completely! <span id="id1">[]</span></p>
-<ul class="simple">
-<li><p>Uniform loading/unloading interfaces</p></li>
-<li><p>modular storage shape, unified ship design needs</p></li>
-<li><p>Interiors still a mess… but solving was asynchronous &amp; distributed</p></li>
-</ul>
+<p>Like the “magic” practices from last section, this “alchemical” tool called a “pipeline” is so nice, assuming all the libraries , tools, and data work together like they <em>should</em>.</p>
+<p>In reality,<strong>~80%</strong> of an analyst’s time is spent wrangling and preprocessing their data… everyone re-invents the wheel <em>for almost every analysis</em>!</p>
 </div>
 <div class="section" id="containerize-data-packages">
-<h2>Containerize — Data Packages!<a class="headerlink" href="#containerize-data-packages" title="Permalink to this headline">¶</a></h2>
-<p><img alt="Bundle the data with the libraries, documentation that you have already finished, to share with others in a uniform way!" src="../_images/containerize.png" /></p>
+<h3>Containerize — Data Packages!<a class="headerlink" href="#containerize-data-packages" title="Permalink to this headline">¶</a></h3>
+<p>I won’t lie, this is a super sticky, outstanding problem.
+Many groups, around the world, are working on making data more reusable and reduce the load on analysts.
+See, for instance, the massive undertaking behind the <a class="reference external" href="https://www.go-fair.org/fair-principles/">FAIR Data</a> Principles <span id="id1">[]</span>:</p>
+<ul class="simple">
+<li><p>Findable</p></li>
+<li><p>Accessible</p></li>
+<li><p>Interoperable</p></li>
+<li><p>Accessible</p></li>
+</ul>
+<p>Or, for a more tooling-centric approach, the Open Knowledge Foundation has the Frictionless Data initiative to make open software and standards.</p>
+<div class="sidebar">
+<p class="sidebar-title">Containerize all the things!</p>
+<div class="figure align-default" id="containerize">
+<img alt="containerize-it" src="../_images/containerize.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Bundle the data with the libraries, documentation that you have already finished, to share with others in a uniform way!</span><a class="headerlink" href="#containerize" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<p>In yet another parallel to the previous section, many solution types revolve around <em>isolation</em>, by bundling context-specific tools and data together in reproducible and transparent ways.
+These “bundles”, or “containers”, are often called <em>data packages</em>, that treat data the way the software engineering community has learned to treat code (i.e. Development Operations, or DevOps).</p>
+<div class="tip admonition">
+<p class="admonition-title">Lesson from History</p>
+<p>Shipping cargo pre-1956 looks a lot like data engineering does today:</p>
+<ul class="simple">
+<li><p>costs were skewed 10-to-1 toward the loading/unloading phases</p></li>
+<li><p>Teams of dock-workers numbered in the 100’s</p></li>
+<li><p>Why? Loading was specialized, as combinatoric case-by-case:</p>
+<ul>
+<li><p>per-cargo-type (bananas? vehicles? oil?) needed special concerns</p></li>
+<li><p>per-ship (length? width? fuel cost?) again, special concerns</p></li>
+</ul>
+</li>
+</ul>
+<p>Shipping containers changed this completely! <span id="id2">[]</span></p>
+<ul class="simple">
+<li><p>Containers provide a <em>uniform</em> loading/unloading interface for ships (cranes<span class="math notranslate nohighlight">\(\rightarrow\)</span>trains<span class="math notranslate nohighlight">\(\rightarrow\)</span>trucks)</p></li>
+<li><p>The modular storage shape unified ship design needs (lots of identical boxes, stacked high)</p></li>
+<li><p>Interiors of each container were still a mess… but <em>solving</em> was <strong>asynchronous</strong> &amp; <strong>distributed</strong>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>Here’s a couple types of tools to get started down the path to this idea:</p>
 <div class="section" id="data-as-code">
-<h2>Data-as-Code<a class="headerlink" href="#data-as-code" title="Permalink to this headline">¶</a></h2>
-<p>How do we do this, in practice? One way… <strong>DataOps</strong></p>
-<p>Treat <strong>Data-as-Code</strong> to exploit existing DevOps infrastructure</p>
+<h3>Data-as-Code<a class="headerlink" href="#data-as-code" title="Permalink to this headline">¶</a></h3>
+<p>Apply DevOps principles to data as DataOps, which treats <strong>Data-as-Code</strong>.
+Through clever extension of Source Control Management, we can exploit existing DevOps infrastructure for</p>
 <ul class="simple">
 <li><p>Dependency management and provision</p></li>
 <li><p>Version Control and releases</p></li>
 <li><p>Reproducibility and programmatic access</p></li>
 </ul>
+<p>So, we start with a DevOps baseline of SCM (<code class="docutils literal notranslate"><span class="pre">git</span></code>, <code class="docutils literal notranslate"><span class="pre">mercurial</span></code>, etc.) plus a social collaboration and project management system, like <a class="reference external" href="http://GitHub.com">GitHub.com</a>, <a class="reference external" href="http://GitLab.com">GitLab.com</a>, GitTea, etc.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will be using <code class="docutils literal notranslate"><span class="pre">git</span></code></p>
+<ul class="simple">
+<li><p>Not installed? <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">git</span></code> in the base environment, assuming you followed along up to now.</p></li>
+<li><p>Read up on <em>why we care</em> about <code class="docutils literal notranslate"><span class="pre">git</span></code> so much. <span id="id3"></span> have you covered (and <a class="reference external" href="https://github.com/jdblischak/git-for-science">use <code class="docutils literal notranslate"><span class="pre">git</span></code> themselves</a>).</p></li>
+</ul>
+<p>and GitHub</p>
+<ul class="simple">
+<li><p>Acts like a “remote” for your code/text to get backed-up/synced to</p></li>
+<li><p>Adds lots of nice social and project management features on top of commits/branches (e.g. Pull Requests, issues, forks, etc.)</p></li>
+</ul>
+</div>
+<p>From here, add a layer that extends SCM to work <em>nicely</em> with large data files (it doesn’t by default, for similar reasons that it doesn’t like <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files).
+Examples of this idea include <code class="docutils literal notranslate"><span class="pre">git-LFS</span></code>, <a class="reference external" href="https://www.pachyderm.com/">Pachyderm</a>, <a class="reference external" href="https://quiltdata.com/">Quilt</a>, and <a class="reference external" href="https://dvc.org">DVC</a>.</p>
+<div class="sidebar">
+<p class="sidebar-title">Example Tools for DataOps</p>
 <p><img alt="Example Tools for DataOps" src="../_images/dataops-logos.png" /></p>
 </div>
-<div class="section" id="documentation-driven-development">
-<h2>Documentation-driven “Development”<a class="headerlink" href="#documentation-driven-development" title="Permalink to this headline">¶</a></h2>
-<p><strong>Documentation</strong>, of data infrastructure is a container’s “cargo manifest”</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will be using <code class="docutils literal notranslate"><span class="pre">dvc</span></code></p>
 <ul class="simple">
-<li><p>distributed and asynchronous collaboration? <strong>Version control</strong> (<code class="docutils literal notranslate"><span class="pre">git</span></code>)</p></li>
-<li><p>separation of form and content? <strong>Plain text</strong> (<code class="docutils literal notranslate"><span class="pre">markdown</span></code>)</p></li>
-<li><p>Deploy PDF’s, websites, etc? <strong>Static site generators</strong></p></li>
+<li><p>Think “makefile + git-lfs”. It version controls data, and makes connections to code/other data <em>explicit</em>. Get started <a class="reference external" href="https://dvc.org/">here</a>.</p></li>
+<li><p>install as project requirement <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">dvc-STORAGE</span></code> or package dependency <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">dvc[STORAGE]</span></code>, where <code class="docutils literal notranslate"><span class="pre">STORAGE</span> <span class="pre">∈</span> <span class="pre">{ssh,</span> <span class="pre">html,</span> <span class="pre">s3,</span> <span class="pre">...}</span></code></p></li>
+<li><p>Use it to get and share data <em>cleanly</em>. <code class="docutils literal notranslate"><span class="pre">dvc</span> <span class="pre">import</span></code> will grab other data out there, <code class="docutils literal notranslate"><span class="pre">dvc</span> <span class="pre">pull</span></code> gets the latest data when available, and the <code class="docutils literal notranslate"><span class="pre">commit</span></code>, <code class="docutils literal notranslate"><span class="pre">pull</span></code>, <code class="docutils literal notranslate"><span class="pre">add</span></code> commands mimic <code class="docutils literal notranslate"><span class="pre">git</span></code> but for your data tracked with DVC.</p></li>
+<li><p>The current GitHub equivalent for DVC is <a class="reference external" href="http://DagsHub.com">DagsHub.com</a>, which we use <a class="reference external" href="https://dagshub.com/tbsexton/text-data-course">for this course</a> to store and supply datasets on-demand.</p></li>
 </ul>
-<p><img alt="Example Tools for DataOps" src="../_images/docs-logos.png" /></p>
+</div>
+</div>
+<div class="section" id="documentation-and-test-driven-development">
+<h3>Documentation- and Test-driven “Development”<a class="headerlink" href="#documentation-and-test-driven-development" title="Permalink to this headline">¶</a></h3>
+<p>There are some best-practices that will take your project to the “next level”, and provide a lot of peace-of-mind if implemented <em>throughout</em> the project (rather than at the end, in a rush)!</p>
+<p>First, <strong>Documentation</strong> of data infrastructure is your container’s “cargo manifest”.
+This can be as simple as a <code class="docutils literal notranslate"><span class="pre">README.md</span></code>, or as complex as a pretty webpage, a dashboard, and beyond.
+Some notes:</p>
+<ul class="simple">
+<li><p>Separation of form and content will make refactoring much easier <span class="math notranslate nohighlight">\(\rightarrow\)</span> use <strong>Plain text</strong> (<code class="docutils literal notranslate"><span class="pre">markdown</span></code>)</p></li>
+<li><p>Writing as a team, but using distributed and asynchronous collaboration <span class="math notranslate nohighlight">\(\rightarrow\)</span> use <strong>Version control</strong> (<code class="docutils literal notranslate"><span class="pre">git</span></code>)</p></li>
+<li><p>Ok, but make sure I can deploy PDF’s, websites, etc? <span class="math notranslate nohighlight">\(\rightarrow\)</span> toeghter, we’ve got a <strong>Static site generator</strong></p></li>
+</ul>
+<div class="sidebar">
+<p class="sidebar-title">Example Tools for Documentation</p>
+<p><img alt="Example Tools for Documentation" src="../_images/docs-logos.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Static site generators, like <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> or <code class="docutils literal notranslate"><span class="pre">mkdocs</span></code> for python. Build it early and often!</p></li>
+<li><p>This site is built on <a class="reference external" href="https://jupyterbook.org"><code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code></a> to turn markdown and jupyter notebooks into beautiful documentation.</p></li>
+<li><p><a class="reference external" href="https://squidfunk.github.io/mkdocs-material/getting-started/">mkdocs-material</a> is another popular option for modern mkdocs.</p></li>
+</ul>
+</div>
+<p>Finally, the phrases “unit test” and “schema validation” get a bad rap in our community.
+But it helps if you think of writing “tests” more like installing sensors in your “shipping container”.
+They provide a suite of positive assertions about your (the authors’) expectations and assumptions about the code and data.
+They are your eyes and ears into what happens when conditions around and inside your “container” changes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make your (and everyone else’s) life easier by adding semantic information about your data. Options include</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://json-schema.org/">jsonschema</a>? Try <a class="reference external" href="https://pydantic-docs.helpmanual.io/">pydantic</a></p></li>
+<li><p><a class="reference external" href="https://graphql.org/">GraphQL</a>? <a class="reference external" href="https://strawberry.rocks/">strawberry</a> is new and shiny, built to work like/with pydantic.</p></li>
+<li><p>Straight DataFrames? Try <a class="reference external" href="https://pandera.readthedocs.io/en/stable/">pandera</a>, also working on pydantic interop.</p></li>
+<li><p>More general tabular solution: <a class="reference external" href="https://framework.frictionlessdata.io/">frictionless</a> framework is quite powerful.</p></li>
+<li><p><a class="reference external" href="https://github.com/intake/intake">Intake</a> can help both with making data packages and describing the datasets themselves.</p></li>
+</ul>
+<p>Unit tests will help you find mistakes and collaborate with peace-of-mind.
+For python, specifically:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.pytest.org/en/6.2.x/"><code class="docutils literal notranslate"><span class="pre">pytest</span></code></a> in general, as the current de-facto standard.</p></li>
+<li><p><a class="reference external" href="https://datatest.readthedocs.io/en/stable/"><code class="docutils literal notranslate"><span class="pre">datatest</span></code></a> and/or <code class="docutils literal notranslate"><span class="pre">pandera</span></code> for your data.</p></li>
+<li><p><a class="reference external" href="https://hypothesis.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">hypothesis</span></code></a> can automatically generate tests through parameterization.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p><em>Phew</em>, that was a lot of ground.
+It probably feels overwhelming, but what I actually want to do is help you feel like <em>you are not alone</em>.
+So many classes focus on theory and application as a <em>separate thing</em> from the tools being used within a community.
+There is an infrastructure out there, and though it may be ever-changing and vast, it is crucial to invest time into teaching yourself some new tricks.</p>
+<p>Plus, nearly all of the tools mentioned here, anecdotally, will end up <em>saving time</em>, in the not-so-long run.
+After all, they are like the paved roads to your direction.
+You might need to learn how to drive, but you’ll get many more places, much faster, on the highway than on the gravel trail.</p>
 </div>
 </div>
 
@@ -509,7 +651,7 @@
     <a class='right-next' id="next-link" href="tools-03sci.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Science</p>
+        <p class="prev-next-title">Tools for Data Science</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
