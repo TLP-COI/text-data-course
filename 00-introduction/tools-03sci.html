@@ -302,6 +302,56 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables-vectors-graphs">
+   Tables, Vectors, &amp; Graphs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#machine-learning">
+   Machine Learning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#natural-language-processing">
+   Natural Language Processing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualization">
+   Visualization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notes">
+   Notes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas">
+     Pandas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jax">
+     Jax
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pyviz">
+     Pyviz
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -314,6 +364,56 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables-vectors-graphs">
+   Tables, Vectors, &amp; Graphs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#machine-learning">
+   Machine Learning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#natural-language-processing">
+   Natural Language Processing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualization">
+   Visualization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notes">
+   Notes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas">
+     Pandas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jax">
+     Jax
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pyviz">
+     Pyviz
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -322,10 +422,216 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="tools-for-data-science">
 <h1>Tools for Data Science<a class="headerlink" href="#tools-for-data-science" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Mostly introduced throughout the course, as needed.</p></li>
-<li><p>Archtypes: pandas, sklearn, nn frameworks</p></li>
-</ul>
+<p>So far in this (over-long) introduction, we’ve introduced the ways that technical communities find their heading (e.g. <em>engineering practice</em>), and why roads are important to go, efficiently, in that direction (e.g. data-driven fields need <em>data infrastructure</em>).
+The last thing we need for this metaphor are vehicles to get us to our destination: domain-specific tools (methods, algorithms, frameworks, etc.).</p>
+<p>To keep things interesting, key tools will be introduced in the context of their <em>use</em>, from here-on-out.
+Rather than go into great detail, then, this page will store a maintained table of tools, with any <span class="xref myst">notes on their use</span> shortly after.</p>
+<div class="section" id="tables-vectors-graphs">
+<h2>Tables, Vectors, &amp; Graphs<a class="headerlink" href="#tables-vectors-graphs" title="Permalink to this headline">¶</a></h2>
+<p>Basic ways of representing and manipulating data.</p>
+<table class="table" id="tools-data">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Docs/Tutorials</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">R</span></code> option</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Numpy/Scipy</p></td>
+<td><p>matrix (dense or sparse) manipulation and routines</p></td>
+<td><p><a class="reference external" href="https://numpy.org/doc/stable/user/quickstart.html">quickstart</a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">matrix</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Pandas</p></td>
+<td><p>All-purpose tabular data loader, manipulator, and writer.</p></td>
+<td><p><span class="xref myst">docs</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">data.frame</span></code></p></td>
+<td><p><a class="reference internal" href="#notes-pandas"><span class="std std-ref">Important! See below</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>pyJanitor</p></td>
+<td><p>Convenient methods to (sanely) clean up your data-frame, in-line</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>XArray</p></td>
+<td><p>N-dimensional extension of Pandas’ “named arrays”, based on NetCDF</p></td>
+<td><p><a class="reference external" href="https://xarray.pydata.org/en/stable/index.html">docs</a></p></td>
+<td><p><a class="reference external" href="https://docs.ropensci.org/tidync/"><code class="docutils literal notranslate"><span class="pre">tidync</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>NetworkX</p></td>
+<td><p>Graphs (vertices+edges) as general-purpose dictionaries with methods.</p></td>
+<td><p>[]</p></td>
+<td><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">tidygraph</span></code></span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>graph-tool</p></td>
+<td><p>C-based network analysis, focused on stochastic block models.</p></td>
+<td><p>[]</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="machine-learning">
+<h2>Machine Learning<a class="headerlink" href="#machine-learning" title="Permalink to this headline">¶</a></h2>
+<table class="table" id="tools-ml">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Docs/Tutorials</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">R</span></code> option</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Scikit-Learn</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>JAX</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p><span class="xref myst">see below</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="natural-language-processing">
+<h2>Natural Language Processing<a class="headerlink" href="#natural-language-processing" title="Permalink to this headline">¶</a></h2>
+<table class="table" id="tools-nlp">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Docs/Tutorials</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">R</span></code> option</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Spacy/Textacy</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Gensim</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>NLTK</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>flair</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>huggingface</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>cleantext</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
+<table class="table" id="tools-viz">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Docs/Tutorials</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">R</span></code> option</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>matplotlib.pyplot</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>seaborn</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>pyviz</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p><span class="xref myst">see below</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pandas">
+<span id="notes-pandas"></span><h3>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h3>
+<p>For an excellent series on using pandas more effectively (which we <em>all</em> need to do), see this fantastic series from Tom Augsperger: <a class="reference external" href="https://tomaugspurger.github.io/modern-1-intro">Modern Pandas</a>.
+For this course, ensure you read the <a class="reference external" href="https://tomaugspurger.github.io/method-chaining.html">method chaining</a> post!
+It will dramitically alter (read: enhance) your code quality and maintainability while using pandas for data munging.</p>
+</div>
+<div class="section" id="jax">
+<h3>Jax<a class="headerlink" href="#jax" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="pyviz">
+<h3>Pyviz<a class="headerlink" href="#pyviz" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

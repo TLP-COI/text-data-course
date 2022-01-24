@@ -207,3 +207,9 @@ There is an infrastructure out there, and though it may be ever-changing and vas
 Plus, nearly all of the tools mentioned here, anecdotally, will end up _saving time_, in the not-so-long run. 
 After all, they are like the paved roads to your direction. 
 You might need to learn how to drive, but you'll get many more places, much faster, on the highway than on the gravel trail.
+
+
+```{bibliography}
+:style: unsrtalpha
+:filter: docname in docnames
+```
