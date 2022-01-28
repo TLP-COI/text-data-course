@@ -11,21 +11,21 @@ kernelspec:
   name: conda-env-text-data-py
 ---
 
-+++ {"slideshow": {"slide_type": "slide"}}
+# Written Rules
 
-# Writing the Rules
+> Do exactly as I say
 
----
++++
 
-_The pen is mightier than the sword..._
+## Grammars
 
-+++ {"slideshow": {"slide_type": "slide"}}
+> Tokenizing, but _more_
 
-## Tokenization
++++
 
---- 
+## Knowledge "Graphs"
 
-_I can't buy anything with this!_
+> rule-writing will continue until morale improves
 
 ```{code-cell} ipython3
 

@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "tlp"
-version = "0.1.0"
+version = "0.1.1"
 description = "utility api for text-as-data course"
 authors = ["Thurston <thurston.b.sexton@gmail.com>"]
 license = "MIT"
+include = [".dvc/config"]
 
 [tool.poetry.dependencies]
 python = "^3.9"

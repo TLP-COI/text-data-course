@@ -12,6 +12,7 @@ except ImportError:
 import janitor as jn
 import gzip, json
 import toolz.curried as tz
+from .utils import get_repository_datafolder
 
 
 def loader(data_dir: Path) -> pd.DataFrame:
@@ -136,3 +137,8 @@ def style_table(df, hide_columns=None):
         .hide_columns(hide_columns)
         .set_table_styles(styles, overwrite=False)
     )
+
+
+def open_mtg() -> pd.DataFrame:
+    mtg_folder = get_repository_datafolder() / "mtg"
+    return pd.read_feather(mtg_folder / "mtg.feather")
