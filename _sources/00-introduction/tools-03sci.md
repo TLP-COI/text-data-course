@@ -61,15 +61,11 @@ Basic ways of representing and manipulating data.
   - `R` option
   - Notes
 * - Scikit-Learn
+  - Standard for ML in Python
+  - [Scikit-Learn Course](https://inria.github.io/scikit-learn-mooc/index.html#)
   - 
   - 
-  - 
-  - 
-* - JAX
-  - 
-  - 
-  - 
-  - [see below]()
+
 :::
 
 
@@ -83,17 +79,17 @@ Basic ways of representing and manipulating data.
   - Docs/Tutorials
   - `R` option
   - Notes
+* - NLTK
+  - 
+  - 
+  - 
+  - 
 * - Spacy/Textacy
   - 
   - 
   - 
   - 
 * - Gensim
-  - 
-  - 
-  - 
-  - 
-* - NLTK
   - 
   - 
   - 
