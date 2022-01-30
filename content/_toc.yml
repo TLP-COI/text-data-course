@@ -14,7 +14,13 @@ parts:
       - file: 00-introduction/references
   - caption: Assumptions
     chapters:
-      - glob: 01-assumptions/*
+  # -   - file: 01-assumptions/overview
+      - file: 01-assumptions/intent
+        sections: 
+          - glob: 01-assumptions/intent-*-nb
+      - file: 01-assumptions/data
+        sections: 
+          - glob: 01-assumptions/data-*-nb
   - caption: Goals & Approach
     chapters:
       - glob: 02-goals-approach/*
