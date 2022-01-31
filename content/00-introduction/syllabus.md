@@ -11,16 +11,16 @@ Use it as a guide for course expectations, but always clarify with a question if
 
 ##  Text as Data for Technical Language Processing
 
-::::{sidebar} Course and Conact Information
-:::{admonition} Course Information
+````{sidebar} Course and Conact Information
+```{admonition} Course Information
 {{info_panel}}
-:::
+```
 
-:::{admonition} Instructor Contact
+```{admonition} Instructor Contact
 :class: tip
 {{instructor_panel}}
-:::
-::::
+```
+````
 
 This course is intended for those wanting to apply various modern text analysis techniques to gain domain-specific insights from their natural language data. 
 Natural Language Processing (NLP) requires special care to apply in a useful, reprocucible, and ethical way. 

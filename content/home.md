@@ -6,16 +6,16 @@ This course is intended for those wanting to apply various modern text analysis 
 Natural Language Processing (NLP) requires special care to apply in a useful, reprocucible, and ethical way. 
 This is especially true when context becomes a large factor in how the text is written or understood --- for instance, technical fields like Social Science, Medicine, Engineering, Policy, Digital Humanities, and many more.
 
-::::{sidebar} Course and Conact Information
-:::{admonition} Course Information
+````{sidebar} Course and Conact Information
+```{admonition} Course Information
 {{info_panel}}
-:::
+```
 
-:::{admonition} Instructor Contact
+```{admonition} Instructor Contact
 :class: tip
 {{instructor_panel}}
-:::
-::::
+```
+````
 
 With that in mind, this course does not take a traditional, theory-heavy approach to the subject matter. 
 Instead, the goal is to guide newcomers through the plethora of tools, theoretical assumptions, data types, and ethical questions that arise when NLP is used as descision-support for experts and decision makers. 

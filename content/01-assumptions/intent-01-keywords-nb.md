@@ -88,13 +88,13 @@ That sounds like some interesting "content"...what is its history?
 
 +++ {"cell_style": "split", "slideshow": {"slide_type": "-"}, "tags": ["margin"]}
 
-:::{figure-md} feeling-lost
+```{figure-md} feeling-lost
 ![fblthp](https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/c/c4/Fblthp.jpg)
 
 _Magic: The Gathering_ can be a lot to take in, and it's easy to get lost in all the strange words. 
 This is why we use it for TLP! 
 Thankfully, us "lost" folks have a mascot, in old Fblthp, here!
-:::
+```
 
 ```{code-cell} ipython3
 ---

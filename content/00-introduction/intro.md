@@ -3,7 +3,7 @@
 _The Road to Technical Language Processing_
 
 
-:::{sidebar} Text analysis?
+```{sidebar} Text analysis?
 ```{mermaid}
 graph LR
 text --> ta(["text analysis?"])
@@ -12,7 +12,7 @@ ta --> analyses
 ```
 
 ... profit?
-:::
+```
 
 Text Analysis can be hard to define.
 
@@ -21,7 +21,7 @@ It's often thought of as a "popular data mining technique": something that, taut
 
 Less trivially, text analysis might be some set of "mutually agreed-upon" assumptions and patterns, all of which try to assist in _using_ text in computational or statistical ways.
 
-:::{sidebar} Once more, with feeling: 
+```{sidebar} Once more, with feeling: 
 ```{mermaid} 
 graph LR
 
@@ -31,7 +31,7 @@ patterns --> ta
 text --> results 
 ta --> results
 ```
-:::
+```
 
 This is nothing to sneeze at. 
 After all, using text ---especially _natural language_ text,  which can be full of symbolic and semantic meaning, written and intended _for_ humans to read and understand --- as a source of data? 
@@ -57,14 +57,14 @@ text --> results
 ta --> results
 ```
 
-::::{margin} 
-:::{figure-md} xkcd-ml
+````{margin} 
+```{figure-md} xkcd-ml
 ![XKCD  Machine Learning](https://imgs.xkcd.com/comics/machine_learning.png)
 
 And hey, it does eventually start looking "right", right? So what's the problem? 
 (From Randall Munroe, [_XKCD_](https://xkcd.com/1838/))
-:::
-::::
+```
+````
 
 How do we know our assumptions (or anyone else's) are good? 
 How do we know those assumptions _exist_, for that matter? 
@@ -84,14 +84,14 @@ Unfortunately, things are not so straight-forward.
 Incentives for practitioners in the field of data science right now mean that there is often _very little_ reason to question the "magic", at least at first. 
 
 
-::::{margin} Black Box of Morgoth
-:::{figure-md} balrog
+````{margin} Black Box of Morgoth
+```{figure-md} balrog
 ![Black Box of Morgoth](http://ackegard.com/gallery/d/5931-5/balrog.jpg)
 
 An ethical data scientist fighting black-box NLP models on the bridge of Khazad-dum. 
 (Image by Håkan Ackegård, from [Fantasy Gallery](http://ackegard.com/gallery/main.php))
-:::
-::::
+```
+````
 
 Problems start arising when the outputs of these "analyses" have _impacts_. 
 They might impact decisions, impact policymaking, impact _people's lives_. 
@@ -161,19 +161,19 @@ So we might say engineering is applying science, but
 > 
 > --- {cite:p}`hutcheson2003software`
 
-:::{margin}
+```{margin}
 Some reading this may think "of course not, those are _dangerous_ things, they _need_ all of that stuff!". 
 I hope to cover some reasons that text analysis can be just as "dangerous" without proper oversight and critical thinking, in the case-studies chapter. 
-:::
+```
 
 Unfortunately, such "bodies of knowledge" and _practice_ are sorely lacking within data science and text analysis as it is in, say, building a dam, an aircraft, or a nuclear power plant. 
 How does an analyst show they performed their duty according to their best ability? 
 What _is_ "accepted text-as-data practice?"
 
-:::{admonition} Technical Language Processing (TLP) Community of Interest
+```{admonition} Technical Language Processing (TLP) Community of Interest
 :class: dropdown, tip
 The TLP [community of interest](https://www.nist.gov/el/technical-language-processing-community-interest) is a group of researchers, academics, and industry professionals, largely from reliability engineering, that are trying to build and connect these "bodies of knowledge" to give analysts a better sense of accepted practice when applying text processing to technical domains. 
-:::
+```
 
 This is why I have organized this textbook with chapters named after steps of the "Engineering Approach". 
 It is not an Engineering course, and you most definitely do not need to care about becoming an engineer to finish it. For the record, computer science has been applying engineering principles for a long time (thus the book reference used above).
@@ -181,7 +181,7 @@ It is not an Engineering course, and you most definitely do not need to care abo
 Instead, these sections are meant to be an, admittedly unorthodox, way to introduce text analysis fundamentals in an application-centered way. 
 Always remember _who_ might be trusting you with their data, their language, and their ear, when you analyse _text-as-data_. 
 
-:::{admonition} Steps in Practicing the _Engineering Approach_
+```{admonition} Steps in Practicing the _Engineering Approach_
 :class: tip
 
 - Goals & Approaches
@@ -196,7 +196,7 @@ Always remember _who_ might be trusting you with their data, their language, and
 - Validate
   : _"Always get a second opinion"_
 
-:::
+```
 
 # References
 ```{bibliography}

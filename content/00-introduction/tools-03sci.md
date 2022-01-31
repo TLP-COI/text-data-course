@@ -9,7 +9,7 @@ Rather than go into great detail, then, this page will store a maintained table 
 ## Tables, Vectors, & Graphs
 Basic ways of representing and manipulating data. 
 
-:::{list-table}
+```{list-table}
 :header-rows: 1
 :name: tools-data
 
@@ -48,10 +48,10 @@ Basic ways of representing and manipulating data.
   - []
   - 
   - 
-:::
+```
 
 ## Machine Learning
-:::{list-table}
+```{list-table}
 :header-rows: 1
 :name: tools-ml
 
@@ -66,11 +66,11 @@ Basic ways of representing and manipulating data.
   - 
   - 
 
-:::
+```
 
 
 ## Natural Language Processing
-:::{list-table}
+```{list-table}
 :header-rows: 1
 :name: tools-nlp
 
@@ -110,11 +110,11 @@ Basic ways of representing and manipulating data.
   - 
   - 
   
-:::
+```
 
 
 ## Visualization
-:::{list-table}
+```{list-table}
 :header-rows: 1
 :name: tools-viz
 
@@ -138,7 +138,7 @@ Basic ways of representing and manipulating data.
   - 
   - 
   - [see below]()
-:::
+```
 
 
 

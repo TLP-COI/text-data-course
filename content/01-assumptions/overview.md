@@ -5,12 +5,12 @@ _Things that turn "natural language" into something worth processing_
 _Tips, Tricks, & Unsolicited Data Science Opinions for the Aspiring Text Analyst_
 
 
-::::{panels}
+````{panels}
 
 Chapter Contents
 ^^^
-:::{tableofcontents}
-:::
+```{tableofcontents}
+```
 
 ---
 
@@ -21,7 +21,7 @@ Reading Materials Referenced
   - Rules, WordNet --- 18.1-18.3
   - Local frequency, markov models --- 3.1-3.4, 
   - Global Context, vector models --- 6
-::::
+````
 
 
 
