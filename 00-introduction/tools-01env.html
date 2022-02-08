@@ -145,20 +145,39 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-assumptions/00-overview.html">
-   Overview
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-assumptions/intent.html">
+   Expressions of Intent
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-assumptions/intent-01-keywords-nb.html">
+     Keywords
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-assumptions/intent-02-rules-er-nb.html">
+     Rules for Entities, Rules for Relations
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-assumptions/01-finding-content-nb.html">
-   Finding Content
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-assumptions/data.html">
+   Driving with Data
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-assumptions/02-rules-nb.html">
-   Written Rules
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -207,8 +226,8 @@
   <a class="reference internal" href="../appendix/datasets.html">
    Datasets for this Course
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -567,8 +586,8 @@ If only there was a way to make some kind of <em>recipe</em> file, that could re
 </div>
 <p>In case you didn’t see this in the mountain of conda documentation, <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually">this exists</a>, and should probably be the <em>only way</em> you make environments.</p>
 <p>These <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code> files are incredibly powerful, and <em>will save you time and sanity working with other people</em>.</p>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Example <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code></p>
+<p>```{admonition} Example <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code>
+:class: tip, dropdown</p>
 <p>Here’s an example file that governs a conda/mamba environment named <code class="docutils literal notranslate"><span class="pre">test</span></code>:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
 <span class="nt">channels</span><span class="p">:</span> 
@@ -594,7 +613,6 @@ If only there was a way to make some kind of <em>recipe</em> file, that could re
 </pre></div>
 </div>
 <p>Now is a good time to try making your own environment for this course… see if you can make a <code class="docutils literal notranslate"><span class="pre">text-data-env.yml</span></code> on your own!</p>
-</div>
 </div>
 <div class="section" id="nb-conda-kernels">
 <h3><a class="reference external" href="https://github.com/Anaconda-Platform/nb_conda_kernels"><code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code></a><a class="headerlink" href="#nb-conda-kernels" title="Permalink to this headline">¶</a></h3>

@@ -3,12 +3,12 @@
 _Tips, Tricks, & Unsolicited Data Science Opinions for the Aspiring Text Analyst_
 
 
-::::{panels}
+````{panels}
 
 Chapter Contents
 ^^^
-:::{tableofcontents}
-:::
+```{tableofcontents}
+```
 
 ---
 
@@ -18,7 +18,7 @@ Reading Materials Referenced
 - [On writing clean Jupyter notebooks](https://ploomber.io/blog/clean-nbs/)
 - [Scikit-Learn Course](https://inria.github.io/scikit-learn-mooc/index.html#)
 
-::::
+````
 
 A recurring theme of this course, if there is one: 
 

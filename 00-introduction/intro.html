@@ -145,20 +145,39 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-assumptions/00-overview.html">
-   Overview
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-assumptions/intent.html">
+   Expressions of Intent
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-assumptions/intent-01-keywords-nb.html">
+     Keywords
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-assumptions/intent-02-rules-er-nb.html">
+     Rules for Entities, Rules for Relations
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-assumptions/01-finding-content-nb.html">
-   Finding Content
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-assumptions/data.html">
+   Driving with Data
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-assumptions/02-rules-nb.html">
-   Written Rules
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -207,8 +226,8 @@
   <a class="reference internal" href="../appendix/datasets.html">
    Datasets for this Course
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -318,11 +337,6 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#do-you-believe-in-magic">
-     Do you believe in Magic?
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-view-from-engineering">
      A View from Engineering
     </a>
@@ -360,11 +374,6 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#do-you-believe-in-magic">
-     Do you believe in Magic?
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-view-from-engineering">
      A View from Engineering
     </a>
@@ -395,31 +404,43 @@
 text --&gt; ta([&quot;text analysis?&quot;])
 style ta stroke-dasharray: 5 5
 ta --&gt; analyses
-        </div><p>… profit?</p>
-</div>
-<p>Text Analysis can be hard to define.</p>
-<p>It’s often thought of as a “popular data mining technique”: something that, tautologically, “text goes into” and “analyses” come out of.</p>
-<p>Less trivially, text analysis might be some set of “mutually agreed-upon” assumptions and patterns, all of which try to assist in <em>using</em> text in computational or statistical ways.</p>
-<div class="sidebar">
-<p class="sidebar-title">Once more, with feeling: </p>
-<div class="mermaid">
-            graph LR
+        </div></div>
+<p>… profit?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Text Analysis can be hard to define.
+
+It&#39;s often thought of as a &quot;popular data mining technique&quot;: something that, tautologically, &quot;text goes into&quot; and &quot;analyses&quot; come out of. 
+
+
+Less trivially, text analysis might be some set of &quot;mutually agreed-upon&quot; assumptions and patterns, all of which try to assist in _using_ text in computational or statistical ways.
+
+```{sidebar} Once more, with feeling: 
+```{mermaid} 
+graph LR
 
 assumptions --&gt; ta([&quot;text analysis?&quot;])
 style ta stroke-dasharray: 5 5
 patterns --&gt; ta
 text --&gt; results 
 ta --&gt; results
-        </div></div>
-<p>This is nothing to sneeze at.
-After all, using text —especially <em>natural language</em> text,  which can be full of symbolic and semantic meaning, written and intended <em>for</em> humans to read and understand — as a source of data?</p>
-<p>That is, arguably, <em>very cool</em>.</p>
-<p>Turning text, which seems to be almost certainly <em>subjective</em> at some fundamental level, into something that <em>looks like objective data</em>, whether for decision support, investigations, understanding demographics, or question-answering, can absolutely feel magical.</p>
-<div class="section" id="do-you-believe-in-magic">
-<h2>Do you believe in Magic?<a class="headerlink" href="#do-you-believe-in-magic" title="Permalink to this headline">¶</a></h2>
-<p>If we look at this definition again, though, “magical” can start to feel a bit <em>on the nose</em>…</p>
-<div align="center" class="mermaid align-center">
-            graph LR
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+This is nothing to sneeze at. 
+After all, using text ---especially _natural language_ text,  which can be full of symbolic and semantic meaning, written and intended _for_ humans to read and understand --- as a source of data? 
+
+That is, arguably, _very cool_. 
+
+Turning text, which seems to be almost certainly _subjective_ at some fundamental level, into something that _looks like objective data_, whether for decision support, investigations, understanding demographics, or question-answering, can absolutely feel magical. 
+
+## Do you believe in Magic?
+ 
+
+If we look at this definition again, though, &quot;magical&quot; can start to feel a bit _on the nose_...
+
+```{mermaid}
+:align: center
+graph LR
 subgraph magic
   assumptions --&gt; ta([&quot;text analysis?&quot;])
   style ta stroke-dasharray: 5 5
@@ -427,8 +448,9 @@ subgraph magic
 end
 text --&gt; results
 ta --&gt; results
-        </div>
-        <div class="margin sidebar">
+</pre></div>
+</div>
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="figure align-default" id="xkcd-ml">
 <img alt="XKCD  Machine Learning" src="https://imgs.xkcd.com/comics/machine_learning.png" />
@@ -467,7 +489,6 @@ Its reliance on large standard corpora, a training and evaluation paradigm that 
 <p>— <em><span id="id1">Dima <em>et al.</em> [<a class="reference internal" href="#id10">2021</a>]</span></em></p>
 </div></blockquote>
 <p>Without asking those pedantic questions about assumptions and patterns, treating our text as “data” that <em>awoke in the darkness of ~~Khazad-dum~~ someone’s NLP model</em> will fundamentally contradict the purpose of those evidence-based fields.</p>
-</div>
 <div class="section" id="a-view-from-engineering">
 <h2>A View from Engineering<a class="headerlink" href="#a-view-from-engineering" title="Permalink to this headline">¶</a></h2>
 <p>All of this is not to say we <em>shouldn’t use</em> NLP or other text-analysis tools at all.
