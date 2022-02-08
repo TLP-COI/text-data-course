@@ -13,6 +13,8 @@ pandera = "^0.8.0"
 pyjanitor = "^0.22.0"
 dvc = "^2.9.3"
 markovify = "^0.9.3"
+nltk = "^3.6.7"
+pomegranate = "^0.14.7"
 
 [tool.poetry.dev-dependencies]
 
