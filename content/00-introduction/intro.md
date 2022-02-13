@@ -3,7 +3,7 @@
 _The Road to Technical Language Processing_
 
 
-```{sidebar} Text analysis?
+````{sidebar} Text analysis?
 ```{mermaid}
 graph LR
 text --> ta(["text analysis?"])
@@ -12,7 +12,7 @@ ta --> analyses
 ```
 
 ... profit?
-```
+````
 
 Text Analysis can be hard to define.
 
@@ -21,7 +21,7 @@ It's often thought of as a "popular data mining technique": something that, taut
 
 Less trivially, text analysis might be some set of "mutually agreed-upon" assumptions and patterns, all of which try to assist in _using_ text in computational or statistical ways.
 
-```{sidebar} Once more, with feeling: 
+````{sidebar} Once more, with feeling: 
 ```{mermaid} 
 graph LR
 
@@ -31,7 +31,7 @@ patterns --> ta
 text --> results 
 ta --> results
 ```
-```
+````
 
 This is nothing to sneeze at. 
 After all, using text ---especially _natural language_ text,  which can be full of symbolic and semantic meaning, written and intended _for_ humans to read and understand --- as a source of data? 
@@ -120,7 +120,7 @@ The key is applying them critically and transparently.
 ```{epigraph}
 All models are wrong; some are useful.
 
--- _every data scientist, all of the time_
+-- _George Box (and many since)_
 ```
 
 
