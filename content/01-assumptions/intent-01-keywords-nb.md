@@ -696,14 +696,9 @@ Heap's Law:
 $$ \|V\| = k\|N\|^\beta$$
 
 ```{code-cell} ipython3
-# tidy_df.groupby(['card_id']).word.agg(['cumcount', lambda s: (~s.duplicated()).cumsum()])
-# (~tidy_df.word.duplicated()).cumsum()
-tidy_df.groupby(['card_id']).word.size().cumsum()
-```
-
-```{code-cell} ipython3
 ---
 cell_style: split
+hide_input: true
 slideshow:
   slide_type: subslide
 ---
@@ -752,13 +747,14 @@ def fit_heaps(data, linearize=False):
 ```{code-cell} ipython3
 ---
 cell_style: center
+hide_input: true
 slideshow:
   slide_type: subslide
 ---
 def plot_heaps_law(heaps, log_scale=False, linearize=False):
     params = fit_heaps(heaps, linearize=linearize)
     print(f'fit: k={params[0]:.2f}\tβ={params[1]:.2f}\tlinear-fit={linearize}')
-    
+    plt.figure()
     x = np.linspace(100,6e5)
     plt.scatter(heaps.N, heaps.V, )
     plt.plot(
@@ -811,5 +807,9 @@ plot_heaps_law(heaps, log_scale=True,
 ```
 
 ```{code-cell} ipython3
+---
+slideshow:
+  slide_type: subslide
+---
 plot_heaps_law(heaps, log_scale=False, linearize=True)
 ```

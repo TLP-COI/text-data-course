@@ -39,7 +39,7 @@ This should be familiar from e.g. data modeling. If not, one way to think of thi
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-In this section, we'll take a look at how people systematically write down and apply **rules** for finding entities and relations.
+In this section, we'll take a look at how people systematically express their intent about entities and relations: ways they write **rules** for them.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -60,7 +60,7 @@ Hard-coding "lowercase", while a viable option, case is only the tip of the text
 is almost always 
 > **Regular Expressions**
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### What is RegEx
 
@@ -236,8 +236,13 @@ slideshow:
 # Try below: 
 import re
 patt = re.compile(r'([ab]*)c\1')
+
 patt.match('aabcaab')
 ```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+note that this matches, but the next one does not:
 
 ```{code-cell} ipython3
 ---
@@ -247,12 +252,21 @@ slideshow:
 patt.match('aabcbaa')
 ```
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+This means that the "group" being referened is _evaluated_ before it gets referenced later... `\1` _must_ be `aab` in this case, not `b` (even though that _would_ be a valid match for `[ab]*`).
+Our pattern matched on `aab` instead of `b`, so `\1` must match that!
+
+Now, the `findall` function will return _match groups_...in fact, it will find all non-overlapping matches. 
+Since `b` is a valid match group, _and_ is duplicated for `\1` to succeed, the `findall` function _will return it_. 
+This is different from the `match` function!
+
 ```{code-cell} ipython3
 ---
 slideshow:
   slide_type: fragment
 ---
-patt.findall('aabcaab aabcbaa')
+patt.findall('aabcaab  aabcbaa')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -269,7 +283,7 @@ What we just witnessed (exact-string memory of a group instance) was _not_ conte
 
 > modern RegEx implementations are majorly "souped-up" with convenience features!
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "slide"}, "hide_input": true}
 
 ## Take a Break (Exercises)
 
@@ -279,16 +293,26 @@ What we just witnessed (exact-string memory of a group instance) was _not_ conte
 - Write expressions to match _Wordle_ words, given feedback
   > _tip: how can we make boolean "AND" in regex?_
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+### Markdown Parser (worked example)
+One approach to turning markdown into a table of sections
+
+- group the header "hash" symbols
+- group the text that _follows_ the hash symbols
+- find all text on the next line(s), EXCEPT: 
+- stop when the _next_ line (look-ahead) is another header!
+
 ```{code-cell} ipython3
 ---
-hide_input: true
+hide_input: false
 slideshow:
-  slide_type: skip
+  slide_type: notes
 ---
 patt = re.compile(
     "(^#+)"  # the header hashes
-    "\s([\w -:]*)"  # the title
-    "\s+(.*?)"  # the body content
+    "\s([\w -:]*)"  # the title (could contain non-word chars)
+    "\n+(.*?)"  # the body content
     "(?=^#|\Z)", # do not include the next section header!
     flags=re.S | re.M
 )
@@ -296,10 +320,11 @@ patt = re.compile(
 
 ```{code-cell} ipython3
 ---
+hide_input: false
 slideshow:
-  slide_type: subslide
+  slide_type: notes
 ---
-# FIND `patt` SUCH THAT: 
+# FIND `patt` SUCH THAT:  
 matches = patt.findall(
     """
 # This is a Markdown Title
@@ -311,35 +336,341 @@ What more is there to say?
 )
 import pandas as pd
 pd.DataFrame.from_records(matches, columns=['level', 'title', 'content'])
-# for match in matches: 
-#     print('heading lvl:',match[0])
-#     print('title: ',  match[1])
-#     print('content: ',match[2])
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Relational Pedantry: Ontology
+### Tokenizers
+
+To split text into tokens, we could match patterns for: 
+- what _is_ a word? --> `re.findall`
+- what is _not_ a word? --> `re.split`
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+It's worth mentioning that the _token_ we match is not "the same" as the _entity_. 
+Rather, we humans are using RegEx as an assumption that pieces of matching text are valid stand-ins to represent the abstract entity, correctly! 
+
+This distinction becomes especially important when our human languages have e.g. [polysemy](https://www.wikiwand.com/en/Polysemy); some _tokens_ should point to completely separate entities, depending on conext.
+However, if we assume Regex as a mechanism to find tokens meant to _stand-in_ for entities of interest, that's a _rule_ standing in for our intent. 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+**Whitespace Tokenizer** 
+
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: '-'
+---
+my_str = "Isn't this fun? It's time to tokenize!"
+re.compile('\s').split(my_str)
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+This looks pretty good! 
+Notice, though, the punctuation is _sometimes_ helpful (it's, isn't), but often adds unnecessary extra ("fun?", "tokenize!", all are ostensibly the same entity as "fun" or "tokenize". |
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+**Scikit-Learn-Style Tokenizer**
+
+Very popular way to tokenize text, especially given the intended use-case (statistical NLP, with matrices)
+
+`\b\w\w+\b`
+
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: '-'
+---
+re.compile(r"\b\w\w+\b").findall(my_str)
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+This time, we avoid punctuation, but lose conjunctions. 
+It's not uncommon to remove punctuation entirely as a preprocessing step. 
+
+Does that always make sense? 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### "Technical" Tokens for Technical Entities
+
+A lot of times the above assumptions won't cut it, _especially_ if there are specific technical entities that a token needs to reference. 
+Here are a few patterns I have seen in e.g. Maintenance Work Order text: 
+
++++ {"slideshow": {"slide_type": "-"}, "cell_style": "split"}
+
+| Pattern          | Example    |    Description|
+|------------------|------------|---------------|
+| `\#[\w\d]+\b`    | `#T43H5sw` | ID's for machines, positions|
+| `\b\w[\/\&]\w\b` | `P&G`,`A/C`| Split bigrams, common shorthands|
+| `\b\w[\w\'\d]+\b`| `won't`    | conjuctions (won vs. won't start)|
+
+```{code-cell} ipython3
+---
+cell_style: split
+slideshow:
+  slide_type: '-'
+---
+re.compile(
+    r'(?:\#[\w\d]+\b)'
+    r'|(?:\b\w[\/\&]\w)\b'
+    r'|(?:\b\w[\w\'\d]+)\b'
+).findall(
+    "Stop H43; repos. to #5 grade."
+    "Carburetor won't start."
+)
+```
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Relational Pedantry: Graphs \& Ontologies
+
+How we define and standardize known relations between entities. 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Now that we have ways to _explicitly define_ what we intend an entity **occurence** to look like, we can start to _explicitly define_ the ways that entities relate to one-another. 
+
++++ {"cell_style": "split", "slideshow": {"slide_type": "-"}}
+
+This is a (mathematical) _graph_, if we think of entities as **nodes** and relationships as **edges**
+
+```{code-cell} ipython3
+---
+cell_style: split
+hide_input: true
+slideshow:
+  slide_type: '-'
+---
+import graphviz
+graphviz.Source(
+    'digraph "entities and relations" '
+    '{ rankdir=LR; '
+    'A -> B [label="relation A:B"] '
+    'C -> B [label="relation C:B"]'
+    '}')
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+There are many ways to use graphs to express how entities related to one another, but two of the most common are 
+
+
+- **Labeled Property Graphs** e.g. NoSQL Graph Databases like [Neo4J](https://neo4j.com/), [JanusGraph](https://janusgraph.org/), etc.\
+  Nodes and edges both have unique ID's, and can have internal properties (key-value).
+- **Triple Stores** i.e. the Resource Description Framework ([RDF](https://www.w3.org/TR/rdf11-primer/))\
+  All information is stored as triples: (subject, predicate, object). Every vertex has a unique identifier (no internal information). 
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For more information comparing the two paradigms, see [this breakdown](https://neo4j.com/blog/rdf-triple-store-vs-labeled-property-graph-difference/) of a talk by Jesús Barrasa. We will return to these, and how knowledge engineering works (and interfaces with text data) more generally in later sections. 
+
+LPG's come from a data-storage and querying community (think databases), while RDF comes from a web-technology culture (think W3C and Semantic Web). 
+We will return to these later, but for now we want to focus on forms that _assumptions_ about entity relationships might take.  
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+What kinds of relations are out there already? 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### [WordNet](https://wordnet.princeton.edu/)
+
+Lexical database for nouns, verbs, adverbs, and adjectives. 
+- Groups terms into sets of synonyms (synsets) that have meaning
+- Several types of relationships are available
+    - Hyper/hyponyms (is-a). e.g. bed is a furniture
+    - Mero/holonyms (part-of) e.g. bread part-of sandwich. 
+    - entailment (implies) e.g. snore implies sleep. 
+- Distinguishes between types (e.g. President) and instances (Abraham Lincoln)
 
 ```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
 ---
+import nltk
+try:
+    nltk.data.find('tokenizers/punkt')
+    nltk.find('corpora/wordnet')
+except LookupError:
+    nltk.download('punkt')
+    nltk.download('wordnet'); 
+    nltk.download('omw-1.4')
 
+from nltk.corpus import wordnet as wn
+wn.synsets('dog')
+```
+
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: subslide
+---
+print(wn.synset('dog.n.01').definition())
+print(wn.synset('dog.n.01').lemma_names())
+```
+
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: '-'
+---
+# Hyper/Hyponyms
+print('pasta could be: ', [i.lemma_names() for i in wn.synset('pasta.n.01').hyponyms()])
+print('pasta is a: ', wn.synset('pasta.n.01').hypernyms())
+```
+
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: subslide
+---
+# Holo/Meronyms
+print('a living room is part of a: ', wn.synset('living_room.n.01').part_holonyms()[0].lemma_names())
+```
+
+```{code-cell} ipython3
+---
+hide_input: true
+slideshow:
+  slide_type: '-'
+---
+graphviz.Source('digraph {rankdir=LR '
+                'living_room -> dwelling [label="part of"];'
+                'dwelling -> home [label="same as"]'
+                'dwelling -> abode [label="same as"]}')
+```
+
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: fragment
+---
+[i.lemma_names() for i in wn.synset('car.n.01').part_meronyms()]
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### WordNet
+**Problem** \
+WordNet is for _general english_, and is **not** exhaustive. 
+If using for technical text, expect decent precision, but poor recall. 
+
+```{code-cell} ipython3
+:cell_style: center
+
+[i.lemma_names() for i in wn.synset('bicycle.n.01').part_meronyms()]
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Meanwhile, from an engineering paper discussing bicycle drivetrains: 
+
+```{code-cell} ipython3
+---
+cell_style: center
+hide_input: true
+slideshow:
+  slide_type: '-'
+---
+graphviz.Source("""graph g { 
+  graph[rankdir=LR, center=true, margin=0.2, nodesep=0.05, ranksep=0.1, bgcolor="transparent";];
+  node[shape=plaintext, color=none, width=0.1, height=0.2, fontsize=11]
+  pedal -- crank_arm;
+  crank_arm -- chain_rings;
+  chain_rings -- rear_derailleur;
+  chain_rings -- chain;
+  chain -- cogset;
+  cogset -- rear_hub;
+  rear_derailleur -- rear_hub;
+  rear_hub -- rear_spokes;
+  rear_spokes -- rear_rim;
+  rear_rim -- rear_tire;
+  
+}
+""")
+```
+
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: '-'
+---
+# Entailments
+print('to buy means to: ', [i.lemma_names() for i in wn.synset('buy.v.01').entailments()])
+print('to snore means to: ', [i.lemma_names() for i in wn.synset('snore.v.01').entailments()])
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+For sources and more info: 
+- https://www.nltk.org/howto/wordnet.html
+- https://blog.xrds.acm.org/2017/07/power-wordnet-use-python/
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### ConceptNet
 
+- **Crowdsourced knowledge**: Open Mind Common Sense, Wiktionary, DBPedia, Yahoo Japan / Kyoto University project
+- **Games with a purpose**: Verbosity, nadya.jp
+- **Expert resources**: Open Multilingual WordNet, JMDict, CEDict, OpenCyc, CLDR emoji definitions
+
+Also uses _graph embeddings_ (we'll come back to this later) to "fuzzify" knowledge relationships. 
+
+see: _ConceptNet in Context_, https://rcqa-ws.github.io/slides/robyn.pdf
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Implementation Details
-- skos and owl
-- jsonschema and jsonld
-- struggles and future: linkml(?)
+**How it works**:\
+ConceptNet builds on WordNet and many others, using nodes and more generic "relations"
+- PartOf, UsedFor, FormOf, HasA, CapableOf, Causes.... 
+- see https://github.com/commonsense/conceptnet5/wiki/Relations
+
+Interestingly, these are _not_ the "edges"... edges are assertions that have start and end-nodes, and _have a relation property_. 
+- Edges can also have sources, weights (for uncertainty), licenses, datasets, "surfaceText" that generated the assertion, etc. 
+
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: subslide
+---
+import requests 
+
+def conceptnet_query(q):
+    url = 'http://api.conceptnet.io/'
+    return requests.get(url+q).json()
+conceptnet_query('c/en/bicycle?rel=/r/PartOf')
+```
+
++++ {"slideshow": {"slide_type": "-"}}
+
+Play around! see: https://conceptnet.io/c/en/bicycle?rel=/r/PartOf&limit=1000
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Takeaway
+
+
+The "top-down" approach to transforming text into "something computable" is to express your intent as _rules_. 
+
+**Entities** 
+- "things that exist", and can have _types_ or _instances_. 
+- we must map text occurences (tokens) to entities using rules e.g. RegEx
+
+**Relationships** 
+- how entities relate to each other, often as "verbs", but more generally as "predicates". 
+- Will often see holonyms/meronyms, hypernyms/hyponyms, entailment, and synonyms
+- How they are represented greatly depends on domain and historical use-case (database vs. web, etc.)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+We've only brushed the surface of ontologies and entity relationships, but the key point for this chapter is that _people had to write all of this down_! 
+For rules-based systems, the name of the game is _human input_, which can be incredibly useful and powerful, while also being very fragile to context-specific application. 
+It also takes _a lot of work_ to write down all of these rules, let alone validate them. 
+
+Using one of these pre-existing rules-based systems is making, whether admitted or not, an _important assumption_ about the applicability of these rules to your problem!
