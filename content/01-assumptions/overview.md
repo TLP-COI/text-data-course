@@ -26,16 +26,15 @@ Reading Materials Referenced
 
 
 Table of Contents
-1. Finding Content: 
-   - Regular Expressions
-   - Tokenization: Rules for Matching & Splitting
+ 
    
-1. Rules-based before Data-driven
-   - Ontology: Rules for Relationship & Meaning
-2. Data drives the need for context
-   - Local Sequences and Probabilities
-   - Global Frequencies and Context
-   - Perfectly Balanced? 
+1. Expressions of Intent
+   - Keywords and Tokens (and tidy-text!)
+   - Finding Entities & Writing Relations (regex+ontology)
+2. Driving with Data
+   - Local Sequences and Probabilities (n-gram language models)
+   - Global Frequencies and Context (vector semantics)
+   - Perfectly Balanced? (distributional semantic embeddings)
    
 
 
