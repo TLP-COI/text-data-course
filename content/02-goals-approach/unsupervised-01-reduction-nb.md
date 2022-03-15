@@ -11,22 +11,34 @@ kernelspec:
   name: conda-env-text-data-py
 ---
 
++++ {"slideshow": {"slide_type": "slide"}}
+
 # Prelude: On Reduction and High Dimensional Pancakes
 
 ```{code-cell} ipython3
+---
+slideshow:
+  slide_type: skip
+---
 import matplotlib.pyplot as plt
 import numpy as np
 plt.xkcd()
 ```
 
++++ {"slideshow": {"slide_type": "slide"}}
+
 ## High Dimensional Space is ... Spikey?
 
-+++
++++ {"slideshow": {"slide_type": "fragment"}}
 
 ![](assets/bounding-box.png)
 
 ```{code-cell} ipython3
-# dims = np.arange(10)+2
+---
+hide_input: true
+slideshow:
+  slide_type: subslide
+---
 f,ax=plt.subplots(ncols=2,figsize=(10,4))
 dims=np.arange(2,11)
 sm=(np.sqrt(dims)-1)
@@ -44,15 +56,15 @@ ax[1].plot(dims, vols,
 ax[1].plot(dims, (sm**dims)*vols, 
            label='Vol. of small sphere', c='#1e90ff')
 
-# ax[1].plot(dims, 4**dims, ls=':')
-# ax[1].set_xlim(2,10)
 ax[1].set_ylim(0,10)
 ax[1].legend()
 ```
 
++++ {"slideshow": {"slide_type": "-"}}
+
 (the volume of the hypercube is _way_ up there)
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 A big take-away: there's a lot of "volume" in high dimensions. Unimaginable amounts of "space."
 
@@ -60,11 +72,11 @@ Often, though, the processes and definitions of things we want to "observe" (lik
 
 > It's easy to lose stuff in all that space.
 
-+++
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Dimensionality Reduction
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Do we really need all those dimensions? 
 
@@ -73,33 +85,35 @@ Do we really need all those dimensions?
 
 Text analysis tends to involve huge matrices, i.e. a _lot_ of dimensions. But the "interesting stuff" is almost certainly happening in a lot fewer dimensions, _if you slice it right_.
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### What _is_ Singular Value Decomposition?
 
-+++
++++ {"slideshow": {"slide_type": "-"}}
 
 Decompose a matrix $M$ into two orthonormal ones and a diagonal one: 
 
 $$M = U\Sigma V^*$$
 
 This can be understood geometrically as saying 
-> every linear transformation can be broken down into: rotation $\rightarrow$ scaling $\rightarrow$ rotation
+> every linear transformation can be broken down into: 
+>
+> rotation $\rightarrow$ scaling $\rightarrow$ rotation
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Singular-Value-Decomposition.svg/640px-Singular-Value-Decomposition.svg.png?1647148219610)
 (credit: Georg-Johann, August 2010)
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Matrix-as-Data? Principal Components Analysis (PCA)
 
-+++
++++ {"slideshow": {"slide_type": "fragment"}}
 
 ![](assets/pancake.png)
 
-+++
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Low-Rank Approximation as "Compression"
 
@@ -110,13 +124,16 @@ What if we did this pancake procedure..._in "reverse"?_
 In high dimensions, as we've seen, these should be radically "thinner" than our "most" variant directions. 
 > Practically pancakes already!
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ![](assets/low-rank.png)
 
 ```{code-cell} ipython3
-:cell_style: split
-
+---
+cell_style: split
+slideshow:
+  slide_type: subslide
+---
 from sklearn.decomposition import TruncatedSVD
 from sklearn.datasets import load_sample_image
 gs = load_sample_image('flower.jpg')[...,:3]@np.array([0.2125,0.7154,0.0721])
@@ -127,8 +144,11 @@ gs.shape
 ```
 
 ```{code-cell} ipython3
-:cell_style: split
-
+---
+cell_style: split
+slideshow:
+  slide_type: '-'
+---
 def compress(n, ax=None):
     svd = TruncatedSVD(n_components=n)
     svd.fit(gs)
@@ -139,12 +159,17 @@ def compress(n, ax=None):
     return svd
 ```
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 **1-D Approximation of the image**
 (each data point is a "row" of pixels)
 
 ```{code-cell} ipython3
-:hide_input: false
-
+---
+hide_input: true
+slideshow:
+  slide_type: subslide
+---
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 f,ax=plt.subplots(figsize=(10,10))
 svd = compress(1, ax=ax)
@@ -166,10 +191,17 @@ ax_data.plot(svd.transform(gs), range(len(gs)), ls=':', label='projected\ndata')
 ax_data.set_xlabel('projected data');
 ```
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 **2-D scatterplot projection of the "rows"**
 (each point approximates an entire row of pixels in 2D)
 
 ```{code-cell} ipython3
+---
+hide_input: false
+slideshow:
+  slide_type: '-'
+---
 f,ax =plt.subplots(ncols=2, figsize=(14,5))
 pancake = compress(2, ax=ax[0]).transform(gs)
 pc12 = ax[1].scatter(pancake[:,1], pancake[:,0], 
@@ -179,17 +211,23 @@ plt.tight_layout()
 f.colorbar(pc12, label='row #')
 ```
 
++++ {"slideshow": {"slide_type": "-"}}
+
 This is wild. 
 Our intuition is really hard to build here, but the start and end rows _are_ roughly similar. The middle "grows" then "shrinks", reflected in the push and pull of green and pink, while the noise of petals is captured by the "fuzziness" of the points there. 
 
 Still, why are similar rows so far apart? Stuff seems weirdly spread out, and weirdly shaped. 
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### How many dimensions?
 > mow much should we "pancake"? 
 
 ```{code-cell} ipython3
+---
+slideshow:
+  slide_type: fragment
+---
 svd=compress(30);
 plt.bar(x=range(30),height=svd.explained_variance_ratio_)
 plt.title('Scree plot')
@@ -199,9 +237,16 @@ plt.axvline(3.5, ls='--', c='xkcd:rust', label='...ish?')
 plt.legend();
 ```
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 **But how does it _look_?**
 
 ```{code-cell} ipython3
+---
+hide_input: true
+slideshow:
+  slide_type: '-'
+---
 def img_approx(mat, which):
     
     num=len(which)
@@ -215,17 +260,24 @@ img_approx(gs, [5, 15, 30])
 # 
 ```
 
++++ {"slideshow": {"slide_type": "-"}}
+
 Even though the variance has been captured, it's hard to see "what it is" without detail. Our brains are _not_ treating each row of pixels as a distince observation, anymore than we read a document of english text in isolation!
 
-+++
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Individual Singular Vectors as "Slices"
 
-+++
++++ {"slideshow": {"slide_type": "-"}}
 
 ![](assets/matrix-topic.png)
 
 ```{code-cell} ipython3
+---
+hide_input: true
+slideshow:
+  slide_type: subslide
+---
 from scipy import linalg
 
 def img_topics(mat, which):
@@ -245,6 +297,8 @@ img_topics(gs, range(3,6))
 img_topics(gs, range(6,9))
 ```
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 **NOTE**
 
 It doesn't make sense to say each of the above are "clusters", does it? REMEBER THIS. 
@@ -256,11 +310,11 @@ It doesn't make sense to say each of the above are "clusters", does it? REMEBER 
 While each is a group of pixels that _do something together_, and that "something" is _orthogonal_ to all the other somethings (i.e. they do unique "stuff" in Euclidean space)
 
 
-+++
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Non-Linear "Pancake" Flavors
 
-+++ {"cell_style": "split"}
++++ {"cell_style": "split", "slideshow": {"slide_type": "-"}}
 
 ### Manifold Learning 
 
@@ -276,11 +330,15 @@ Examples: [MDS](https://scikit-learn.org/stable/modules/manifold.html#multi-dime
 
 [^1]: Often the best-performing, see [interactive explanation](https://pair-code.github.io/understanding-umap/)
 
-+++ {"cell_style": "split"}
++++ {"cell_style": "split", "slideshow": {"slide_type": "-"}}
 
 ![](assets/floppy-pancake.png)
 
 ```{code-cell} ipython3
+---
+slideshow:
+  slide_type: subslide
+---
 from sklearn.decomposition import FastICA
 from sklearn.manifold import TSNE
 
@@ -297,13 +355,15 @@ img.axis('off')
 plt.tight_layout()
 ```
 
++++ {"slideshow": {"slide_type": "-"}}
+
 As hoped, each row is approximately touching it's neighbor, except where there's an actual _jump_ in colors. 
 
 Notice global stuff is much less pronounced, instead giving us a hint at "what's going on", _locally_!
 See how the rows start and end at _different_ positions, despite being very similar, objectively? 
 This is because they are heading in _different directions_ (growing white, vs shrinking white). 
 
-+++ {"cell_style": "split"}
++++ {"cell_style": "split", "slideshow": {"slide_type": "-"}}
 
 ### Independence & Blind Source Separation 
 
@@ -315,13 +375,13 @@ Classic example:
 
 In our case, each "microphone" is a data point, and each "instrument" is a component vector. 
 
-+++ {"cell_style": "split"}
++++ {"cell_style": "split", "slideshow": {"slide_type": "-"}}
 
 ![](https://scikit-learn.org/stable/_images/sphx_glr_plot_ica_blind_source_separation_001.png)
 
 (source: scikit-learn.org)
 
-+++
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Takeaway
 Dimensionality reduction is very powerful, and it _feels_ like it. BUT...
@@ -329,7 +389,7 @@ Dimensionality reduction is very powerful, and it _feels_ like it. BUT...
 - there are serious implications when you choose a specific _type_ of reduction... really depends on what you want to accomplish
 - Building an intuition takes time, but is crucial to proper usage _and_ making sure you ask yourself (and others) good questions, constantly!
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 > But where's the _text_?? 
 
@@ -337,7 +397,3 @@ As mentioned, we are now focusing primarily on vector-based models for context-d
 This means we need to be comfy with what big matrices actually _are_, the _curse of dimensionality_, and how different assumed goals deal with that. 
 
 And trust me, this will come very much in handy for the next section on _clustering & topic modeling_
-
-```{code-cell} ipython3
-
-```
