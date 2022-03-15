@@ -23,7 +23,12 @@ parts:
           - glob: 01-assumptions/data-*-nb
   - caption: Goals & Approach
     chapters:
-      - glob: 02-goals-approach/*
+      - file: 02-goals-approach/unsupervised
+        sections: 
+          - glob: 02-goals-approach/unsupervised-*-nb
+      - file: 02-goals-approach/supervised
+        sections: 
+          - glob: 02-goals-approach/supervised-*-nb
   - caption: Measure & Evaluate
     chapters:
       - glob: 03-measure-evaluate/*
