@@ -131,7 +131,7 @@ slideshow:
 ---
 model.distributions[0].keys()|> ', '.join |> print
 
-model.distributions[1]
+# model.distributions[1]
 ```
 
 ```{code-cell} coconut
@@ -205,30 +205,4 @@ sns.catplot(
     orient='h', height=10, aspect=.5, color='grey',
     order=get_stat_order(df_prob, 'importance')
 )
-```
-
-```{code-cell} coconut
-tidy = (df
- .assign(token=df.dialogue.str.lower().str.findall(r'\b(\w\w+)\b'))
- .explode(['token'])
- .reset_index()
-)
-tidy
-```
-
-```{code-cell} coconut
-tidy.groupby('line').size()
-```
-
-```{code-cell} coconut
-
-tf = tidy.groupby(['line', 'token']).token.transform('count')
-df = tidy.groupby('token')['line'].transform('size')
-N = tidy['line'].nunique()
-idf = np.log(N/df)
-tidy.assign(tfidf=tf*idf)
-```
-
-```{code-cell} coconut
-
 ```

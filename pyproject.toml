@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tlp"
-version = "0.1.1"
+version = "0.1.2"
 description = "utility api for text-as-data course"
 authors = ["Thurston <thurston.b.sexton@gmail.com>"]
 license = "MIT"
@@ -15,7 +15,7 @@ dvc = "^2.9.3"
 markovify = "^0.9.3"
 nltk = "^3.6.7"
 pomegranate = "^0.14.7"
-flair = "^0.10"
+syntok = "^1.4.4"
 
 [tool.poetry.dev-dependencies]
 

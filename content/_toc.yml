@@ -20,7 +20,7 @@ parts:
           - glob: 01-assumptions/intent-*-nb
       - file: 01-assumptions/data
         sections: 
-          - glob: 01-assumptions/data-*-nb
+          - glob: 01-assumptio ns/data-*-nb
   - caption: Goals & Approach
     chapters:
       - file: 02-goals-approach/unsupervised
@@ -41,3 +41,6 @@ parts:
         sections:
           - file: appendix/datasets/mtgjson-nb
           - file: appendix/datasets/tiny-shakespeare-nb
+      - file: appendix/tutorials
+        sections:
+          - file: appendix/tutorials/markovian-shakespeare

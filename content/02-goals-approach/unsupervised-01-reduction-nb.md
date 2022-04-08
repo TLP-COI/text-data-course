@@ -15,6 +15,12 @@ kernelspec:
 
 # Prelude: On Reduction and High Dimensional Pancakes
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+If we're going to be dealing with _very_ large matrices as representing "language", we're going to need to build an intuition for dealing with them. 
+
+> Remember large matrices are generally thought of as geometrical objects of _high dimension_.
+
 ```{code-cell} ipython3
 ---
 slideshow:
@@ -216,12 +222,12 @@ f.colorbar(pc12, label='row #')
 This is wild. 
 Our intuition is really hard to build here, but the start and end rows _are_ roughly similar. The middle "grows" then "shrinks", reflected in the push and pull of green and pink, while the noise of petals is captured by the "fuzziness" of the points there. 
 
-Still, why are similar rows so far apart? Stuff seems weirdly spread out, and weirdly shaped. 
+Still, why are similar rows so far apart? Stuff seems weirdly spread out, and weirdly shaped.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### How many dimensions?
-> mow much should we "pancake"? 
+> mow much should we "pancake"?
 
 ```{code-cell} ipython3
 ---
@@ -309,7 +315,6 @@ It doesn't make sense to say each of the above are "clusters", does it? REMEBER 
 
 While each is a group of pixels that _do something together_, and that "something" is _orthogonal_ to all the other somethings (i.e. they do unique "stuff" in Euclidean space)
 
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Non-Linear "Pancake" Flavors
@@ -336,6 +341,7 @@ Examples: [MDS](https://scikit-learn.org/stable/modules/manifold.html#multi-dime
 
 ```{code-cell} ipython3
 ---
+hide_input: true
 slideshow:
   slide_type: subslide
 ---
@@ -361,7 +367,7 @@ As hoped, each row is approximately touching it's neighbor, except where there's
 
 Notice global stuff is much less pronounced, instead giving us a hint at "what's going on", _locally_!
 See how the rows start and end at _different_ positions, despite being very similar, objectively? 
-This is because they are heading in _different directions_ (growing white, vs shrinking white). 
+This is because they are heading in _different directions_ (growing white, vs shrinking white).
 
 +++ {"cell_style": "split", "slideshow": {"slide_type": "-"}}
 
@@ -373,7 +379,7 @@ Classic example:
 - On a stage, you have some number (K) of microphones, and some number (N) of instruments
 - Can you use the unique recordings of _mixed_ instrument audio to "unmix" the recordings? Yes!
 
-In our case, each "microphone" is a data point, and each "instrument" is a component vector. 
+In our case, each "microphone" is a data point, and each "instrument" is a component vector.
 
 +++ {"cell_style": "split", "slideshow": {"slide_type": "-"}}
 
