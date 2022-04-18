@@ -4,18 +4,18 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.13.8
 kernelspec:
-  display_name: Python [conda env:text-data]
+  display_name: Python 3 (ipykernel)
   language: python
-  name: conda-env-text-data-py
+  name: python3
 ---
 
 # Vector-Space Models of Language
 
 _Work in Progress_
 
-```{code-cell} ipython3
+```{code-cell}
 import spacy
 import numpy as np
 from scipy.spatial import distance
@@ -25,7 +25,7 @@ import pandas as pd
 import flair
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 # !python -m spacy download en_core_web_md
 # nlp=spacy.load('en_core_web_md')
 from flair.embeddings import WordEmbeddings
@@ -35,7 +35,7 @@ from flair.data import Sentence
 glove_embedding = WordEmbeddings('glove')
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 # create sentence.
 sentence = Sentence('The grass is green .')
 
@@ -48,13 +48,13 @@ for token in sentence:
     print(token.embedding)
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 def vec(s:str):
     return nlp(s).vector
 vec('lion')
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 your_word = "lion"
 
 ms = nlp.vocab.vectors.most_similar(
@@ -64,7 +64,7 @@ distances = ms[2]
 print(words)
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 # Format the vocabulary for use in the distance function
 words = pd.Series(list(nlp.vocab.vectors.strings)).str.lower().pipe(
     lambda s: s[s.str.fullmatch('[a-z]+')]
@@ -73,15 +73,15 @@ vocab_vectors = np.array([nlp.vocab.strings[nlp.vocab.vectors[x]] for x in words
 ## use nltk
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 vocab_vectors@vocab_vectors.T
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 # input_word = "frog"
 # p = np.array([nlp.vocab[input_word].vector])
 p = np.array([vec('king')+vec('queen')-vec('man')])
@@ -92,6 +92,6 @@ nlp.vocab[word_id].text
 # output_word is identical, or very close, to the input word
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 np.ndarray.argsort
 ```

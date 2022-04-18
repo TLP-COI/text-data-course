@@ -29,19 +29,11 @@ jobs:
       uses: mikefarah/yq@master
       with:
         cmd: |
-          yq e -i '
-            .dependencies |= . + [
+          yq e -i '.dependencies |= . + [
               "poetry",
-              "jupyter-book",
-              "jupytext",
               "rise",
               "nb_conda_kernels"
-            ] |
-            (.dependencies[] | select(tag=="!!map"))
-            .pip |= . + [
-                "sphinxcontrib-mermaid"
-            ]
-          ' env.yaml
+            ]' env.yaml
         
     - uses: conda-incubator/setup-miniconda@v2
       with:

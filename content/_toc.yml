@@ -20,7 +20,7 @@ parts:
           - glob: 01-assumptions/intent-*-nb
       - file: 01-assumptions/data
         sections: 
-          - glob: 01-assumptio ns/data-*-nb
+          - glob: 01-assumptions/data-*-nb
   - caption: Goals & Approach
     chapters:
       - file: 02-goals-approach/unsupervised

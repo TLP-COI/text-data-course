@@ -4,11 +4,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.13.8
 kernelspec:
-  display_name: Python [conda env:text-data]
+  display_name: Python 3 (ipykernel)
   language: python
-  name: conda-env-text-data-py
+  name: python3
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -21,7 +21,7 @@ If we're going to be dealing with _very_ large matrices as representing "languag
 
 > Remember large matrices are generally thought of as geometrical objects of _high dimension_.
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: skip
@@ -39,7 +39,7 @@ plt.xkcd()
 
 ![](assets/bounding-box.png)
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 hide_input: true
 slideshow:
@@ -134,7 +134,7 @@ In high dimensions, as we've seen, these should be radically "thinner" than our 
 
 ![](assets/low-rank.png)
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 cell_style: split
 slideshow:
@@ -149,7 +149,7 @@ plt.axis('off')
 gs.shape
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 cell_style: split
 slideshow:
@@ -170,7 +170,7 @@ def compress(n, ax=None):
 **1-D Approximation of the image**
 (each data point is a "row" of pixels)
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 hide_input: true
 slideshow:
@@ -202,7 +202,7 @@ ax_data.set_xlabel('projected data');
 **2-D scatterplot projection of the "rows"**
 (each point approximates an entire row of pixels in 2D)
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 hide_input: false
 slideshow:
@@ -229,7 +229,7 @@ Still, why are similar rows so far apart? Stuff seems weirdly spread out, and we
 ### How many dimensions?
 > mow much should we "pancake"?
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -247,7 +247,7 @@ plt.legend();
 
 **But how does it _look_?**
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 hide_input: true
 slideshow:
@@ -278,7 +278,7 @@ Even though the variance has been captured, it's hard to see "what it is" withou
 
 ![](assets/matrix-topic.png)
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 hide_input: true
 slideshow:
@@ -339,7 +339,7 @@ Examples: [MDS](https://scikit-learn.org/stable/modules/manifold.html#multi-dime
 
 ![](assets/floppy-pancake.png)
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 hide_input: true
 slideshow:

@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.13.8
 kernelspec:
-  display_name: Python [conda env:text-data]
+  display_name: Python 3 (ipykernel)
   language: python
-  name: conda-env-text-data-py
+  name: python3
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -227,7 +227,7 @@ What is this for?
 
 ```([ab]*)c\1```
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 hide_input: false
 slideshow:
@@ -244,7 +244,7 @@ patt.match('aabcaab')
 
 note that this matches, but the next one does not:
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -261,7 +261,7 @@ Now, the `findall` function will return _match groups_...in fact, it will find a
 Since `b` is a valid match group, _and_ is duplicated for `\1` to succeed, the `findall` function _will return it_. 
 This is different from the `match` function!
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -303,7 +303,7 @@ One approach to turning markdown into a table of sections
 - find all text on the next line(s), EXCEPT: 
 - stop when the _next_ line (look-ahead) is another header!
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 hide_input: false
 slideshow:
@@ -318,7 +318,7 @@ patt = re.compile(
 )
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 hide_input: false
 slideshow:
@@ -352,13 +352,13 @@ It's worth mentioning that the _token_ we match is not "the same" as the _entity
 Rather, we humans are using RegEx as an assumption that pieces of matching text are valid stand-ins to represent the abstract entity, correctly! 
 
 This distinction becomes especially important when our human languages have e.g. [polysemy](https://www.wikiwand.com/en/Polysemy); some _tokens_ should point to completely separate entities, depending on conext.
-However, if we assume Regex as a mechanism to find tokens meant to _stand-in_ for entities of interest, that's a _rule_ standing in for our intent. 
+However, if we assume Regex as a mechanism to find tokens meant to _stand-in_ for entities of interest, that's a _rule_ standing in for our intent.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-**Whitespace Tokenizer** 
+**Whitespace Tokenizer**
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: '-'
@@ -380,7 +380,7 @@ Very popular way to tokenize text, especially given the intended use-case (stati
 
 `\b\w\w+\b`
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: '-'
@@ -393,14 +393,14 @@ re.compile(r"\b\w\w+\b").findall(my_str)
 This time, we avoid punctuation, but lose conjunctions. 
 It's not uncommon to remove punctuation entirely as a preprocessing step. 
 
-Does that always make sense? 
+Does that always make sense?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### "Technical" Tokens for Technical Entities
 
 A lot of times the above assumptions won't cut it, _especially_ if there are specific technical entities that a token needs to reference. 
-Here are a few patterns I have seen in e.g. Maintenance Work Order text: 
+Here are a few patterns I have seen in e.g. Maintenance Work Order text:
 
 +++ {"slideshow": {"slide_type": "-"}, "cell_style": "split"}
 
@@ -410,7 +410,7 @@ Here are a few patterns I have seen in e.g. Maintenance Work Order text:
 | `\b\w[\/\&]\w\b` | `P&G`,`A/C`| Split bigrams, common shorthands|
 | `\b\w[\w\'\d]+\b`| `won't`    | conjuctions (won vs. won't start)|
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 cell_style: split
 slideshow:
@@ -430,17 +430,17 @@ re.compile(
 
 ## Relational Pedantry: Graphs \& Ontologies
 
-How we define and standardize known relations between entities. 
+How we define and standardize known relations between entities.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Now that we have ways to _explicitly define_ what we intend an entity **occurence** to look like, we can start to _explicitly define_ the ways that entities relate to one-another. 
+Now that we have ways to _explicitly define_ what we intend an entity **occurence** to look like, we can start to _explicitly define_ the ways that entities relate to one-another.
 
 +++ {"cell_style": "split", "slideshow": {"slide_type": "-"}}
 
 This is a (mathematical) _graph_, if we think of entities as **nodes** and relationships as **edges**
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 cell_style: split
 hide_input: true
@@ -464,18 +464,18 @@ There are many ways to use graphs to express how entities related to one another
 - **Labeled Property Graphs** e.g. NoSQL Graph Databases like [Neo4J](https://neo4j.com/), [JanusGraph](https://janusgraph.org/), etc.\
   Nodes and edges both have unique ID's, and can have internal properties (key-value).
 - **Triple Stores** i.e. the Resource Description Framework ([RDF](https://www.w3.org/TR/rdf11-primer/))\
-  All information is stored as triples: (subject, predicate, object). Every vertex has a unique identifier (no internal information). 
+  All information is stored as triples: (subject, predicate, object). Every vertex has a unique identifier (no internal information).
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For more information comparing the two paradigms, see [this breakdown](https://neo4j.com/blog/rdf-triple-store-vs-labeled-property-graph-difference/) of a talk by Jesús Barrasa. We will return to these, and how knowledge engineering works (and interfaces with text data) more generally in later sections. 
 
 LPG's come from a data-storage and querying community (think databases), while RDF comes from a web-technology culture (think W3C and Semantic Web). 
-We will return to these later, but for now we want to focus on forms that _assumptions_ about entity relationships might take.  
+We will return to these later, but for now we want to focus on forms that _assumptions_ about entity relationships might take.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-What kinds of relations are out there already? 
+What kinds of relations are out there already?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -489,7 +489,7 @@ Lexical database for nouns, verbs, adverbs, and adjectives.
     - entailment (implies) e.g. snore implies sleep. 
 - Distinguishes between types (e.g. President) and instances (Abraham Lincoln)
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: subslide
@@ -507,7 +507,7 @@ from nltk.corpus import wordnet as wn
 wn.synsets('dog')
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: subslide
@@ -516,7 +516,7 @@ print(wn.synset('dog.n.01').definition())
 print(wn.synset('dog.n.01').lemma_names())
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: '-'
@@ -526,7 +526,7 @@ print('pasta could be: ', [i.lemma_names() for i in wn.synset('pasta.n.01').hypo
 print('pasta is a: ', wn.synset('pasta.n.01').hypernyms())
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: subslide
@@ -535,7 +535,7 @@ slideshow:
 print('a living room is part of a: ', wn.synset('living_room.n.01').part_holonyms()[0].lemma_names())
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 hide_input: true
 slideshow:
@@ -547,7 +547,7 @@ graphviz.Source('digraph {rankdir=LR '
                 'dwelling -> abode [label="same as"]}')
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -559,9 +559,9 @@ slideshow:
 
 **Problem** \
 WordNet is for _general english_, and is **not** exhaustive. 
-If using for technical text, expect decent precision, but poor recall. 
+If using for technical text, expect decent precision, but poor recall.
 
-```{code-cell} ipython3
+```{code-cell}
 :cell_style: center
 
 [i.lemma_names() for i in wn.synset('bicycle.n.01').part_meronyms()]
@@ -569,9 +569,9 @@ If using for technical text, expect decent precision, but poor recall.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Meanwhile, from an engineering paper discussing bicycle drivetrains: 
+Meanwhile, from an engineering paper discussing bicycle drivetrains:
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 cell_style: center
 hide_input: true
@@ -596,7 +596,7 @@ graphviz.Source("""graph g {
 """)
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: '-'
@@ -632,9 +632,9 @@ ConceptNet builds on WordNet and many others, using nodes and more generic "rela
 - see https://github.com/commonsense/conceptnet5/wiki/Relations
 
 Interestingly, these are _not_ the "edges"... edges are assertions that have start and end-nodes, and _have a relation property_. 
-- Edges can also have sources, weights (for uncertainty), licenses, datasets, "surfaceText" that generated the assertion, etc. 
+- Edges can also have sources, weights (for uncertainty), licenses, datasets, "surfaceText" that generated the assertion, etc.
 
-```{code-cell} ipython3
+```{code-cell}
 ---
 slideshow:
   slide_type: subslide

@@ -4,11 +4,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.13.8
 kernelspec:
-  display_name: Python [conda env:text-data]
+  display_name: Python 3 (ipykernel)
   language: python
-  name: conda-env-text-data-py
+  name: python3
 ---
 
 # MTGJSON
@@ -17,7 +17,7 @@ kernelspec:
 >
 > [mtgjson.com](mtgjson.com)
 
-```{code-cell} ipython3
+```{code-cell}
 import dvc.api as dvc
 from pathlib import Path
 import pandas as pd
@@ -35,7 +35,7 @@ We've done some work to extract out a useful tabular form from the original (nes
 
 Validation is done using the following `pandera` schema:
 
-```{code-cell} ipython3
+```{code-cell}
 from tlp.data import mtg, styleprops_longtext
 from inspect import getsourcelines
 Code(''.join(getsourcelines(mtg.MTGSchema)[0]), language='python')
@@ -55,7 +55,7 @@ flavor-text
 keywords
 :  special, meaningful terms that appear in the "text", which have gameplay impacts
 
-```{code-cell} ipython3
+```{code-cell}
 (df[['name', 'text','flavor_text']]
  .sample(10, random_state=2).fillna('').style
  .set_properties(**styleprops_longtext(['text','flavor_text']))
@@ -75,12 +75,12 @@ There are a number of other potential sources of "fortuitous data", as well:
     
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 %%HTML
 <link href="//cdn.jsdelivr.net/npm/mana-font@latest/css/mana.min.css" rel="stylesheet" type="text/css" />
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 mtg.style_table(df.sample(10, random_state=2),
                         hide_columns=['text','flavor_text'])
 ```
@@ -94,7 +94,7 @@ Mana CSS, LESS, and Sass files are licensed under the MIT License
 Symbols are for vizualization only, with the original data consisting of lists of letters: `['W', 'U']`, etc. 
 "Mana font" is made by [Andrew Gioia](https://mana.andrewgioia.com/index.html)
 
-```{code-cell} ipython3
+```{code-cell}
 (df
  .set_index('release_date')
  .sort_index()
@@ -103,6 +103,6 @@ Symbols are for vizualization only, with the original data consisting of lists o
 ).hvplot( rot=45, title='What fraction of cards have Flavor Text each year?')
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 
 ```
