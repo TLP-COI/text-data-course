@@ -4,11 +4,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.13.8
 kernelspec:
-  display_name: Coconut [conda env:text-data]
+  display_name: Coconut
   language: coconut
-  name: conda-env-text-data-coconut
+  name: coconut
 ---
 
 ```{code-cell} coconut
