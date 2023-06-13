@@ -2,7 +2,7 @@
 name = "tlp"
 version = "0.1.2"
 description = "utility api for text-as-data course"
-authors = ["Thurston <thurston.b.sexton@gmail.com>"]
+authors = ["Rachael <rachaeltsexton@gmail.com>"]
 license = "MIT"
 include = [".dvc/config"]
 

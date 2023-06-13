@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: ""
-author: Thurston Sexton
+author: Rachael Sexton
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -35,8 +35,8 @@ parse:
       - **Course Repository**: https://github.com/TLP-COI/text-data-course
 
     instructor_panel: |
-      - **Name**: Thurston Sexton
-      - **Email**: thurston.b.sexton@gmail.com
+      - **Name**: Rachael Sexton
+      - **Email**: rachaeltsexton@gmail.com
       - **Twitter**: [@ArchaeoEngineer](https://twitter.com/ArchaeoEngineer)
       - **Github**: [@tbsexton](https://github.com/tbsexton)
 
