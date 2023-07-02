@@ -37,8 +37,8 @@ parse:
     instructor_panel: |
       - **Name**: Rachael Sexton
       - **Email**: rachaeltsexton@gmail.com
-      - **Twitter**: [@ArchaeoEngineer](https://twitter.com/ArchaeoEngineer)
-      - **Github**: [@tbsexton](https://github.com/tbsexton)
+      # - **Twitter**: [@ArchaeoEngineer](https://twitter.com/ArchaeoEngineer)
+      - **Github**: [@rtbs-dev](https://github.com/rtbs-dev)
 
 # sphinx options
 sphinx:

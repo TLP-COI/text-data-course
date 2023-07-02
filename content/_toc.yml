@@ -6,7 +6,7 @@ root: home
 parts:
   - caption: Introduction
     chapters:
-      - file: 00-introduction/syllabus
+      # - file: 00-introduction/syllabus
       - file: 00-introduction/intro
       - file: 00-introduction/tools
         sections:
@@ -14,20 +14,20 @@ parts:
       - file: 00-introduction/references
   - caption: Assumptions
     chapters:
-  # -   - file: 01-assumptions/overview
+      - file: 01-assumptions/overview
       - file: 01-assumptions/intent
-        sections: 
+        sections:
           - glob: 01-assumptions/intent-*-nb
       - file: 01-assumptions/data
-        sections: 
+        sections:
           - glob: 01-assumptions/data-*-nb
   - caption: Goals & Approach
     chapters:
       - file: 02-goals-approach/unsupervised
-        sections: 
+        sections:
           - glob: 02-goals-approach/unsupervised-*-nb
       - file: 02-goals-approach/supervised
-        sections: 
+        sections:
           - glob: 02-goals-approach/supervised-*-nb
   - caption: Measure & Evaluate
     chapters:

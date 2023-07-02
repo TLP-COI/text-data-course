@@ -1,6 +1,5 @@
 from pathlib import Path
-import dvc.api as dvc
-
+from dvc.repo import Repo
 
 def styleprops_longtext(columns: list[str] = None):
     """display long dataframe text nicer.
@@ -28,4 +27,4 @@ def get_repository_datafolder() -> Path:
     """DVC can search for the root folder of a repository.
     Helpful when needing relative imports and data-loading paths from separate locations in a repo structure.
     """
-    return Path(dvc.Repo().find_root()) / "resources" / "data"
+    return Path(Repo().find_root()) / "resources" / "data"

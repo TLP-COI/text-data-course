@@ -133,8 +133,7 @@ def style_table(df, hide_columns=None):
                 "release_date": lambda x: x.strftime("%b '%y"),
             },
         )
-        .hide_index()
-        .hide_columns(hide_columns)
+        .hide()
         .set_table_styles(styles, overwrite=False)
     )
 

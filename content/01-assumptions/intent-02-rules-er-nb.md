@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.13.8
+    jupytext_version: 1.14.5
 kernelspec:
-  display_name: Python 3 (ipykernel)
+  display_name: text-data
   language: python
-  name: python3
+  name: text-data
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -227,7 +227,7 @@ What is this for?
 
 ```([ab]*)c\1```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 hide_input: false
 slideshow:
@@ -244,7 +244,7 @@ patt.match('aabcaab')
 
 note that this matches, but the next one does not:
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: fragment
@@ -261,7 +261,7 @@ Now, the `findall` function will return _match groups_...in fact, it will find a
 Since `b` is a valid match group, _and_ is duplicated for `\1` to succeed, the `findall` function _will return it_. 
 This is different from the `match` function!
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: fragment
@@ -303,7 +303,7 @@ One approach to turning markdown into a table of sections
 - find all text on the next line(s), EXCEPT: 
 - stop when the _next_ line (look-ahead) is another header!
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 hide_input: false
 slideshow:
@@ -318,7 +318,7 @@ patt = re.compile(
 )
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 hide_input: false
 slideshow:
@@ -358,7 +358,7 @@ However, if we assume Regex as a mechanism to find tokens meant to _stand-in_ fo
 
 **Whitespace Tokenizer**
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: '-'
@@ -380,7 +380,7 @@ Very popular way to tokenize text, especially given the intended use-case (stati
 
 `\b\w\w+\b`
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: '-'
@@ -410,7 +410,7 @@ Here are a few patterns I have seen in e.g. Maintenance Work Order text:
 | `\b\w[\/\&]\w\b` | `P&G`,`A/C`| Split bigrams, common shorthands|
 | `\b\w[\w\'\d]+\b`| `won't`    | conjuctions (won vs. won't start)|
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 slideshow:
@@ -440,7 +440,7 @@ Now that we have ways to _explicitly define_ what we intend an entity **occurenc
 
 This is a (mathematical) _graph_, if we think of entities as **nodes** and relationships as **edges**
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 hide_input: true
@@ -489,7 +489,7 @@ Lexical database for nouns, verbs, adverbs, and adjectives.
     - entailment (implies) e.g. snore implies sleep. 
 - Distinguishes between types (e.g. President) and instances (Abraham Lincoln)
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
@@ -507,7 +507,7 @@ from nltk.corpus import wordnet as wn
 wn.synsets('dog')
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
@@ -516,7 +516,7 @@ print(wn.synset('dog.n.01').definition())
 print(wn.synset('dog.n.01').lemma_names())
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: '-'
@@ -526,7 +526,7 @@ print('pasta could be: ', [i.lemma_names() for i in wn.synset('pasta.n.01').hypo
 print('pasta is a: ', wn.synset('pasta.n.01').hypernyms())
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
@@ -535,7 +535,7 @@ slideshow:
 print('a living room is part of a: ', wn.synset('living_room.n.01').part_holonyms()[0].lemma_names())
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 hide_input: true
 slideshow:
@@ -547,7 +547,7 @@ graphviz.Source('digraph {rankdir=LR '
                 'dwelling -> abode [label="same as"]}')
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: fragment
@@ -561,7 +561,7 @@ slideshow:
 WordNet is for _general english_, and is **not** exhaustive. 
 If using for technical text, expect decent precision, but poor recall.
 
-```{code-cell}
+```{code-cell} ipython3
 :cell_style: center
 
 [i.lemma_names() for i in wn.synset('bicycle.n.01').part_meronyms()]
@@ -571,7 +571,7 @@ If using for technical text, expect decent precision, but poor recall.
 
 Meanwhile, from an engineering paper discussing bicycle drivetrains:
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: center
 hide_input: true
@@ -596,7 +596,7 @@ graphviz.Source("""graph g {
 """)
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: '-'
@@ -634,17 +634,18 @@ ConceptNet builds on WordNet and many others, using nodes and more generic "rela
 Interestingly, these are _not_ the "edges"... edges are assertions that have start and end-nodes, and _have a relation property_. 
 - Edges can also have sources, weights (for uncertainty), licenses, datasets, "surfaceText" that generated the assertion, etc.
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
 ---
 import requests 
-
 def conceptnet_query(q):
-    url = 'http://api.conceptnet.io/'
-    return requests.get(url+q).json()
-conceptnet_query('c/en/bicycle?rel=/r/PartOf')
+    url = 'http://api.conceptnet.io/c/en/'
+    return dict(requests.get(url+q).json())
+
+for i in conceptnet_query('bicycle?rel=/r/PartOf')['edges']:
+    print('{}:\t{}'.format(i['rel']['label'],i['surfaceText']))
 ```
 
 +++ {"slideshow": {"slide_type": "-"}}

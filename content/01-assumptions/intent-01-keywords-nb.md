@@ -5,12 +5,18 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.13.8
+    jupytext_version: 1.14.5
 kernelspec:
-  display_name: Python [conda env:text-data]
+  display_name: text-data
   language: python
-  name: conda-env-text-data-py
+  name: text-data
 ---
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+# Keywords 
+
+> "Quality Content" and Where to Find It...
 
 ```{code-cell} ipython3
 ---
@@ -30,12 +36,6 @@ tags: [remove-cell]
 %%HTML
 <link href="//cdn.jsdelivr.net/npm/mana-font@latest/css/mana.min.css" rel="stylesheet" type="text/css" />
 ```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-# Keywords 
-
-> "Quality Content" and Where to Find It...
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -79,7 +79,7 @@ from tlp.data import mtg, styleprops_longtext
 (df[['name', 'text','flavor_text']]
  .sample(10, random_state=2).fillna('').style
  .set_properties(**styleprops_longtext(['text','flavor_text']))
- .hide_index()
+ .hide()
 )
 ```
 
@@ -212,8 +212,8 @@ def plot_textual_occurrence(
             textual=lambda df: 
             df.apply(keyword_in_txt, axis=1)
         )
-        .groupby('keywords').mean()
-        .sort_values('textual')
+        .groupby('keywords')['textual'].mean()
+        .sort_values()
         .head(40)
         .hvplot.barh(
             title='Fraction of text containing keyword',
