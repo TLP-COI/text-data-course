@@ -1,450 +1,428 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Tools for Data Infrastructure</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mana.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '00-introduction/tools-02ops';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Tools for Data Science" href="tools-03sci.html" />
     <link rel="prev" title="Setting up a Computing Environment" href="tools-01env.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="syllabus.html">
-   Syllabus (PPOL 628 Spring 2022)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="tools.html">
-   First Tools of the Trade
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="tools-01env.html">
-     Setting up a Computing Environment
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Tools for Data Infrastructure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="tools-03sci.html">
-     Tools for Data Science
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="references.html">
-   Chapter Resources
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus (PPOL 628 Spring 2022)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tools.html">First Tools of the Trade</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tools-01env.html">Setting up a Computing Environment</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tools for Data Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools-03sci.html">Tools for Data Science</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Assumptions
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../01-assumptions/intent.html">
-   Expressions of Intent
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01-assumptions/intent-01-keywords-nb.html">
-     Keywords
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01-assumptions/intent-02-rules-er-nb.html">
-     Rules for Entities, Rules for Relations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../01-assumptions/data.html">
-   Driving with Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Chapter Resources</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Goals &amp; Approach
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Assumptions</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../02-goals-approach/presentation-test-nb.html">
-   Testing Presentations
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../01-assumptions/overview.html">Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-assumptions/intent.html">Expressions of Intent</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01-assumptions/intent-01-keywords-nb.html">Keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-assumptions/intent-02-rules-er-nb.html">Rules for Entities, Rules for Relations</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Measure &amp; Evaluate
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../03-measure-evaluate/notebooks-nb.html">
-   Content with notebooks
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-assumptions/data.html">Driving with Data</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01-assumptions/data-02-vecsem-nb.html">Vector Semantics</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Validate
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-validation/trouble.html">
-   Trouble in Paradise
-  </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Goals &amp; Approach</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../appendix/datasets.html">
-   Datasets for this Course
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/datasets/mtgjson-nb.html">
-     MTGJSON
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/datasets/tiny-shakespeare-nb.html">
-     “Tiny” Shakespeare
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02-goals-approach/unsupervised.html">Unsupervised Techniques</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02-goals-approach/unsupervised-01-reduction-nb.html">Prelude: On Reduction and High Dimensional Pancakes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-goals-approach/unsupervised-02-clustertopics-nb.html">Let Simmer, Unsupervised</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02-goals-approach/supervised.html">Supervised Machine Learning with Text</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Validate</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04-validation/trouble.html">Trouble in Paradise</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/datasets.html">Datasets for this Course</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/datasets/mtgjson-nb.html">MTGJSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/datasets/tiny-shakespeare-nb.html">“Tiny” Shakespeare</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/tutorials/markovian-shakespeare.html">Markovian Shakespeare</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/00-introduction/tools-02ops.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/TLP-COI/text-data-course"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/TLP-COI/text-data-course/issues/new?title=Issue%20on%20page%20%2F00-introduction/tools-02ops.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/TLP-COI/text-data-course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/TLP-COI/text-data-course/issues/new?title=Issue%20on%20page%20%2F00-introduction/tools-02ops.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/00-introduction/tools-02ops.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tools for Data Infrastructure</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-s-the-big-idea">
-   What’s the Big Idea?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#theory-vs-practice">
-     Theory vs. Practice
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#containerize-data-packages">
-     Containerize — Data Packages!
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#getting-started">
-   Getting Started
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-as-code">
-     Data-as-Code
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#documentation-and-test-driven-development">
-     Documentation- and Test-driven “Development”
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-the-big-idea">What’s the Big Idea?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theory-vs-practice">Theory vs. Practice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#containerize-data-packages">Containerize — Data Packages!</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-as-code">Data-as-Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-test-driven-development">Documentation- and Test-driven “Development”</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tools for Data Infrastructure</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-s-the-big-idea">
-   What’s the Big Idea?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#theory-vs-practice">
-     Theory vs. Practice
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#containerize-data-packages">
-     Containerize — Data Packages!
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#getting-started">
-   Getting Started
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-as-code">
-     Data-as-Code
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#documentation-and-test-driven-development">
-     Documentation- and Test-driven “Development”
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="tools-for-data-infrastructure">
-<h1>Tools for Data Infrastructure<a class="headerlink" href="#tools-for-data-infrastructure" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tools-for-data-infrastructure">
+<h1>Tools for Data Infrastructure<a class="headerlink" href="#tools-for-data-infrastructure" title="Permalink to this heading">#</a></h1>
 <div class="tip dropdown admonition">
 <p class="admonition-title">TL;DR</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Make sure your Source Control Management (SCM) is ready to use; we’re using <code class="docutils literal notranslate"><span class="pre">git</span></code></p></li>
 <li><p>Sign up for a “git forge”; we’re using <a class="reference external" href="http://GitHub.com">GitHub.com</a></p></li>
 <li><p>In relevant projects, use and build <em>data packages</em> wherever possible; we’re using <code class="docutils literal notranslate"><span class="pre">dvc</span></code>, since it’s language-agnostic.</p></li>
@@ -453,10 +431,10 @@
 </ol>
 </div>
 <p>In the last section, we talked about the <em>engineering practice</em>, a body of “art” that consists of knowledge and accepted best-practice that supports experts in making context-sensitive decisions.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Even with a known heading, getting from point A to point B is a lot easier with a nicely paved road.</p>
-</div>
+</aside>
 <p>The other key component to problem solving in-context is a suite of tools in your “toolbox”.
 Tools enable experts to efficiently accomplish their goals, and understanding the tools being used within your community will help you critique and contribute to other work, as well.
 If the <em>practice</em> is a technical community’s mutual direction or heading, we might think of these tools as the <em>infrastructure</em> of a technical community.</p>
@@ -466,40 +444,44 @@ If the <em>practice</em> is a technical community’s mutual direction or headin
 </dd>
 </dl>
 <p>This, like the section before, is worth a course of it’s own: spanning <a class="reference external" href="https://aws.amazon.com/devops/what-is-devops/">development</a>- and <a class="reference external" href="https://databand.ai/blog/dataops-org-structure/">data</a>-operations, software engineering principles, <a class="reference external" href="https://themaintainers.org/information-maintenance-as-a-practice-of-care-an-invitation-to-reflect-and-share/">information maintainers</a>, human factors, and plenty of <a class="reference external" href="https://timharford.com/2021/05/cautionary-tales-wrong-tools-cost-lives/">cautionary tales</a>.</p>
-<div class="section" id="what-s-the-big-idea">
-<h2>What’s the Big Idea?<a class="headerlink" href="#what-s-the-big-idea" title="Permalink to this headline">¶</a></h2>
+<section id="what-s-the-big-idea">
+<h2>What’s the Big Idea?<a class="headerlink" href="#what-s-the-big-idea" title="Permalink to this heading">#</a></h2>
 <p>Rather than delving too deep here, it’s important to get an idea of what the “big challenge” is, and some basic tools to get started for this course, specifically.</p>
-<div class="section" id="theory-vs-practice">
-<h3>Theory vs. Practice<a class="headerlink" href="#theory-vs-practice" title="Permalink to this headline">¶</a></h3>
-<div class="sidebar">
+<section id="theory-vs-practice">
+<h3>Theory vs. Practice<a class="headerlink" href="#theory-vs-practice" title="Permalink to this heading">#</a></h3>
+<aside class="sidebar">
 <p class="sidebar-title">“We have data science at home”</p>
-<div class="figure align-default" id="alchemy">
+<figure class="align-default" id="alchemy">
 <img alt="Alchemy is so clean!" src="../_images/clean-pipe-transp.png" />
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Alchemy, like magic, looks so <em>clean</em>!</span><a class="headerlink" href="#alchemy" title="Permalink to this image">¶</a></p>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Alchemy, like magic, looks so <em>clean</em>!</span><a class="headerlink" href="#alchemy" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</aside>
 <p>Analysts, data scientists, etc., would like to:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Load their data</p></li>
 <li><p>Grab their trusty libraries of well-documented tools</p></li>
 <li><p><span class="math notranslate nohighlight">\(\rightarrow\)</span> <em>pipeline</em> <span class="math notranslate nohighlight">\(\rightarrow\)</span></p></li>
 <li><p>Report out <em>results</em> that anyone can use and trust!</p></li>
 </ol>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">The data science at home</p>
-<div class="figure align-default" id="messy">
+<figure class="align-default" id="messy">
 <img alt="the pain..." src="../_images/messy-pipe-transp.png" />
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">The <em>pain</em>…</span><a class="headerlink" href="#messy" title="Permalink to this image">¶</a></p>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">The <em>pain</em>…</span><a class="headerlink" href="#messy" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</aside>
 <p>Like the “magic” practices from last section, this “alchemical” tool called a “pipeline” is so nice, assuming all the libraries , tools, and data work together like they <em>should</em>.</p>
 <p>In reality,<strong>~80%</strong> of an analyst’s time is spent wrangling and preprocessing their data… everyone re-invents the wheel <em>for almost every analysis</em>!</p>
-</div>
-<div class="section" id="containerize-data-packages">
-<h3>Containerize — Data Packages!<a class="headerlink" href="#containerize-data-packages" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="containerize-data-packages">
+<h3>Containerize — Data Packages!<a class="headerlink" href="#containerize-data-packages" title="Permalink to this heading">#</a></h3>
 <p>I won’t lie, this is a super sticky, outstanding problem.
 Many groups, around the world, are working on making data more reusable and reduce the load on analysts.
-See, for instance, the massive undertaking behind the <a class="reference external" href="https://www.go-fair.org/fair-principles/">FAIR Data</a> Principles <span id="id1">[<a class="reference internal" href="#id8">Wilkinson <em>et al.</em>, 2016</a>]</span>:</p>
+See, for instance, the massive undertaking behind the <a class="reference external" href="https://www.go-fair.org/fair-principles/">FAIR Data</a> Principles <span id="id1">[<a class="reference internal" href="#id8" title="Mark D Wilkinson, Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, Jan-Willem Boiten, Luiz Bonino da Silva Santos, Philip E Bourne, and others. The fair guiding principles for scientific data management and stewardship. Scientific data, 3(1):1–9, 2016.">Wilkinson <em>et al.</em>, 2016</a>]</span>:</p>
 <ul class="simple">
 <li><p>Findable</p></li>
 <li><p>Accessible</p></li>
@@ -507,13 +489,15 @@ See, for instance, the massive undertaking behind the <a class="reference extern
 <li><p>Accessible</p></li>
 </ul>
 <p>Or, for a more tooling-centric approach, the Open Knowledge Foundation has the Frictionless Data initiative to make open software and standards.</p>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Containerize all the things!</p>
-<div class="figure align-default" id="containerize">
+<figure class="align-default" id="containerize">
 <img alt="containerize-it" src="../_images/containerize.png" />
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Bundle the data with the libraries, documentation that you have already finished, to share with others in a uniform way!</span><a class="headerlink" href="#containerize" title="Permalink to this image">¶</a></p>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Bundle the data with the libraries, documentation that you have already finished, to share with others in a uniform way!</span><a class="headerlink" href="#containerize" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</aside>
 <p>In yet another parallel to the previous section, many solution types revolve around <em>isolation</em>, by bundling context-specific tools and data together in reproducible and transparent ways.
 These “bundles”, or “containers”, are often called <em>data packages</em>, that treat data the way the software engineering community has learned to treat code (i.e. Development Operations, or DevOps).</p>
 <div class="tip admonition">
@@ -529,20 +513,20 @@ These “bundles”, or “containers”, are often called <em>data packages</em
 </ul>
 </li>
 </ul>
-<p>Shipping containers changed this completely! <span id="id2">[<a class="reference internal" href="#id5">Ebeling, 2009</a>]</span></p>
+<p>Shipping containers changed this completely! <span id="id2">[<a class="reference internal" href="#id5" title="CE Ebeling. Evolution of a box. Invention and Technology, 23(4):8–9, 2009.">Ebeling, 2009</a>]</span></p>
 <ul class="simple">
 <li><p>Containers provide a <em>uniform</em> loading/unloading interface for ships (cranes<span class="math notranslate nohighlight">\(\rightarrow\)</span>trains<span class="math notranslate nohighlight">\(\rightarrow\)</span>trucks)</p></li>
 <li><p>The modular storage shape unified ship design needs (lots of identical boxes, stacked high)</p></li>
 <li><p>Interiors of each container were still a mess… but <em>solving</em> was <strong>asynchronous</strong> &amp; <strong>distributed</strong>.</p></li>
 </ul>
 </div>
-</div>
-</div>
-<div class="section" id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
 <p>Here’s a couple types of tools to get started down the path to this idea:</p>
-<div class="section" id="data-as-code">
-<h3>Data-as-Code<a class="headerlink" href="#data-as-code" title="Permalink to this headline">¶</a></h3>
+<section id="data-as-code">
+<h3>Data-as-Code<a class="headerlink" href="#data-as-code" title="Permalink to this heading">#</a></h3>
 <p>Apply DevOps principles to data as DataOps, which treats <strong>Data-as-Code</strong>.
 Through clever extension of Source Control Management, we can exploit existing DevOps infrastructure for</p>
 <ul class="simple">
@@ -556,7 +540,7 @@ Through clever extension of Source Control Management, we can exploit existing D
 <p>We will be using <code class="docutils literal notranslate"><span class="pre">git</span></code></p>
 <ul class="simple">
 <li><p>Not installed? <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">git</span></code> in the base environment, assuming you followed along up to now.</p></li>
-<li><p>Read up on <em>why we care</em> about <code class="docutils literal notranslate"><span class="pre">git</span></code> so much. <span id="id3">Blischak <em>et al.</em> [<a class="reference internal" href="#id7">2016</a>]</span> have you covered (and <a class="reference external" href="https://github.com/jdblischak/git-for-science">use <code class="docutils literal notranslate"><span class="pre">git</span></code> themselves</a>).</p></li>
+<li><p>Read up on <em>why we care</em> about <code class="docutils literal notranslate"><span class="pre">git</span></code> so much. <span id="id3">Blischak <em>et al.</em> [<a class="reference internal" href="#id7" title="John D Blischak, Emily R Davenport, and Greg Wilson. A quick introduction to version control with git and github. PLoS computational biology, 12(1):e1004668, 2016.">2016</a>]</span> have you covered (and <a class="reference external" href="https://github.com/jdblischak/git-for-science">use <code class="docutils literal notranslate"><span class="pre">git</span></code> themselves</a>).</p></li>
 </ul>
 <p>and GitHub</p>
 <ul class="simple">
@@ -566,10 +550,10 @@ Through clever extension of Source Control Management, we can exploit existing D
 </div>
 <p>From here, add a layer that extends SCM to work <em>nicely</em> with large data files (it doesn’t by default, for similar reasons that it doesn’t like <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files).
 Examples of this idea include <code class="docutils literal notranslate"><span class="pre">git-LFS</span></code>, <a class="reference external" href="https://www.pachyderm.com/">Pachyderm</a>, <a class="reference external" href="https://quiltdata.com/">Quilt</a>, and <a class="reference external" href="https://dvc.org">DVC</a>.</p>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Example Tools for DataOps</p>
 <p><img alt="Example Tools for DataOps" src="../_images/dataops-logos.png" /></p>
-</div>
+</aside>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We will be using <code class="docutils literal notranslate"><span class="pre">dvc</span></code></p>
@@ -580,9 +564,9 @@ Examples of this idea include <code class="docutils literal notranslate"><span c
 <li><p>The current GitHub equivalent for DVC is <a class="reference external" href="http://DagsHub.com">DagsHub.com</a>, which we use <a class="reference external" href="https://dagshub.com/tbsexton/text-data-course">for this course</a> to store and supply datasets on-demand.</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="documentation-and-test-driven-development">
-<h3>Documentation- and Test-driven “Development”<a class="headerlink" href="#documentation-and-test-driven-development" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="documentation-and-test-driven-development">
+<h3>Documentation- and Test-driven “Development”<a class="headerlink" href="#documentation-and-test-driven-development" title="Permalink to this heading">#</a></h3>
 <p>There are some best-practices that will take your project to the “next level”, and provide a lot of peace-of-mind if implemented <em>throughout</em> the project (rather than at the end, in a rush)!</p>
 <p>First, <strong>Documentation</strong> of data infrastructure is your container’s “cargo manifest”.
 This can be as simple as a <code class="docutils literal notranslate"><span class="pre">README.md</span></code>, or as complex as a pretty webpage, a dashboard, and beyond.
@@ -592,10 +576,10 @@ Some notes:</p>
 <li><p>Writing as a team, but using distributed and asynchronous collaboration <span class="math notranslate nohighlight">\(\rightarrow\)</span> use <strong>Version control</strong> (<code class="docutils literal notranslate"><span class="pre">git</span></code>)</p></li>
 <li><p>Ok, but make sure I can deploy PDF’s, websites, etc? <span class="math notranslate nohighlight">\(\rightarrow\)</span> toeghter, we’ve got a <strong>Static site generator</strong></p></li>
 </ul>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Example Tools for Documentation</p>
 <p><img alt="Example Tools for Documentation" src="../_images/docs-logos.png" /></p>
-</div>
+</aside>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
@@ -626,10 +610,10 @@ For python, specifically:</p>
 <li><p><a class="reference external" href="https://hypothesis.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">hypothesis</span></code></a> can automatically generate tests through parameterization.</p></li>
 </ul>
 </div>
-</div>
-</div>
-<div class="section" id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p><em>Phew</em>, that was a lot of ground.
 It probably feels overwhelming, but what I actually want to do is help you feel like <em>you are not alone</em>.
 So many classes focus on theory and application as a <em>separate thing</em> from the tools being used within a community.
@@ -637,7 +621,8 @@ There is an infrastructure out there, and though it may be ever-changing and vas
 <p>Plus, nearly all of the tools mentioned here, anecdotally, will end up <em>saving time</em>, in the not-so-long run.
 After all, they are like the paved roads to your direction.
 You might need to learn how to drive, but you’ll get many more places, much faster, on the highway than on the gravel trail.</p>
-<p id="id4"><dl class="citation">
+<div class="docutils container" id="id4">
+<dl class="citation">
 <dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id1">WDA+16</a></span></dt>
 <dd><p>Mark D Wilkinson, Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, Jan-Willem Boiten, Luiz Bonino da Silva Santos, Philip E Bourne, and others. The fair guiding principles for scientific data management and stewardship. <em>Scientific data</em>, 3(1):1–9, 2016.</p>
 </dd>
@@ -648,9 +633,9 @@ You might need to learn how to drive, but you’ll get many more places, much fa
 <dd><p>John D Blischak, Emily R Davenport, and Greg Wilson. A quick introduction to version control with git and github. <em>PLoS computational biology</em>, 12(1):e1004668, 2016.</p>
 </dd>
 </dl>
-</p>
 </div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -664,7 +649,7 @@ You might need to learn how to drive, but you’ll get many more places, much fa
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./00-introduction"
         },
         predefinedOutput: true
@@ -672,44 +657,115 @@ You might need to learn how to drive, but you’ll get many more places, much fa
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="tools-01env.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Setting up a Computing Environment</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tools-01env.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Setting up a Computing Environment</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="tools-03sci.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="tools-03sci.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Tools for Data Science</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Thurston Sexton<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
       </div>
-    </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-the-big-idea">What’s the Big Idea?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theory-vs-practice">Theory vs. Practice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#containerize-data-packages">Containerize — Data Packages!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-as-code">Data-as-Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-test-driven-development">Documentation- and Test-driven “Development”</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rachael Sexton
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

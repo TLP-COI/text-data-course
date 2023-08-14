@@ -99,7 +99,7 @@ Jupyter is a _server_-based coding interface.
 - Access the running server through your browser: `localhos:8888`, or automatic
 ```
 
-A common misunderstanding: Jupter is _not_ "python", and using it isn't really dependent on your python installation above. 
+A common misunderstanding: Jupyter is _not_ "python", and using it isn't really dependent on your python installation above. 
 Instead, the jupyter server frontend communicates with a programming language/interpreter _of your choosing_ through a jupyter _language kernel_. 
 This architecture lets jupyter operate as a rich interface to [_many languages_](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels), not just python. 
 That link has kernels to use anything from R and Julia to Haskell, Common Lisp, Clojure, MatLab, Ruby, or Fortran. 

@@ -1,549 +1,441 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Keywords</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mana.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01-assumptions/intent-01-keywords-nb';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Rules for Entities, Rules for Relations" href="intent-02-rules-er-nb.html" />
     <link rel="prev" title="Expressions of Intent" href="intent.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-introduction/syllabus.html">
-   Syllabus (PPOL 628 Spring 2022)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-introduction/intro.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../00-introduction/tools.html">
-   First Tools of the Trade
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../00-introduction/tools-01env.html">
-     Setting up a Computing Environment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../00-introduction/tools-02ops.html">
-     Tools for Data Infrastructure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../00-introduction/tools-03sci.html">
-     Tools for Data Science
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-introduction/references.html">
-   Chapter Resources
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../00-introduction/syllabus.html">Syllabus (PPOL 628 Spring 2022)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00-introduction/intro.html">Introduction</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../00-introduction/tools.html">First Tools of the Trade</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../00-introduction/tools-01env.html">Setting up a Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00-introduction/tools-02ops.html">Tools for Data Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00-introduction/tools-03sci.html">Tools for Data Science</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Assumptions
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../00-introduction/references.html">Chapter Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Assumptions</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="intent.html">
-   Expressions of Intent
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Keywords
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="intent-02-rules-er-nb.html">
-     Rules for Entities, Rules for Relations
-    </a>
-   </li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intent.html">Expressions of Intent</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intent-02-rules-er-nb.html">Rules for Entities, Rules for Relations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="data.html">Driving with Data</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-02-vecsem-nb.html">Vector Semantics</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Goals &amp; Approach</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02-goals-approach/overview.html">Overview: Supervision (or the lack-thereof)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02-goals-approach/unsupervised.html">Unsupervised Techniques</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02-goals-approach/unsupervised-01-reduction-nb.html">Prelude: On Reduction and High Dimensional Pancakes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-goals-approach/unsupervised-02-clustertopics-nb.html">Let Simmer, Unsupervised</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02-goals-approach/supervised.html">Supervised Machine Learning with Text</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Measure &amp; Evaluate</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03-measure-evaluate/measuring-up.html">Similarities, Distances, and Performance Indication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03-measure-evaluate/overview.html">Overview: <em>Metrics</em> and <em>Metrology</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03-measure-evaluate/translator.html">The Good Translator: how you “win” <em>defines the game</em></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Validate</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04-validation/trouble.html">Trouble in Paradise</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/datasets.html">Datasets for this Course</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/datasets/mtgjson-nb.html">MTGJSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/datasets/tiny-shakespeare-nb.html">“Tiny” Shakespeare</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/tutorials/markovian-shakespeare.html">Markovian Shakespeare</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/TLP-COI/text-data-course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/TLP-COI/text-data-course/issues/new?title=Issue%20on%20page%20%2F01-assumptions/intent-01-keywords-nb.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="data.html">
-   Driving with Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/01-assumptions/intent-01-keywords-nb.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Goals &amp; Approach
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../02-goals-approach/presentation-test-nb.html">
-   Testing Presentations
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Measure &amp; Evaluate
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../03-measure-evaluate/notebooks-nb.html">
-   Content with notebooks
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Validate
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-validation/trouble.html">
-   Trouble in Paradise
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../appendix/datasets.html">
-   Datasets for this Course
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/datasets/mtgjson-nb.html">
-     MTGJSON
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/datasets/tiny-shakespeare-nb.html">
-     “Tiny” Shakespeare
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+</div>
 
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  
 </div>
-
 </div>
+              
+              
 
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Keywords</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../_sources/01-assumptions/intent-01-keywords-nb.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/01-assumptions/intent-01-keywords-nb.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/TLP-COI/text-data-course"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/TLP-COI/text-data-course/issues/new?title=Issue%20on%20page%20%2F01-assumptions/intent-01-keywords-nb.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/TLP-COI/text-data-course/main?urlpath=tree/content/01-assumptions/intent-01-keywords-nb.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Keywords
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recap">
-     Recap
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sanity-check">
-     Sanity-check
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#intro-to-tokenization">
-   Intro to Tokenization
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-pandas-str">
-     Using Pandas’
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .str
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tidy-text">
-   Tidy Text
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tidy-data-review">
-     Tidy Data Review
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#back-to-tidy-text">
-     Back to Tidy
-     <em>
-      Text
-     </em>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assumption-review">
-   Assumption Review
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#words-stopwords">
-     Words? Stopwords.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#importance-approx-frequency">
-     Importance
-     <span class="math notranslate nohighlight">
-      \(\approx\)
-     </span>
-     Frequency?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aside-how-many-keywords-in-my-corpus">
-   Aside: how many keywords in my corpus?
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Keywords</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sanity-check">Sanity-check</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-to-tokenization">Intro to Tokenization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pandas-str">Using Pandas’ <code class="docutils literal notranslate"><span class="pre">.str</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidy-text">Tidy Text</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidy-data-review">Tidy Data Review</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-tidy-text">Back to Tidy <em>Text</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assumption-review">Assumption Review</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#words-stopwords">Words? Stopwords.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-approx-frequency">Importance <span class="math notranslate nohighlight">\(\approx\)</span> Frequency?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aside-how-many-keywords-in-my-corpus">Aside: how many keywords in my corpus?</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Keywords</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Keywords
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recap">
-     Recap
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sanity-check">
-     Sanity-check
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#intro-to-tokenization">
-   Intro to Tokenization
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-pandas-str">
-     Using Pandas’
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .str
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tidy-text">
-   Tidy Text
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tidy-data-review">
-     Tidy Data Review
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#back-to-tidy-text">
-     Back to Tidy
-     <em>
-      Text
-     </em>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assumption-review">
-   Assumption Review
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#words-stopwords">
-     Words? Stopwords.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#importance-approx-frequency">
-     Importance
-     <span class="math notranslate nohighlight">
-      \(\approx\)
-     </span>
-     Frequency?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aside-how-many-keywords-in-my-corpus">
-   Aside: how many keywords in my corpus?
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="keywords">
-<h1>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="keywords">
+<h1>Keywords<a class="headerlink" href="#keywords" title="Permalink to this heading">#</a></h1>
 <blockquote>
 <div><p>“Quality Content” and Where to Find It…</p>
 </div></blockquote>
@@ -553,8 +445,8 @@
 </div></blockquote>
 <p>These questions help form a narrative (what am I interested in?), and <em>sell</em> that narrative (why should I be interested?)</p>
 <p>In essence, we are looking for good <em>content</em>, the “stuff” that is useful or interesting from the</p>
-<div class="section" id="id1">
-<h2>Keywords<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h2>Keywords<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Let’s grab one of our course datasets: MTGJson, as documented <span class="xref myst">in the appendix</span>. If you’re following along, DVC can grab the data, as well: <code class="docutils literal notranslate"><span class="pre">dvc</span> <span class="pre">import...</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -571,11 +463,91 @@
 <span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span><span class="s1">&#39;flavor_text&#39;</span><span class="p">]]</span>
  <span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">style</span>
  <span class="o">.</span><span class="n">set_properties</span><span class="p">(</span><span class="o">**</span><span class="n">styleprops_longtext</span><span class="p">([</span><span class="s1">&#39;text&#39;</span><span class="p">,</span><span class="s1">&#39;flavor_text&#39;</span><span class="p">]))</span>
- <span class="o">.</span><span class="n">hide_index</span><span class="p">()</span>
+ <span class="o">.</span><span class="n">hide</span><span class="p">()</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_4f7f8_row0_col1, #T_4f7f8_row0_col2, #T_4f7f8_row1_col1, #T_4f7f8_row1_col2, #T_4f7f8_row2_col1, #T_4f7f8_row2_col2, #T_4f7f8_row3_col1, #T_4f7f8_row3_col2, #T_4f7f8_row4_col1, #T_4f7f8_row4_col2, #T_4f7f8_row5_col1, #T_4f7f8_row5_col2, #T_4f7f8_row6_col1, #T_4f7f8_row6_col2, #T_4f7f8_row7_col1, #T_4f7f8_row7_col2, #T_4f7f8_row8_col1, #T_4f7f8_row8_col2, #T_4f7f8_row9_col1, #T_4f7f8_row9_col2 {
+  word-wrap: normal;
+  text-align: left;
+  font-style: italic;
+  font-size: 0.8em;
+  width: 250px;
+}
+</style>
+<table id="T_4f7f8">
+  <thead>
+    <tr>
+      <th id="T_4f7f8_level0_col0" class="col_heading level0 col0" >name</th>
+      <th id="T_4f7f8_level0_col1" class="col_heading level0 col1" >text</th>
+      <th id="T_4f7f8_level0_col2" class="col_heading level0 col2" >flavor_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_4f7f8_row0_col0" class="data row0 col0" >Saddleback Lagac</td>
+      <td id="T_4f7f8_row0_col1" class="data row0 col1" >When Saddleback Lagac enters the battlefield, support 2. (Put a +1/+1 counter on each of up to two other target creatures.)</td>
+      <td id="T_4f7f8_row0_col2" class="data row0 col2" >"A good lagac will carry you through thick and thin. A bad one . . . well, it's a tasty dinner."
+—Raff Slugeater, goblin shortcutter</td>
+    </tr>
+    <tr>
+      <td id="T_4f7f8_row1_col0" class="data row1 col0" >Dragonskull Summit</td>
+      <td id="T_4f7f8_row1_col1" class="data row1 col1" >Dragonskull Summit enters the battlefield tapped unless you control a Swamp or a Mountain.
+{T}: Add {B} or {R}.</td>
+      <td id="T_4f7f8_row1_col2" class="data row1 col2" >When the Planeswalker Angrath called dinosaurs "dragons," the name stuck in certain pirate circles.</td>
+    </tr>
+    <tr>
+      <td id="T_4f7f8_row2_col0" class="data row2 col0" >Snow-Covered Forest</td>
+      <td id="T_4f7f8_row2_col1" class="data row2 col1" >({T}: Add {G}.)</td>
+      <td id="T_4f7f8_row2_col2" class="data row2 col2" ></td>
+    </tr>
+    <tr>
+      <td id="T_4f7f8_row3_col0" class="data row3 col0" >Earthshaker Giant</td>
+      <td id="T_4f7f8_row3_col1" class="data row3 col1" >Trample
+When Earthshaker Giant enters the battlefield, other creatures you control get +3/+3 and gain trample until end of turn.</td>
+      <td id="T_4f7f8_row3_col2" class="data row3 col2" >"Come, my wild children. Let's give the interlopers a woodland welcome."</td>
+    </tr>
+    <tr>
+      <td id="T_4f7f8_row4_col0" class="data row4 col0" >Howlpack Piper // Wildsong Howler</td>
+      <td id="T_4f7f8_row4_col1" class="data row4 col1" >This spell can't be countered.
+{1}{G}, {T}: You may put a creature card from your hand onto the battlefield. If it's a Wolf or Werewolf, untap Howlpack Piper. Activate only as a sorcery.
+Daybound (If a player casts no spells during their own turn, it becomes night next turn.)</td>
+      <td id="T_4f7f8_row4_col2" class="data row4 col2" ></td>
+    </tr>
+    <tr>
+      <td id="T_4f7f8_row5_col0" class="data row5 col0" >Frost Bite</td>
+      <td id="T_4f7f8_row5_col1" class="data row5 col1" >Frost Bite deals 2 damage to target creature or planeswalker. If you control three or more snow permanents, it deals 3 damage instead.</td>
+      <td id="T_4f7f8_row5_col2" class="data row5 col2" >"Don't wander far—it's a bit nippy out there!"
+—Leidurr, expedition leader</td>
+    </tr>
+    <tr>
+      <td id="T_4f7f8_row6_col0" class="data row6 col0" >Sisay's Ring</td>
+      <td id="T_4f7f8_row6_col1" class="data row6 col1" >{T}: Add {C}{C}.</td>
+      <td id="T_4f7f8_row6_col2" class="data row6 col2" >"With this ring, you have friends in worlds you've never heard of."
+—Sisay, Captain of the *Weatherlight*</td>
+    </tr>
+    <tr>
+      <td id="T_4f7f8_row7_col0" class="data row7 col0" >Spectral Bears</td>
+      <td id="T_4f7f8_row7_col1" class="data row7 col1" >Whenever Spectral Bears attacks, if defending player controls no black nontoken permanents, it doesn't untap during your next untap step.</td>
+      <td id="T_4f7f8_row7_col2" class="data row7 col2" >"I hear there are bears—or spirits—that guard caravans passing through the forest."
+—Gulsen, abbey matron</td>
+    </tr>
+    <tr>
+      <td id="T_4f7f8_row8_col0" class="data row8 col0" >Mardu Hateblade</td>
+      <td id="T_4f7f8_row8_col1" class="data row8 col1" >{B}: Mardu Hateblade gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it.)</td>
+      <td id="T_4f7f8_row8_col2" class="data row8 col2" >"There may be little honor in my tactics, but there is no honor in losing."</td>
+    </tr>
+    <tr>
+      <td id="T_4f7f8_row9_col0" class="data row9 col0" >Forest</td>
+      <td id="T_4f7f8_row9_col1" class="data row9 col1" >({T}: Add {G}.)</td>
+      <td id="T_4f7f8_row9_col2" class="data row9 col2" ></td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <p><em>Flavor text</em> has been a staple of Magic cards for a long time.
 A lot of players gravitate to it, even more than the game itself.</p>
@@ -602,6 +574,540 @@ Thankfully, us “lost” folks have a mascot, in old Fblthp, here!</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<script type="application/javascript">(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  var force = true;
+  var py_version = '3.1.1'.replace('rc', '-rc.').replace('.dev', '-dev.');
+  var is_dev = py_version.indexOf("+") !== -1 || py_version.indexOf("-") !== -1;
+  var reloading = false;
+  var Bokeh = root.Bokeh;
+  var bokeh_loaded = Bokeh != null && (Bokeh.version === py_version || (Bokeh.versions !== undefined && Bokeh.versions.has(py_version)));
+
+  if (typeof (root._bokeh_timeout) === "undefined" || force) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks;
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, js_modules, js_exports, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+    if (js_modules == null) js_modules = [];
+    if (js_exports == null) js_exports = {};
+
+    root._bokeh_onload_callbacks.push(callback);
+
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls.length === 0 && js_modules.length === 0 && Object.keys(js_exports).length === 0) {
+      run_callbacks();
+      return null;
+    }
+    if (!reloading) {
+      console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    }
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+    window._bokeh_on_load = on_load
+
+    function on_error() {
+      console.error("failed to load " + url);
+    }
+
+    var skip = [];
+    if (window.requirejs) {
+      window.requirejs.config({'packages': {}, 'paths': {'jspanel': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/jspanel', 'jspanel-modal': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/modal/jspanel.modal', 'jspanel-tooltip': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/tooltip/jspanel.tooltip', 'jspanel-hint': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/hint/jspanel.hint', 'jspanel-layout': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/layout/jspanel.layout', 'jspanel-contextmenu': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/contextmenu/jspanel.contextmenu', 'jspanel-dock': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/dock/jspanel.dock', 'gridstack': 'https://cdn.jsdelivr.net/npm/gridstack@7.2.3/dist/gridstack-all', 'notyf': 'https://cdn.jsdelivr.net/npm/notyf@3/notyf.min'}, 'shim': {'jspanel': {'exports': 'jsPanel'}, 'gridstack': {'exports': 'GridStack'}}});
+      require(["jspanel"], function(jsPanel) {
+	window.jsPanel = jsPanel
+	on_load()
+      })
+      require(["jspanel-modal"], function() {
+	on_load()
+      })
+      require(["jspanel-tooltip"], function() {
+	on_load()
+      })
+      require(["jspanel-hint"], function() {
+	on_load()
+      })
+      require(["jspanel-layout"], function() {
+	on_load()
+      })
+      require(["jspanel-contextmenu"], function() {
+	on_load()
+      })
+      require(["jspanel-dock"], function() {
+	on_load()
+      })
+      require(["gridstack"], function(GridStack) {
+	window.GridStack = GridStack
+	on_load()
+      })
+      require(["notyf"], function() {
+	on_load()
+      })
+      root._bokeh_is_loading = css_urls.length + 9;
+    } else {
+      root._bokeh_is_loading = css_urls.length + js_urls.length + js_modules.length + Object.keys(js_exports).length;
+    }
+
+    var existing_stylesheets = []
+    var links = document.getElementsByTagName('link')
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i]
+      if (link.href != null) {
+	existing_stylesheets.push(link.href)
+      }
+    }
+    for (var i = 0; i < css_urls.length; i++) {
+      var url = css_urls[i];
+      if (existing_stylesheets.indexOf(url) !== -1) {
+	on_load()
+	continue;
+      }
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }    if (((window['jsPanel'] !== undefined) && (!(window['jsPanel'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/jspanel.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/modal/jspanel.modal.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/tooltip/jspanel.tooltip.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/hint/jspanel.hint.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/layout/jspanel.layout.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/contextmenu/jspanel.contextmenu.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/dock/jspanel.dock.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    if (((window['GridStack'] !== undefined) && (!(window['GridStack'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.1.1/dist/bundled/gridstack/gridstack@7.2.3/dist/gridstack-all.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    if (((window['Notyf'] !== undefined) && (!(window['Notyf'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.1.1/dist/bundled/notificationarea/notyf@3/notyf.min.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    var existing_scripts = []
+    var scripts = document.getElementsByTagName('script')
+    for (var i = 0; i < scripts.length; i++) {
+      var script = scripts[i]
+      if (script.src != null) {
+	existing_scripts.push(script.src)
+      }
+    }
+    for (var i = 0; i < js_urls.length; i++) {
+      var url = js_urls[i];
+      if (skip.indexOf(url) !== -1 || existing_scripts.indexOf(url) !== -1) {
+	if (!window.requirejs) {
+	  on_load();
+	}
+	continue;
+      }
+      var element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+    for (var i = 0; i < js_modules.length; i++) {
+      var url = js_modules[i];
+      if (skip.indexOf(url) !== -1 || existing_scripts.indexOf(url) !== -1) {
+	if (!window.requirejs) {
+	  on_load();
+	}
+	continue;
+      }
+      var element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.async = false;
+      element.src = url;
+      element.type = "module";
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+    for (const name in js_exports) {
+      var url = js_exports[name];
+      if (skip.indexOf(url) >= 0 || root[name] != null) {
+	if (!window.requirejs) {
+	  on_load();
+	}
+	continue;
+      }
+      var element = document.createElement('script');
+      element.onerror = on_error;
+      element.async = false;
+      element.type = "module";
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      element.textContent = `
+      import ${name} from "${url}"
+      window.${name} = ${name}
+      window._bokeh_on_load()
+      `
+      document.head.appendChild(element);
+    }
+    if (!js_urls.length && !js_modules.length) {
+      on_load()
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  var js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.1.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.1.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.1.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.1.1.min.js", "https://cdn.holoviz.org/panel/1.1.1/dist/panel.min.js"];
+  var js_modules = [];
+  var js_exports = {};
+  var css_urls = [];
+  var inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {} // ensure no trailing comma for IE
+  ];
+
+  function run_inline_js() {
+    if ((root.Bokeh !== undefined) || (force === true)) {
+      for (var i = 0; i < inline_js.length; i++) {
+        inline_js[i].call(root, root.Bokeh);
+      }
+      // Cache old bokeh versions
+      if (Bokeh != undefined && !reloading) {
+	var NewBokeh = root.Bokeh;
+	if (Bokeh.versions === undefined) {
+	  Bokeh.versions = new Map();
+	}
+	if (NewBokeh.version !== Bokeh.version) {
+	  Bokeh.versions.set(NewBokeh.version, NewBokeh)
+	}
+	root.Bokeh = Bokeh;
+      }} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    }
+    root._bokeh_is_initializing = false
+  }
+
+  function load_or_wait() {
+    // Implement a backoff loop that tries to ensure we do not load multiple
+    // versions of Bokeh and its dependencies at the same time.
+    // In recent versions we use the root._bokeh_is_initializing flag
+    // to determine whether there is an ongoing attempt to initialize
+    // bokeh, however for backward compatibility we also try to ensure
+    // that we do not start loading a newer (Panel>=1.0 and Bokeh>3) version
+    // before older versions are fully initialized.
+    if (root._bokeh_is_initializing && Date.now() > root._bokeh_timeout) {
+      root._bokeh_is_initializing = false;
+      root._bokeh_onload_callbacks = undefined;
+      console.log("Bokeh: BokehJS was loaded multiple times but one version failed to initialize.");
+      load_or_wait();
+    } else if (root._bokeh_is_initializing || (typeof root._bokeh_is_initializing === "undefined" && root._bokeh_onload_callbacks !== undefined)) {
+      setTimeout(load_or_wait, 100);
+    } else {
+      Bokeh = root.Bokeh;
+      bokeh_loaded = Bokeh != null && (Bokeh.version === py_version || (Bokeh.versions !== undefined && Bokeh.versions.has(py_version)));
+      root._bokeh_is_initializing = true
+      root._bokeh_onload_callbacks = []
+      if (!reloading && (!bokeh_loaded || is_dev)) {
+	root.Bokeh = undefined;
+      }
+      load_libs(css_urls, js_urls, js_modules, js_exports, function() {
+	console.debug("Bokeh: BokehJS plotting callback run at", now());
+	run_inline_js();
+      });
+    }
+  }
+  // Give older versions of the autoload script a head-start to ensure
+  // they initialize before we start loading newer version.
+  setTimeout(load_or_wait, 100)
+}(window));</script><script type="application/javascript">
+if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
+  window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
+}
+
+
+    function JupyterCommManager() {
+    }
+
+    JupyterCommManager.prototype.register_target = function(plot_id, comm_id, msg_handler) {
+      if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
+        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
+        comm_manager.register_target(comm_id, function(comm) {
+          comm.on_msg(msg_handler);
+        });
+      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
+        window.PyViz.kernels[plot_id].registerCommTarget(comm_id, function(comm) {
+          comm.onMsg = msg_handler;
+        });
+      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
+        google.colab.kernel.comms.registerTarget(comm_id, (comm) => {
+          var messages = comm.messages[Symbol.asyncIterator]();
+          function processIteratorResult(result) {
+            var message = result.value;
+            console.log(message)
+            var content = {data: message.data, comm_id};
+            var buffers = []
+            for (var buffer of message.buffers || []) {
+              buffers.push(new DataView(buffer))
+            }
+            var metadata = message.metadata || {};
+            var msg = {content, buffers, metadata}
+            msg_handler(msg);
+            return messages.next().then(processIteratorResult);
+          }
+          return messages.next().then(processIteratorResult);
+        })
+      }
+    }
+
+    JupyterCommManager.prototype.get_client_comm = function(plot_id, comm_id, msg_handler) {
+      if (comm_id in window.PyViz.comms) {
+        return window.PyViz.comms[comm_id];
+      } else if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
+        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
+        var comm = comm_manager.new_comm(comm_id, {}, {}, {}, comm_id);
+        if (msg_handler) {
+          comm.on_msg(msg_handler);
+        }
+      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
+        var comm = window.PyViz.kernels[plot_id].connectToComm(comm_id);
+        comm.open();
+        if (msg_handler) {
+          comm.onMsg = msg_handler;
+        }
+      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
+        var comm_promise = google.colab.kernel.comms.open(comm_id)
+        comm_promise.then((comm) => {
+          window.PyViz.comms[comm_id] = comm;
+          if (msg_handler) {
+            var messages = comm.messages[Symbol.asyncIterator]();
+            function processIteratorResult(result) {
+              var message = result.value;
+              var content = {data: message.data};
+              var metadata = message.metadata || {comm_id};
+              var msg = {content, metadata}
+              msg_handler(msg);
+              return messages.next().then(processIteratorResult);
+            }
+            return messages.next().then(processIteratorResult);
+          }
+        }) 
+        var sendClosure = (data, metadata, buffers, disposeOnDone) => {
+          return comm_promise.then((comm) => {
+            comm.send(data, metadata, buffers, disposeOnDone);
+          });
+        };
+        var comm = {
+          send: sendClosure
+        };
+      }
+      window.PyViz.comms[comm_id] = comm;
+      return comm;
+    }
+    window.PyViz.comm_manager = new JupyterCommManager();
+    
+
+
+var JS_MIME_TYPE = 'application/javascript';
+var HTML_MIME_TYPE = 'text/html';
+var EXEC_MIME_TYPE = 'application/vnd.holoviews_exec.v0+json';
+var CLASS_NAME = 'output';
+
+/**
+ * Render data to the DOM node
+ */
+function render(props, node) {
+  var div = document.createElement("div");
+  var script = document.createElement("script");
+  node.appendChild(div);
+  node.appendChild(script);
+}
+
+/**
+ * Handle when a new output is added
+ */
+function handle_add_output(event, handle) {
+  var output_area = handle.output_area;
+  var output = handle.output;
+  if ((output.data == undefined) || (!output.data.hasOwnProperty(EXEC_MIME_TYPE))) {
+    return
+  }
+  var id = output.metadata[EXEC_MIME_TYPE]["id"];
+  var toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+  if (id !== undefined) {
+    var nchildren = toinsert.length;
+    var html_node = toinsert[nchildren-1].children[0];
+    html_node.innerHTML = output.data[HTML_MIME_TYPE];
+    var scripts = [];
+    var nodelist = html_node.querySelectorAll("script");
+    for (var i in nodelist) {
+      if (nodelist.hasOwnProperty(i)) {
+        scripts.push(nodelist[i])
+      }
+    }
+
+    scripts.forEach( function (oldScript) {
+      var newScript = document.createElement("script");
+      var attrs = [];
+      var nodemap = oldScript.attributes;
+      for (var j in nodemap) {
+        if (nodemap.hasOwnProperty(j)) {
+          attrs.push(nodemap[j])
+        }
+      }
+      attrs.forEach(function(attr) { newScript.setAttribute(attr.name, attr.value) });
+      newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+      oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+    if (JS_MIME_TYPE in output.data) {
+      toinsert[nchildren-1].children[1].textContent = output.data[JS_MIME_TYPE];
+    }
+    output_area._hv_plot_id = id;
+    if ((window.Bokeh !== undefined) && (id in Bokeh.index)) {
+      window.PyViz.plot_index[id] = Bokeh.index[id];
+    } else {
+      window.PyViz.plot_index[id] = null;
+    }
+  } else if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+    var bk_div = document.createElement("div");
+    bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+    var script_attrs = bk_div.children[0].attributes;
+    for (var i = 0; i < script_attrs.length; i++) {
+      toinsert[toinsert.length - 1].childNodes[1].setAttribute(script_attrs[i].name, script_attrs[i].value);
+    }
+    // store reference to server id on output_area
+    output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+  }
+}
+
+/**
+ * Handle when an output is cleared or removed
+ */
+function handle_clear_output(event, handle) {
+  var id = handle.cell.output_area._hv_plot_id;
+  var server_id = handle.cell.output_area._bokeh_server_id;
+  if (((id === undefined) || !(id in PyViz.plot_index)) && (server_id !== undefined)) { return; }
+  var comm = window.PyViz.comm_manager.get_client_comm("hv-extension-comm", "hv-extension-comm", function () {});
+  if (server_id !== null) {
+    comm.send({event_type: 'server_delete', 'id': server_id});
+    return;
+  } else if (comm !== null) {
+    comm.send({event_type: 'delete', 'id': id});
+  }
+  delete PyViz.plot_index[id];
+  if ((window.Bokeh !== undefined) & (id in window.Bokeh.index)) {
+    var doc = window.Bokeh.index[id].model.document
+    doc.clear();
+    const i = window.Bokeh.documents.indexOf(doc);
+    if (i > -1) {
+      window.Bokeh.documents.splice(i, 1);
+    }
+  }
+}
+
+/**
+ * Handle kernel restart event
+ */
+function handle_kernel_cleanup(event, handle) {
+  delete PyViz.comms["hv-extension-comm"];
+  window.PyViz.plot_index = {}
+}
+
+/**
+ * Handle update_display_data messages
+ */
+function handle_update_output(event, handle) {
+  handle_clear_output(event, {cell: {output_area: handle.output_area}})
+  handle_add_output(event, handle)
+}
+
+function register_renderer(events, OutputArea) {
+  function append_mime(data, metadata, element) {
+    // create a DOM node to render to
+    var toinsert = this.create_output_subarea(
+    metadata,
+    CLASS_NAME,
+    EXEC_MIME_TYPE
+    );
+    this.keyboard_manager.register_events(toinsert);
+    // Render to node
+    var props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+    render(props, toinsert[0]);
+    element.append(toinsert);
+    return toinsert
+  }
+
+  events.on('output_added.OutputArea', handle_add_output);
+  events.on('output_updated.OutputArea', handle_update_output);
+  events.on('clear_output.CodeCell', handle_clear_output);
+  events.on('delete.Cell', handle_clear_output);
+  events.on('kernel_ready.Kernel', handle_kernel_cleanup);
+
+  OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+    safe: true,
+    index: 0
+  });
+}
+
+if (window.Jupyter !== undefined) {
+  try {
+    var events = require('base/js/events');
+    var OutputArea = require('notebook/js/outputarea').OutputArea;
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  } catch(err) {
+  }
+}
+</script><div class="output text_html"><style>*[data-root-id],
+*[data-root-id] > * {
+  box-sizing: border-box;
+  font-family: var(--jp-ui-font-family);
+  font-size: var(--jp-ui-font-size1);
+  color: var(--vscode-editor-foreground, var(--jp-ui-font-color1));
+}
+
+/* Override VSCode background color */
+.cell-output-ipywidget-background:has(> .cell-output-ipywidget-background
+    > .lm-Widget
+    > *[data-root-id]),
+.cell-output-ipywidget-background:has(> .lm-Widget > *[data-root-id]) {
+  background-color: transparent !important;
+}
+</style></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: title={&#39;center&#39;: &#39;What fraction of cards have Flavor Text each year?&#39;}, xlabel=&#39;release_date&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/409b373f7b32a39ecd83cd177e8fc850e2d8337ffcb7bc3b55593f1e23d8f7fa.png" src="../_images/409b373f7b32a39ecd83cd177e8fc850e2d8337ffcb7bc3b55593f1e23d8f7fa.png" />
+</div>
 </div>
 <p>There’s a lot of other data avaliable, as well!</p>
 <div class="cell docutils container">
@@ -611,6 +1117,276 @@ Thankfully, us “lost” folks have a mascot, in old Fblthp, here!</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_dfdcd th.col_heading {
+  writing-mode: sideways-lr;
+  vertical-align: bottom;
+  transform-origin: left;
+  transform: rotate(45deg) translate(35px,-40px);
+  border-bottom: 1px solid #ccc;
+}
+#T_dfdcd td {
+  text-align: left;
+}
+</style>
+<table id="T_dfdcd">
+  <thead>
+    <tr>
+      <th id="T_dfdcd_level0_col0" class="col_heading level0 col0" >color_identity</th>
+      <th id="T_dfdcd_level0_col1" class="col_heading level0 col1" >colors</th>
+      <th id="T_dfdcd_level0_col2" class="col_heading level0 col2" >converted_mana_cost</th>
+      <th id="T_dfdcd_level0_col3" class="col_heading level0 col3" >edhrec_rank</th>
+      <th id="T_dfdcd_level0_col4" class="col_heading level0 col4" >keywords</th>
+      <th id="T_dfdcd_level0_col5" class="col_heading level0 col5" >mana_cost</th>
+      <th id="T_dfdcd_level0_col6" class="col_heading level0 col6" >name</th>
+      <th id="T_dfdcd_level0_col7" class="col_heading level0 col7" >number</th>
+      <th id="T_dfdcd_level0_col8" class="col_heading level0 col8" >power</th>
+      <th id="T_dfdcd_level0_col9" class="col_heading level0 col9" >rarity</th>
+      <th id="T_dfdcd_level0_col10" class="col_heading level0 col10" >subtypes</th>
+      <th id="T_dfdcd_level0_col11" class="col_heading level0 col11" >supertypes</th>
+      <th id="T_dfdcd_level0_col12" class="col_heading level0 col12" >text</th>
+      <th id="T_dfdcd_level0_col13" class="col_heading level0 col13" >toughness</th>
+      <th id="T_dfdcd_level0_col14" class="col_heading level0 col14" >types</th>
+      <th id="T_dfdcd_level0_col15" class="col_heading level0 col15" >flavor_text</th>
+      <th id="T_dfdcd_level0_col16" class="col_heading level0 col16" >life</th>
+      <th id="T_dfdcd_level0_col17" class="col_heading level0 col17" >code</th>
+      <th id="T_dfdcd_level0_col18" class="col_heading level0 col18" >release_date</th>
+      <th id="T_dfdcd_level0_col19" class="col_heading level0 col19" >block</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_dfdcd_row0_col0" class="data row0 col0" ><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row0_col1" class="data row0 col1" ><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row0_col2" class="data row0 col2" >4</td>
+      <td id="T_dfdcd_row0_col3" class="data row0 col3" >16804</td>
+      <td id="T_dfdcd_row0_col4" class="data row0 col4" >['Support']</td>
+      <td id="T_dfdcd_row0_col5" class="data row0 col5" ><i class="ms ms-cost ms-3"></i><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row0_col6" class="data row0 col6" >Saddleback Lagac</td>
+      <td id="T_dfdcd_row0_col7" class="data row0 col7" >18</td>
+      <td id="T_dfdcd_row0_col8" class="data row0 col8" >3</td>
+      <td id="T_dfdcd_row0_col9" class="data row0 col9" >common</td>
+      <td id="T_dfdcd_row0_col10" class="data row0 col10" >['Lizard']</td>
+      <td id="T_dfdcd_row0_col11" class="data row0 col11" >[]</td>
+      <td id="T_dfdcd_row0_col12" class="data row0 col12" >When Saddleback Lagac enters the battlefield, support 2. (Put a +1/+1 counter on each of up to two other target creatures.)</td>
+      <td id="T_dfdcd_row0_col13" class="data row0 col13" >1</td>
+      <td id="T_dfdcd_row0_col14" class="data row0 col14" >['Creature']</td>
+      <td id="T_dfdcd_row0_col15" class="data row0 col15" >"A good lagac will carry you through thick and thin. A bad one . . . well, it's a tasty dinner."
+—Raff Slugeater, goblin shortcutter</td>
+      <td id="T_dfdcd_row0_col16" class="data row0 col16" >nan</td>
+      <td id="T_dfdcd_row0_col17" class="data row0 col17" >DDR</td>
+      <td id="T_dfdcd_row0_col18" class="data row0 col18" >Sep '16</td>
+      <td id="T_dfdcd_row0_col19" class="data row0 col19" >None</td>
+    </tr>
+    <tr>
+      <td id="T_dfdcd_row1_col0" class="data row1 col0" ><i class="ms ms-cost ms-b"></i><i class="ms ms-cost ms-r"></i></td>
+      <td id="T_dfdcd_row1_col1" class="data row1 col1" ></td>
+      <td id="T_dfdcd_row1_col2" class="data row1 col2" >0</td>
+      <td id="T_dfdcd_row1_col3" class="data row1 col3" >125</td>
+      <td id="T_dfdcd_row1_col4" class="data row1 col4" >None</td>
+      <td id="T_dfdcd_row1_col5" class="data row1 col5" ></td>
+      <td id="T_dfdcd_row1_col6" class="data row1 col6" >Dragonskull Summit</td>
+      <td id="T_dfdcd_row1_col7" class="data row1 col7" >252</td>
+      <td id="T_dfdcd_row1_col8" class="data row1 col8" >nan</td>
+      <td id="T_dfdcd_row1_col9" class="data row1 col9" >rare</td>
+      <td id="T_dfdcd_row1_col10" class="data row1 col10" >[]</td>
+      <td id="T_dfdcd_row1_col11" class="data row1 col11" >[]</td>
+      <td id="T_dfdcd_row1_col12" class="data row1 col12" >Dragonskull Summit enters the battlefield tapped unless you control a Swamp or a Mountain.
+{T}: Add {B} or {R}.</td>
+      <td id="T_dfdcd_row1_col13" class="data row1 col13" >nan</td>
+      <td id="T_dfdcd_row1_col14" class="data row1 col14" >['Land']</td>
+      <td id="T_dfdcd_row1_col15" class="data row1 col15" >When the Planeswalker Angrath called dinosaurs "dragons," the name stuck in certain pirate circles.</td>
+      <td id="T_dfdcd_row1_col16" class="data row1 col16" >nan</td>
+      <td id="T_dfdcd_row1_col17" class="data row1 col17" >XLN</td>
+      <td id="T_dfdcd_row1_col18" class="data row1 col18" >Sep '17</td>
+      <td id="T_dfdcd_row1_col19" class="data row1 col19" >Ixalan</td>
+    </tr>
+    <tr>
+      <td id="T_dfdcd_row2_col0" class="data row2 col0" ><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row2_col1" class="data row2 col1" ></td>
+      <td id="T_dfdcd_row2_col2" class="data row2 col2" >0</td>
+      <td id="T_dfdcd_row2_col3" class="data row2 col3" >nan</td>
+      <td id="T_dfdcd_row2_col4" class="data row2 col4" >None</td>
+      <td id="T_dfdcd_row2_col5" class="data row2 col5" ></td>
+      <td id="T_dfdcd_row2_col6" class="data row2 col6" >Snow-Covered Forest</td>
+      <td id="T_dfdcd_row2_col7" class="data row2 col7" >254</td>
+      <td id="T_dfdcd_row2_col8" class="data row2 col8" >nan</td>
+      <td id="T_dfdcd_row2_col9" class="data row2 col9" >common</td>
+      <td id="T_dfdcd_row2_col10" class="data row2 col10" >['Forest']</td>
+      <td id="T_dfdcd_row2_col11" class="data row2 col11" >['Basic' 'Snow']</td>
+      <td id="T_dfdcd_row2_col12" class="data row2 col12" >({T}: Add {G}.)</td>
+      <td id="T_dfdcd_row2_col13" class="data row2 col13" >nan</td>
+      <td id="T_dfdcd_row2_col14" class="data row2 col14" >['Land']</td>
+      <td id="T_dfdcd_row2_col15" class="data row2 col15" ><NA></td>
+      <td id="T_dfdcd_row2_col16" class="data row2 col16" >nan</td>
+      <td id="T_dfdcd_row2_col17" class="data row2 col17" >MH1</td>
+      <td id="T_dfdcd_row2_col18" class="data row2 col18" >Jun '19</td>
+      <td id="T_dfdcd_row2_col19" class="data row2 col19" >None</td>
+    </tr>
+    <tr>
+      <td id="T_dfdcd_row3_col0" class="data row3 col0" ><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row3_col1" class="data row3 col1" ><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row3_col2" class="data row3 col2" >6</td>
+      <td id="T_dfdcd_row3_col3" class="data row3 col3" >9001</td>
+      <td id="T_dfdcd_row3_col4" class="data row3 col4" >['Trample']</td>
+      <td id="T_dfdcd_row3_col5" class="data row3 col5" ><i class="ms ms-cost ms-4"></i><i class="ms ms-cost ms-g"></i><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row3_col6" class="data row3 col6" >Earthshaker Giant</td>
+      <td id="T_dfdcd_row3_col7" class="data row3 col7" >5</td>
+      <td id="T_dfdcd_row3_col8" class="data row3 col8" >6</td>
+      <td id="T_dfdcd_row3_col9" class="data row3 col9" >nan</td>
+      <td id="T_dfdcd_row3_col10" class="data row3 col10" >['Giant' 'Druid']</td>
+      <td id="T_dfdcd_row3_col11" class="data row3 col11" >[]</td>
+      <td id="T_dfdcd_row3_col12" class="data row3 col12" >Trample
+When Earthshaker Giant enters the battlefield, other creatures you control get +3/+3 and gain trample until end of turn.</td>
+      <td id="T_dfdcd_row3_col13" class="data row3 col13" >6</td>
+      <td id="T_dfdcd_row3_col14" class="data row3 col14" >['Creature']</td>
+      <td id="T_dfdcd_row3_col15" class="data row3 col15" >"Come, my wild children. Let's give the interlopers a woodland welcome."</td>
+      <td id="T_dfdcd_row3_col16" class="data row3 col16" >nan</td>
+      <td id="T_dfdcd_row3_col17" class="data row3 col17" >GN2</td>
+      <td id="T_dfdcd_row3_col18" class="data row3 col18" >Nov '19</td>
+      <td id="T_dfdcd_row3_col19" class="data row3 col19" >None</td>
+    </tr>
+    <tr>
+      <td id="T_dfdcd_row4_col0" class="data row4 col0" ><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row4_col1" class="data row4 col1" ><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row4_col2" class="data row4 col2" >4</td>
+      <td id="T_dfdcd_row4_col3" class="data row4 col3" >7392</td>
+      <td id="T_dfdcd_row4_col4" class="data row4 col4" >['Daybound']</td>
+      <td id="T_dfdcd_row4_col5" class="data row4 col5" ><i class="ms ms-cost ms-3"></i><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row4_col6" class="data row4 col6" >Howlpack Piper // Wildsong Howler</td>
+      <td id="T_dfdcd_row4_col7" class="data row4 col7" >392</td>
+      <td id="T_dfdcd_row4_col8" class="data row4 col8" >2</td>
+      <td id="T_dfdcd_row4_col9" class="data row4 col9" >rare</td>
+      <td id="T_dfdcd_row4_col10" class="data row4 col10" >['Human' 'Werewolf']</td>
+      <td id="T_dfdcd_row4_col11" class="data row4 col11" >[]</td>
+      <td id="T_dfdcd_row4_col12" class="data row4 col12" >This spell can't be countered.
+{1}{G}, {T}: You may put a creature card from your hand onto the battlefield. If it's a Wolf or Werewolf, untap Howlpack Piper. Activate only as a sorcery.
+Daybound (If a player casts no spells during their own turn, it becomes night next turn.)</td>
+      <td id="T_dfdcd_row4_col13" class="data row4 col13" >2</td>
+      <td id="T_dfdcd_row4_col14" class="data row4 col14" >['Creature']</td>
+      <td id="T_dfdcd_row4_col15" class="data row4 col15" ><NA></td>
+      <td id="T_dfdcd_row4_col16" class="data row4 col16" >nan</td>
+      <td id="T_dfdcd_row4_col17" class="data row4 col17" >VOW</td>
+      <td id="T_dfdcd_row4_col18" class="data row4 col18" >Nov '21</td>
+      <td id="T_dfdcd_row4_col19" class="data row4 col19" >Innistrad: Double Feature</td>
+    </tr>
+    <tr>
+      <td id="T_dfdcd_row5_col0" class="data row5 col0" ><i class="ms ms-cost ms-r"></i></td>
+      <td id="T_dfdcd_row5_col1" class="data row5 col1" ><i class="ms ms-cost ms-r"></i></td>
+      <td id="T_dfdcd_row5_col2" class="data row5 col2" >1</td>
+      <td id="T_dfdcd_row5_col3" class="data row5 col3" >11917</td>
+      <td id="T_dfdcd_row5_col4" class="data row5 col4" >None</td>
+      <td id="T_dfdcd_row5_col5" class="data row5 col5" ><i class="ms ms-cost ms-r"></i></td>
+      <td id="T_dfdcd_row5_col6" class="data row5 col6" >Frost Bite</td>
+      <td id="T_dfdcd_row5_col7" class="data row5 col7" >404</td>
+      <td id="T_dfdcd_row5_col8" class="data row5 col8" >nan</td>
+      <td id="T_dfdcd_row5_col9" class="data row5 col9" >common</td>
+      <td id="T_dfdcd_row5_col10" class="data row5 col10" >[]</td>
+      <td id="T_dfdcd_row5_col11" class="data row5 col11" >['Snow']</td>
+      <td id="T_dfdcd_row5_col12" class="data row5 col12" >Frost Bite deals 2 damage to target creature or planeswalker. If you control three or more snow permanents, it deals 3 damage instead.</td>
+      <td id="T_dfdcd_row5_col13" class="data row5 col13" >nan</td>
+      <td id="T_dfdcd_row5_col14" class="data row5 col14" >['Instant']</td>
+      <td id="T_dfdcd_row5_col15" class="data row5 col15" >"Don't wander far—it's a bit nippy out there!"
+—Leidurr, expedition leader</td>
+      <td id="T_dfdcd_row5_col16" class="data row5 col16" >nan</td>
+      <td id="T_dfdcd_row5_col17" class="data row5 col17" >KHM</td>
+      <td id="T_dfdcd_row5_col18" class="data row5 col18" >Feb '21</td>
+      <td id="T_dfdcd_row5_col19" class="data row5 col19" >None</td>
+    </tr>
+    <tr>
+      <td id="T_dfdcd_row6_col0" class="data row6 col0" ></td>
+      <td id="T_dfdcd_row6_col1" class="data row6 col1" ></td>
+      <td id="T_dfdcd_row6_col2" class="data row6 col2" >4</td>
+      <td id="T_dfdcd_row6_col3" class="data row6 col3" >2463</td>
+      <td id="T_dfdcd_row6_col4" class="data row6 col4" >None</td>
+      <td id="T_dfdcd_row6_col5" class="data row6 col5" ><i class="ms ms-cost ms-4"></i></td>
+      <td id="T_dfdcd_row6_col6" class="data row6 col6" >Sisay's Ring</td>
+      <td id="T_dfdcd_row6_col7" class="data row6 col7" >154</td>
+      <td id="T_dfdcd_row6_col8" class="data row6 col8" >nan</td>
+      <td id="T_dfdcd_row6_col9" class="data row6 col9" >common</td>
+      <td id="T_dfdcd_row6_col10" class="data row6 col10" >[]</td>
+      <td id="T_dfdcd_row6_col11" class="data row6 col11" >[]</td>
+      <td id="T_dfdcd_row6_col12" class="data row6 col12" >{T}: Add {C}{C}.</td>
+      <td id="T_dfdcd_row6_col13" class="data row6 col13" >nan</td>
+      <td id="T_dfdcd_row6_col14" class="data row6 col14" >['Artifact']</td>
+      <td id="T_dfdcd_row6_col15" class="data row6 col15" >"With this ring, you have friends in worlds you've never heard of."
+—Sisay, Captain of the *Weatherlight*</td>
+      <td id="T_dfdcd_row6_col16" class="data row6 col16" >nan</td>
+      <td id="T_dfdcd_row6_col17" class="data row6 col17" >VIS</td>
+      <td id="T_dfdcd_row6_col18" class="data row6 col18" >Feb '97</td>
+      <td id="T_dfdcd_row6_col19" class="data row6 col19" >Mirage</td>
+    </tr>
+    <tr>
+      <td id="T_dfdcd_row7_col0" class="data row7 col0" ><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row7_col1" class="data row7 col1" ><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row7_col2" class="data row7 col2" >2</td>
+      <td id="T_dfdcd_row7_col3" class="data row7 col3" >8173</td>
+      <td id="T_dfdcd_row7_col4" class="data row7 col4" >None</td>
+      <td id="T_dfdcd_row7_col5" class="data row7 col5" ><i class="ms ms-cost ms-1"></i><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row7_col6" class="data row7 col6" >Spectral Bears</td>
+      <td id="T_dfdcd_row7_col7" class="data row7 col7" >131</td>
+      <td id="T_dfdcd_row7_col8" class="data row7 col8" >3</td>
+      <td id="T_dfdcd_row7_col9" class="data row7 col9" >uncommon</td>
+      <td id="T_dfdcd_row7_col10" class="data row7 col10" >['Bear' 'Spirit']</td>
+      <td id="T_dfdcd_row7_col11" class="data row7 col11" >[]</td>
+      <td id="T_dfdcd_row7_col12" class="data row7 col12" >Whenever Spectral Bears attacks, if defending player controls no black nontoken permanents, it doesn't untap during your next untap step.</td>
+      <td id="T_dfdcd_row7_col13" class="data row7 col13" >3</td>
+      <td id="T_dfdcd_row7_col14" class="data row7 col14" >['Creature']</td>
+      <td id="T_dfdcd_row7_col15" class="data row7 col15" >"I hear there are bears—or spirits—that guard caravans passing through the forest."
+—Gulsen, abbey matron</td>
+      <td id="T_dfdcd_row7_col16" class="data row7 col16" >nan</td>
+      <td id="T_dfdcd_row7_col17" class="data row7 col17" >ME1</td>
+      <td id="T_dfdcd_row7_col18" class="data row7 col18" >Sep '07</td>
+      <td id="T_dfdcd_row7_col19" class="data row7 col19" >None</td>
+    </tr>
+    <tr>
+      <td id="T_dfdcd_row8_col0" class="data row8 col0" ><i class="ms ms-cost ms-b"></i><i class="ms ms-cost ms-w"></i></td>
+      <td id="T_dfdcd_row8_col1" class="data row8 col1" ><i class="ms ms-cost ms-w"></i></td>
+      <td id="T_dfdcd_row8_col2" class="data row8 col2" >1</td>
+      <td id="T_dfdcd_row8_col3" class="data row8 col3" >17021</td>
+      <td id="T_dfdcd_row8_col4" class="data row8 col4" >None</td>
+      <td id="T_dfdcd_row8_col5" class="data row8 col5" ><i class="ms ms-cost ms-w"></i></td>
+      <td id="T_dfdcd_row8_col6" class="data row8 col6" >Mardu Hateblade</td>
+      <td id="T_dfdcd_row8_col7" class="data row8 col7" >16</td>
+      <td id="T_dfdcd_row8_col8" class="data row8 col8" >1</td>
+      <td id="T_dfdcd_row8_col9" class="data row8 col9" >common</td>
+      <td id="T_dfdcd_row8_col10" class="data row8 col10" >['Human' 'Warrior']</td>
+      <td id="T_dfdcd_row8_col11" class="data row8 col11" >[]</td>
+      <td id="T_dfdcd_row8_col12" class="data row8 col12" >{B}: Mardu Hateblade gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it.)</td>
+      <td id="T_dfdcd_row8_col13" class="data row8 col13" >1</td>
+      <td id="T_dfdcd_row8_col14" class="data row8 col14" >['Creature']</td>
+      <td id="T_dfdcd_row8_col15" class="data row8 col15" >"There may be little honor in my tactics, but there is no honor in losing."</td>
+      <td id="T_dfdcd_row8_col16" class="data row8 col16" >nan</td>
+      <td id="T_dfdcd_row8_col17" class="data row8 col17" >KTK</td>
+      <td id="T_dfdcd_row8_col18" class="data row8 col18" >Sep '14</td>
+      <td id="T_dfdcd_row8_col19" class="data row8 col19" >Khans of Tarkir</td>
+    </tr>
+    <tr>
+      <td id="T_dfdcd_row9_col0" class="data row9 col0" ><i class="ms ms-cost ms-g"></i></td>
+      <td id="T_dfdcd_row9_col1" class="data row9 col1" ></td>
+      <td id="T_dfdcd_row9_col2" class="data row9 col2" >0</td>
+      <td id="T_dfdcd_row9_col3" class="data row9 col3" >nan</td>
+      <td id="T_dfdcd_row9_col4" class="data row9 col4" >None</td>
+      <td id="T_dfdcd_row9_col5" class="data row9 col5" ></td>
+      <td id="T_dfdcd_row9_col6" class="data row9 col6" >Forest</td>
+      <td id="T_dfdcd_row9_col7" class="data row9 col7" >247</td>
+      <td id="T_dfdcd_row9_col8" class="data row9 col8" >nan</td>
+      <td id="T_dfdcd_row9_col9" class="data row9 col9" >common</td>
+      <td id="T_dfdcd_row9_col10" class="data row9 col10" >['Forest']</td>
+      <td id="T_dfdcd_row9_col11" class="data row9 col11" >['Basic']</td>
+      <td id="T_dfdcd_row9_col12" class="data row9 col12" >({T}: Add {G}.)</td>
+      <td id="T_dfdcd_row9_col13" class="data row9 col13" >nan</td>
+      <td id="T_dfdcd_row9_col14" class="data row9 col14" >['Land']</td>
+      <td id="T_dfdcd_row9_col15" class="data row9 col15" ><NA></td>
+      <td id="T_dfdcd_row9_col16" class="data row9 col16" >nan</td>
+      <td id="T_dfdcd_row9_col17" class="data row9 col17" >M11</td>
+      <td id="T_dfdcd_row9_col18" class="data row9 col18" >Jul '10</td>
+      <td id="T_dfdcd_row9_col19" class="data row9 col19" >Core Set</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -631,6 +1407,9 @@ Thankfully, us “lost” folks have a mascot, in old Fblthp, here!</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/166ac53aba342e9e42279bd0948a4e89d66582d8677bfa0238f15d1f14c72987.png" src="../_images/166ac53aba342e9e42279bd0948a4e89d66582d8677bfa0238f15d1f14c72987.png" />
+</div>
 </div>
 <p>What “types” of cards are there?
 What are the “subtypes” of cards, and how are they differentiate from “types”?</p>
@@ -643,6 +1422,9 @@ What are the “subtypes” of cards, and how are they differentiate from “typ
 <span class="c1"># df.subtypes.value_counts()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f088fda4407a7b40f8ec0cbd572c620c95e84799c2232a4bba581b23eae3eb3e.png" src="../_images/f088fda4407a7b40f8ec0cbd572c620c95e84799c2232a4bba581b23eae3eb3e.png" />
 </div>
 </div>
 <p><strong>Keywords</strong></p>
@@ -672,8 +1454,8 @@ Here, we have been <em>told</em> what those keywords are, which is nice!</p>
             <span class="n">textual</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> 
             <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">keyword_in_txt</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="p">)</span>
-        <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;keywords&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-        <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;textual&#39;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;keywords&#39;</span><span class="p">)[</span><span class="s1">&#39;textual&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
         <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
         <span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span>
             <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Fraction of text containing keyword&#39;</span><span class="p">,</span>
@@ -686,6 +1468,73 @@ Here, we have been <em>told</em> what those keywords are, which is nice!</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id='p1002'>
+  <div id="a47c50ce-77d2-41bd-ae31-316ba8b0321d" data-root-id="p1002" style="display: contents;"></div>
+</div>
+<script type="application/javascript">(function(root) {
+  var docs_json = {"241ecdc3-e7c6-40b9-a0d4-00f657c7d766":{"version":"3.1.1","title":"Bokeh Application","defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]}],"roots":[{"type":"object","name":"Row","id":"p1002","attributes":{"name":"Row00889","tags":["embedded"],"stylesheets":["\n:host(.pn-loading.pn-arc):before, .pn-loading.pn-arc:before {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJtYXJnaW46IGF1dG87IGJhY2tncm91bmQ6IG5vbmU7IGRpc3BsYXk6IGJsb2NrOyBzaGFwZS1yZW5kZXJpbmc6IGF1dG87IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzNjM2MzIiBzdHJva2Utd2lkdGg9IjEwIiByPSIzNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTY0LjkzMzYxNDMxMzQ2NDE1IDU2Ljk3Nzg3MTQzNzgyMTM4Ij4gICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiB2YWx1ZXM9IjAgNTAgNTA7MzYwIDUwIDUwIiBrZXlUaW1lcz0iMDsxIj48L2FuaW1hdGVUcmFuc2Zvcm0+ICA8L2NpcmNsZT48L3N2Zz4=\");\n  background-size: auto calc(min(50%, 400px));\n}",{"type":"object","name":"ImportedStyleSheet","id":"p1005","attributes":{"url":"https://cdn.holoviz.org/panel/1.1.1/dist/css/loading.css"}},{"type":"object","name":"ImportedStyleSheet","id":"p1093","attributes":{"url":"https://cdn.holoviz.org/panel/1.1.1/dist/css/listpanel.css"}},{"type":"object","name":"ImportedStyleSheet","id":"p1003","attributes":{"url":"https://cdn.holoviz.org/panel/1.1.1/dist/bundled/theme/default.css"}},{"type":"object","name":"ImportedStyleSheet","id":"p1004","attributes":{"url":"https://cdn.holoviz.org/panel/1.1.1/dist/bundled/theme/native.css"}}],"margin":0,"sizing_mode":"stretch_width","align":"start","children":[{"type":"object","name":"Spacer","id":"p1006","attributes":{"name":"HSpacer00900","stylesheets":["\n:host(.pn-loading.pn-arc):before, .pn-loading.pn-arc:before {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJtYXJnaW46IGF1dG87IGJhY2tncm91bmQ6IG5vbmU7IGRpc3BsYXk6IGJsb2NrOyBzaGFwZS1yZW5kZXJpbmc6IGF1dG87IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzNjM2MzIiBzdHJva2Utd2lkdGg9IjEwIiByPSIzNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTY0LjkzMzYxNDMxMzQ2NDE1IDU2Ljk3Nzg3MTQzNzgyMTM4Ij4gICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiB2YWx1ZXM9IjAgNTAgNTA7MzYwIDUwIDUwIiBrZXlUaW1lcz0iMDsxIj48L2FuaW1hdGVUcmFuc2Zvcm0+ICA8L2NpcmNsZT48L3N2Zz4=\");\n  background-size: auto calc(min(50%, 400px));\n}",{"id":"p1005"},{"id":"p1003"},{"id":"p1004"}],"margin":0,"sizing_mode":"stretch_width","align":"start"}},{"type":"object","name":"Figure","id":"p1010","attributes":{"width":null,"height":null,"margin":[5,10],"sizing_mode":"fixed","align":"start","x_range":{"type":"object","name":"Range1d","id":"p1007","attributes":{"tags":[[["textual","textual",null]]],"end":0.8631944444444444,"reset_start":0.0,"reset_end":0.8631944444444444}},"y_range":{"type":"object","name":"FactorRange","id":"p1008","attributes":{"tags":[[["keywords","keywords",null]]],"factors":["Level Up","Explore","Fateseal","Fight","Battle Cry","Landwalk","Landcycling","Aura Swap","Assemble","Meld","Mill","Detain","Exert","Transform","Investigate","Seek","Support","Legendary landwalk","Learn","Goad","Bolster","Populate","Proliferate","Conjure","Scry","Lifelink","Amass","Manifest","Banding","Surveil","Haste","Hexproof from","Protection","Vigilance","Clash","Rampage","Forestcycling","Indestructible","Trample","Deathtouch"]}},"x_scale":{"type":"object","name":"LinearScale","id":"p1022"},"y_scale":{"type":"object","name":"CategoricalScale","id":"p1024"},"title":{"type":"object","name":"Title","id":"p1013","attributes":{"text":"Fraction of text containing keyword","text_color":"black","text_font_size":"12pt"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1063","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1053","attributes":{"selected":{"type":"object","name":"Selection","id":"p1054","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1055"},"data":{"type":"map","entries":[["keywords",["Level Up","Explore","Fateseal","Fight","Battle Cry","Landwalk","Landcycling","Aura Swap","Assemble","Meld","Mill","Detain","Exert","Transform","Investigate","Seek","Support","Legendary landwalk","Learn","Goad","Bolster","Populate","Proliferate","Conjure","Scry","Lifelink","Amass","Manifest","Banding","Surveil","Haste","Hexproof from","Protection","Vigilance","Clash","Rampage","Forestcycling","Indestructible","Trample","Deathtouch"]],["textual",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaL2Cb01W+P5eWlpaWlsY/11prrbXWyj/W6pjgwTzRP3Icx3Ecx9E/AAAAAAAA1D9VVVVVVVXVP1VVVVVVVdU/25WoXYna1T8WX/EVX/HVP2ZmZmZmZtY/idqVqF2J2j/hfAzOx+DcPw3lNZTXUN4/3vlbnNZs3z+oxks3iUHgP7rooosuuuA/URRFURRF4T9yHMdxHMfhP5IkSZIkSeI/SI5oGh1+4j+rqqqqqqriP5rP9cfLYOQ/2V/rCs3t5D+mpaWlpaXlPwAAAAAAAOg/eHh4eHh46D/VfXlsRdDoP1nHANS13ug/x3Ecx3Ec6T8="},"shape":[40],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1064","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1065"}}},"glyph":{"type":"object","name":"HBar","id":"p1060","attributes":{"tags":["apply_ranges"],"y":{"type":"field","field":"keywords"},"height":{"type":"value","value":0.8},"right":{"type":"field","field":"textual"},"fill_color":{"type":"value","value":"#30a2da"},"hatch_color":{"type":"value","value":"#30a2da"}}},"selection_glyph":{"type":"object","name":"HBar","id":"p1066","attributes":{"tags":["apply_ranges"],"y":{"type":"field","field":"keywords"},"height":{"type":"value","value":0.8},"left":{"type":"value","value":0},"right":{"type":"field","field":"textual"},"line_color":{"type":"value","value":"black"},"line_alpha":{"type":"value","value":1.0},"line_width":{"type":"value","value":1},"line_join":{"type":"value","value":"bevel"},"line_cap":{"type":"value","value":"butt"},"line_dash":{"type":"value","value":[]},"line_dash_offset":{"type":"value","value":0},"fill_color":{"type":"value","value":"#30a2da"},"fill_alpha":{"type":"value","value":1.0},"hatch_color":{"type":"value","value":"#30a2da"},"hatch_alpha":{"type":"value","value":1.0},"hatch_scale":{"type":"value","value":12.0},"hatch_pattern":{"type":"value","value":null},"hatch_weight":{"type":"value","value":1.0}}},"nonselection_glyph":{"type":"object","name":"HBar","id":"p1061","attributes":{"tags":["apply_ranges"],"y":{"type":"field","field":"keywords"},"height":{"type":"value","value":0.8},"right":{"type":"field","field":"textual"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#30a2da"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"#30a2da"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"HBar","id":"p1062","attributes":{"tags":["apply_ranges"],"y":{"type":"field","field":"keywords"},"height":{"type":"value","value":0.8},"right":{"type":"field","field":"textual"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#30a2da"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"#30a2da"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1018","attributes":{"tools":[{"type":"object","name":"HoverTool","id":"p1009","attributes":{"tags":["hv_created"],"renderers":[{"id":"p1063"}],"tooltips":[["keywords","@{keywords}"],["textual","@{textual}"]]}},{"type":"object","name":"SaveTool","id":"p1039"},{"type":"object","name":"PanTool","id":"p1040"},{"type":"object","name":"WheelZoomTool","id":"p1041"},{"type":"object","name":"BoxZoomTool","id":"p1042","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1043","attributes":{"syncable":false,"level":"overlay","visible":false,"left_units":"canvas","right_units":"canvas","bottom_units":"canvas","top_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"ResetTool","id":"p1044"}],"active_drag":{"id":"p1040"},"active_scroll":{"id":"p1041"}}},"left":[{"type":"object","name":"CategoricalAxis","id":"p1033","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1036"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1034"},"axis_label":"","major_label_policy":{"type":"object","name":"AllLabels","id":"p1035"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1026","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1029","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1027"},"axis_label":"textual","major_label_policy":{"type":"object","name":"AllLabels","id":"p1028"}}}],"center":[{"type":"object","name":"Grid","id":"p1032","attributes":{"axis":{"id":"p1026"},"grid_line_color":null}},{"type":"object","name":"Grid","id":"p1038","attributes":{"dimension":1,"axis":{"id":"p1033"},"grid_line_color":null}}],"frame_width":250,"frame_height":350,"min_border_top":10,"min_border_bottom":10,"min_border_left":10,"min_border_right":10,"output_backend":"webgl"}},{"type":"object","name":"Spacer","id":"p1091","attributes":{"name":"HSpacer00903","stylesheets":["\n:host(.pn-loading.pn-arc):before, .pn-loading.pn-arc:before {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJtYXJnaW46IGF1dG87IGJhY2tncm91bmQ6IG5vbmU7IGRpc3BsYXk6IGJsb2NrOyBzaGFwZS1yZW5kZXJpbmc6IGF1dG87IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzNjM2MzIiBzdHJva2Utd2lkdGg9IjEwIiByPSIzNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTY0LjkzMzYxNDMxMzQ2NDE1IDU2Ljk3Nzg3MTQzNzgyMTM4Ij4gICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiB2YWx1ZXM9IjAgNTAgNTA7MzYwIDUwIDUwIiBrZXlUaW1lcz0iMDsxIj48L2FuaW1hdGVUcmFuc2Zvcm0+ICA8L2NpcmNsZT48L3N2Zz4=\");\n  background-size: auto calc(min(50%, 400px));\n}",{"id":"p1005"},{"id":"p1003"},{"id":"p1004"}],"margin":0,"sizing_mode":"stretch_width","align":"start"}}]}}],"callbacks":{"type":"map"}}};
+  var render_items = [{"docid":"241ecdc3-e7c6-40b9-a0d4-00f657c7d766","roots":{"p1002":"a47c50ce-77d2-41bd-ae31-316ba8b0321d"},"root_ids":["p1002"]}];
+  var docs = Object.values(docs_json)
+  if (!docs) {
+    return
+  }
+  const py_version = docs[0].version.replace('rc', '-rc.').replace('.dev', '-dev.')
+  const is_dev = py_version.indexOf("+") !== -1 || py_version.indexOf("-") !== -1
+  function embed_document(root) {
+    var Bokeh = get_bokeh(root)
+    Bokeh.embed.embed_items_notebook(docs_json, render_items);
+    for (const render_item of render_items) {
+      for (const root_id of render_item.root_ids) {
+	const id_el = document.getElementById(root_id)
+	if (id_el.children.length && (id_el.children[0].className === 'bk-root')) {
+	  const root_el = id_el.children[0]
+	  root_el.id = root_el.id + '-rendered'
+	}
+      }
+    }
+  }
+  function get_bokeh(root) {
+    if (root.Bokeh === undefined) {
+      return null
+    } else if (root.Bokeh.version !== py_version && !is_dev) {
+      if (root.Bokeh.versions === undefined || !root.Bokeh.versions.has(py_version)) {
+	return null
+      }
+      return root.Bokeh.versions.get(py_version);
+    } else if (root.Bokeh.version === py_version) {
+      return root.Bokeh
+    }
+    return null
+  }
+  function is_loaded(root) {
+    var Bokeh = get_bokeh(root)
+    return (Bokeh != null && Bokeh.Panel !== undefined)
+  }
+  if (is_loaded(root)) {
+    embed_document(root);
+  } else {
+    var attempts = 0;
+    var timer = setInterval(function(root) {
+      if (is_loaded(root)) {
+        clearInterval(timer);
+        embed_document(root);
+      } else if (document.readyState == "complete") {
+        attempts++;
+        if (attempts > 200) {
+          clearInterval(timer);
+	  var Bokeh = get_bokeh(root)
+	  if (Bokeh == null || Bokeh.Panel == null) {
+            console.warn("Panel: ERROR: Unable to run Panel code because Bokeh or Panel library is missing");
+	  } else {
+	    console.warn("Panel: WARNING: Attempting to render but not all required libraries could be resolved.")
+	    embed_document(root)
+	  }
+        }
+      }
+    }, 25, root)
+  }
+})(window);</script></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -696,9 +1545,76 @@ Here, we have been <em>told</em> what those keywords are, which is nice!</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id='p1148'>
+  <div id="f6163846-0ea0-49fa-82e6-16335fe687f5" data-root-id="p1148" style="display: contents;"></div>
 </div>
-<div class="section" id="recap">
-<h3>Recap<a class="headerlink" href="#recap" title="Permalink to this headline">¶</a></h3>
+<script type="application/javascript">(function(root) {
+  var docs_json = {"74168038-0eae-4bc8-b13a-8e2ed7edd603":{"version":"3.1.1","title":"Bokeh Application","defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]}],"roots":[{"type":"object","name":"Row","id":"p1148","attributes":{"name":"Row01031","tags":["embedded"],"stylesheets":["\n:host(.pn-loading.pn-arc):before, .pn-loading.pn-arc:before {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJtYXJnaW46IGF1dG87IGJhY2tncm91bmQ6IG5vbmU7IGRpc3BsYXk6IGJsb2NrOyBzaGFwZS1yZW5kZXJpbmc6IGF1dG87IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzNjM2MzIiBzdHJva2Utd2lkdGg9IjEwIiByPSIzNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTY0LjkzMzYxNDMxMzQ2NDE1IDU2Ljk3Nzg3MTQzNzgyMTM4Ij4gICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiB2YWx1ZXM9IjAgNTAgNTA7MzYwIDUwIDUwIiBrZXlUaW1lcz0iMDsxIj48L2FuaW1hdGVUcmFuc2Zvcm0+ICA8L2NpcmNsZT48L3N2Zz4=\");\n  background-size: auto calc(min(50%, 400px));\n}",{"type":"object","name":"ImportedStyleSheet","id":"p1151","attributes":{"url":"https://cdn.holoviz.org/panel/1.1.1/dist/css/loading.css"}},{"type":"object","name":"ImportedStyleSheet","id":"p1239","attributes":{"url":"https://cdn.holoviz.org/panel/1.1.1/dist/css/listpanel.css"}},{"type":"object","name":"ImportedStyleSheet","id":"p1149","attributes":{"url":"https://cdn.holoviz.org/panel/1.1.1/dist/bundled/theme/default.css"}},{"type":"object","name":"ImportedStyleSheet","id":"p1150","attributes":{"url":"https://cdn.holoviz.org/panel/1.1.1/dist/bundled/theme/native.css"}}],"margin":0,"sizing_mode":"stretch_width","align":"start","children":[{"type":"object","name":"Spacer","id":"p1152","attributes":{"name":"HSpacer01042","stylesheets":["\n:host(.pn-loading.pn-arc):before, .pn-loading.pn-arc:before {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJtYXJnaW46IGF1dG87IGJhY2tncm91bmQ6IG5vbmU7IGRpc3BsYXk6IGJsb2NrOyBzaGFwZS1yZW5kZXJpbmc6IGF1dG87IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzNjM2MzIiBzdHJva2Utd2lkdGg9IjEwIiByPSIzNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTY0LjkzMzYxNDMxMzQ2NDE1IDU2Ljk3Nzg3MTQzNzgyMTM4Ij4gICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiB2YWx1ZXM9IjAgNTAgNTA7MzYwIDUwIDUwIiBrZXlUaW1lcz0iMDsxIj48L2FuaW1hdGVUcmFuc2Zvcm0+ICA8L2NpcmNsZT48L3N2Zz4=\");\n  background-size: auto calc(min(50%, 400px));\n}",{"id":"p1151"},{"id":"p1149"},{"id":"p1150"}],"margin":0,"sizing_mode":"stretch_width","align":"start"}},{"type":"object","name":"Figure","id":"p1156","attributes":{"width":null,"height":null,"margin":[5,10],"sizing_mode":"fixed","align":"start","x_range":{"type":"object","name":"Range1d","id":"p1153","attributes":{"tags":[[["textual","textual",null]]],"reset_start":0.0,"reset_end":1.0}},"y_range":{"type":"object","name":"FactorRange","id":"p1154","attributes":{"tags":[[["keywords","keywords",null]]],"factors":["Adamant","Mill","Miracle","Modular","Monstrosity","Morbid","Morph","Mountaincycling","Mountainwalk","Multikicker","Mutate","Myriad","Nightbound","Metalcraft","Ninjutsu","Outlast","Overload","Pack tactics","Parley","Partner","Partner with","Persist","Phasing","Plainscycling","Plainswalk","Populate","Proliferate","Nonbasic landwalk","Protection","Mentor","Melee","Inspired","Intimidate","Investigate","Islandcycling","Islandwalk","Join forces","Jump-start","Kicker","Kinfall"]}},"x_scale":{"type":"object","name":"LinearScale","id":"p1168"},"y_scale":{"type":"object","name":"CategoricalScale","id":"p1170"},"title":{"type":"object","name":"Title","id":"p1159","attributes":{"text":"Fraction of text containing keyword","text_color":"black","text_font_size":"12pt"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1209","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1199","attributes":{"selected":{"type":"object","name":"Selection","id":"p1200","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1201"},"data":{"type":"map","entries":[["keywords",["Adamant","Mill","Miracle","Modular","Monstrosity","Morbid","Morph","Mountaincycling","Mountainwalk","Multikicker","Mutate","Myriad","Nightbound","Metalcraft","Ninjutsu","Outlast","Overload","Pack tactics","Parley","Partner","Partner with","Persist","Phasing","Plainscycling","Plainswalk","Populate","Proliferate","Nonbasic landwalk","Protection","Mentor","Melee","Inspired","Intimidate","Investigate","Islandcycling","Islandwalk","Join forces","Jump-start","Kicker","Kinfall"]],["textual",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8="},"shape":[40],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1210","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1211"}}},"glyph":{"type":"object","name":"HBar","id":"p1206","attributes":{"tags":["apply_ranges"],"y":{"type":"field","field":"keywords"},"height":{"type":"value","value":0.8},"right":{"type":"field","field":"textual"},"fill_color":{"type":"value","value":"#30a2da"},"hatch_color":{"type":"value","value":"#30a2da"}}},"selection_glyph":{"type":"object","name":"HBar","id":"p1212","attributes":{"tags":["apply_ranges"],"y":{"type":"field","field":"keywords"},"height":{"type":"value","value":0.8},"left":{"type":"value","value":0},"right":{"type":"field","field":"textual"},"line_color":{"type":"value","value":"black"},"line_alpha":{"type":"value","value":1.0},"line_width":{"type":"value","value":1},"line_join":{"type":"value","value":"bevel"},"line_cap":{"type":"value","value":"butt"},"line_dash":{"type":"value","value":[]},"line_dash_offset":{"type":"value","value":0},"fill_color":{"type":"value","value":"#30a2da"},"fill_alpha":{"type":"value","value":1.0},"hatch_color":{"type":"value","value":"#30a2da"},"hatch_alpha":{"type":"value","value":1.0},"hatch_scale":{"type":"value","value":12.0},"hatch_pattern":{"type":"value","value":null},"hatch_weight":{"type":"value","value":1.0}}},"nonselection_glyph":{"type":"object","name":"HBar","id":"p1207","attributes":{"tags":["apply_ranges"],"y":{"type":"field","field":"keywords"},"height":{"type":"value","value":0.8},"right":{"type":"field","field":"textual"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#30a2da"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"#30a2da"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"HBar","id":"p1208","attributes":{"tags":["apply_ranges"],"y":{"type":"field","field":"keywords"},"height":{"type":"value","value":0.8},"right":{"type":"field","field":"textual"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#30a2da"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"#30a2da"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1164","attributes":{"tools":[{"type":"object","name":"HoverTool","id":"p1155","attributes":{"tags":["hv_created"],"renderers":[{"id":"p1209"}],"tooltips":[["keywords","@{keywords}"],["textual","@{textual}"]]}},{"type":"object","name":"SaveTool","id":"p1185"},{"type":"object","name":"PanTool","id":"p1186"},{"type":"object","name":"WheelZoomTool","id":"p1187"},{"type":"object","name":"BoxZoomTool","id":"p1188","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1189","attributes":{"syncable":false,"level":"overlay","visible":false,"left_units":"canvas","right_units":"canvas","bottom_units":"canvas","top_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"ResetTool","id":"p1190"}],"active_drag":{"id":"p1186"},"active_scroll":{"id":"p1187"}}},"left":[{"type":"object","name":"CategoricalAxis","id":"p1179","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1182"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1180"},"axis_label":"","major_label_policy":{"type":"object","name":"AllLabels","id":"p1181"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1172","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1175","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1173"},"axis_label":"textual","major_label_policy":{"type":"object","name":"AllLabels","id":"p1174"}}}],"center":[{"type":"object","name":"Grid","id":"p1178","attributes":{"axis":{"id":"p1172"},"grid_line_color":null}},{"type":"object","name":"Grid","id":"p1184","attributes":{"dimension":1,"axis":{"id":"p1179"},"grid_line_color":null}}],"frame_width":250,"frame_height":350,"min_border_top":10,"min_border_bottom":10,"min_border_left":10,"min_border_right":10,"output_backend":"webgl"}},{"type":"object","name":"Spacer","id":"p1237","attributes":{"name":"HSpacer01045","stylesheets":["\n:host(.pn-loading.pn-arc):before, .pn-loading.pn-arc:before {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJtYXJnaW46IGF1dG87IGJhY2tncm91bmQ6IG5vbmU7IGRpc3BsYXk6IGJsb2NrOyBzaGFwZS1yZW5kZXJpbmc6IGF1dG87IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzNjM2MzIiBzdHJva2Utd2lkdGg9IjEwIiByPSIzNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTY0LjkzMzYxNDMxMzQ2NDE1IDU2Ljk3Nzg3MTQzNzgyMTM4Ij4gICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiB2YWx1ZXM9IjAgNTAgNTA7MzYwIDUwIDUwIiBrZXlUaW1lcz0iMDsxIj48L2FuaW1hdGVUcmFuc2Zvcm0+ICA8L2NpcmNsZT48L3N2Zz4=\");\n  background-size: auto calc(min(50%, 400px));\n}",{"id":"p1151"},{"id":"p1149"},{"id":"p1150"}],"margin":0,"sizing_mode":"stretch_width","align":"start"}}]}}],"callbacks":{"type":"map"}}};
+  var render_items = [{"docid":"74168038-0eae-4bc8-b13a-8e2ed7edd603","roots":{"p1148":"f6163846-0ea0-49fa-82e6-16335fe687f5"},"root_ids":["p1148"]}];
+  var docs = Object.values(docs_json)
+  if (!docs) {
+    return
+  }
+  const py_version = docs[0].version.replace('rc', '-rc.').replace('.dev', '-dev.')
+  const is_dev = py_version.indexOf("+") !== -1 || py_version.indexOf("-") !== -1
+  function embed_document(root) {
+    var Bokeh = get_bokeh(root)
+    Bokeh.embed.embed_items_notebook(docs_json, render_items);
+    for (const render_item of render_items) {
+      for (const root_id of render_item.root_ids) {
+	const id_el = document.getElementById(root_id)
+	if (id_el.children.length && (id_el.children[0].className === 'bk-root')) {
+	  const root_el = id_el.children[0]
+	  root_el.id = root_el.id + '-rendered'
+	}
+      }
+    }
+  }
+  function get_bokeh(root) {
+    if (root.Bokeh === undefined) {
+      return null
+    } else if (root.Bokeh.version !== py_version && !is_dev) {
+      if (root.Bokeh.versions === undefined || !root.Bokeh.versions.has(py_version)) {
+	return null
+      }
+      return root.Bokeh.versions.get(py_version);
+    } else if (root.Bokeh.version === py_version) {
+      return root.Bokeh
+    }
+    return null
+  }
+  function is_loaded(root) {
+    var Bokeh = get_bokeh(root)
+    return (Bokeh != null && Bokeh.Panel !== undefined)
+  }
+  if (is_loaded(root)) {
+    embed_document(root);
+  } else {
+    var attempts = 0;
+    var timer = setInterval(function(root) {
+      if (is_loaded(root)) {
+        clearInterval(timer);
+        embed_document(root);
+      } else if (document.readyState == "complete") {
+        attempts++;
+        if (attempts > 200) {
+          clearInterval(timer);
+	  var Bokeh = get_bokeh(root)
+	  if (Bokeh == null || Bokeh.Panel == null) {
+            console.warn("Panel: ERROR: Unable to run Panel code because Bokeh or Panel library is missing");
+	  } else {
+	    console.warn("Panel: WARNING: Attempting to render but not all required libraries could be resolved.")
+	    embed_document(root)
+	  }
+        }
+      }
+    }, 25, root)
+  }
+})(window);</script></div></div>
+</div>
+<section id="recap">
+<h3>Recap<a class="headerlink" href="#recap" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Content in a document can occur in or alongside the text itself.</p></li>
 <li><p>Keywords are individual markers of useful content, often comma-separated</p></li>
@@ -706,9 +1622,9 @@ Here, we have been <em>told</em> what those keywords are, which is nice!</p>
 <li><p>Keywords can be supplied a priori (by experts, etc.) Use them!</p></li>
 <li><p>Supplied keywords have become divorced from the text… do they match?</p></li>
 </ul>
-</div>
-<div class="section" id="sanity-check">
-<h3>Sanity-check<a class="headerlink" href="#sanity-check" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sanity-check">
+<h3>Sanity-check<a class="headerlink" href="#sanity-check" title="Permalink to this heading">#</a></h3>
 <p>So:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">interesting</span> <span class="pre">content</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">frequent</span> <span class="pre">content</span></code></p>
@@ -740,6 +1656,26 @@ my_str |&gt; substrings(5)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;The&#39;, &#39; qu&#39;, &#39;ick&#39;, &#39; br&#39;, &#39;own&#39;, &#39; fo&#39;, &#39;x&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;The &#39;, &#39;quic&#39;, &#39;k br&#39;, &#39;own &#39;, &#39;fox&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;The q&#39;, &#39;uick &#39;, &#39;brown&#39;, &#39; fox&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>Only some of these would make sense as “words”, and that’s only if we do some post-processing in our minds (e.g. <code class="docutils literal notranslate"><span class="pre">own</span></code> could be a word, but is that the same as <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]own</span></code>?</p>
 <p>How do we:</p>
@@ -747,10 +1683,10 @@ my_str |&gt; substrings(5)
 <li><p>formalize turning strings into the these concept-compatible “word” objects?</p></li>
 <li><p>Apply this to our text, so we know the concepts available to us?</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="intro-to-tokenization">
-<h2>Intro to Tokenization<a class="headerlink" href="#intro-to-tokenization" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="intro-to-tokenization">
+<h2>Intro to Tokenization<a class="headerlink" href="#intro-to-tokenization" title="Permalink to this heading">#</a></h2>
 <p>Preferably, we want to replace the <code class="docutils literal notranslate"><span class="pre">substrings</span></code> function with something that looked like:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">substr</span><span class="p">(</span><span class="n">my_str</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s1">&#39;The&#39;</span><span class="p">,</span> <span class="s1">&#39;quick&#39;</span><span class="p">,</span> <span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="s1">&#39;fox&#39;</span><span class="p">]</span>
@@ -784,8 +1720,8 @@ The process of breaking strings of text into tokens is called <em>tokenization</
 </div></blockquote>
 </dd>
 </dl>
-<div class="section" id="using-pandas-str">
-<h3>Using Pandas’ <code class="docutils literal notranslate"><span class="pre">.str</span></code><a class="headerlink" href="#using-pandas-str" title="Permalink to this headline">¶</a></h3>
+<section id="using-pandas-str">
+<h3>Using Pandas’ <code class="docutils literal notranslate"><span class="pre">.str</span></code><a class="headerlink" href="#using-pandas-str" title="Permalink to this heading">#</a></h3>
 <p>There are a number of <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/text.html">very helpful tools</a> in the pandas <code class="docutils literal notranslate"><span class="pre">.str</span></code> namespace of the <code class="docutils literal notranslate"><span class="pre">Series</span></code> object. We can return to our card example from before:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -796,6 +1732,15 @@ The process of breaking strings of text into tokens is called <em>tokenization</
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Mardu Hateblade&#39;]:
+	 &quot;There may be little honor in my tactics, but there is no honor in losing.&quot;
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -803,10 +1748,22 @@ The process of breaking strings of text into tokens is called <em>tokenization</
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24660    &quot;THERE MAY BE LITTLE HONOR IN MY TACTICS, BUT ...
+Name: flavor_text, dtype: string
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flav</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span>  <span class="c1"># how long is the string?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24660    75
+Name: flavor_text, dtype: Int64
 </pre></div>
 </div>
 </div>
@@ -821,11 +1778,69 @@ The process of breaking strings of text into tokens is called <em>tokenization</
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24660    [&quot;There, may, be, little, honor, in, my, tacti...
+Name: flavor_text, dtype: object
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>no. tokens: 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>no. types: 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>wait a minute…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flav</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">()</span><span class="o">.</span><span class="n">explode</span><span class="p">()</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>flavor_text
+honor       2
+in          2
+&quot;There      1
+may         1
+be          1
+little      1
+my          1
+tactics,    1
+but         1
+there       1
+is          1
+no          1
+losing.&quot;    1
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -838,6 +1853,26 @@ The process of breaking strings of text into tokens is called <em>tokenization</
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>flavor_text
+           4
+honor      2
+in         2
+There      1
+may        1
+be         1
+little     1
+my         1
+tactics    1
+but        1
+there      1
+is         1
+no         1
+losing     1
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <p>Much better!</p>
 <p>So what is this devilry? This <code class="docutils literal notranslate"><span class="pre">[^A-Za-z]</span></code> is a pattern — a <em>regular expression</em> — for “things that are <em>not</em> alphabetical characters in upper or lower-case”. Powerful, right? We’ll cover this in more detail in the next section.</p>
@@ -845,13 +1880,13 @@ The process of breaking strings of text into tokens is called <em>tokenization</
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">tokenize</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">explode</span></code></p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="tidy-text">
-<h2>Tidy Text<a class="headerlink" href="#tidy-text" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="tidy-text">
+<h2>Tidy Text<a class="headerlink" href="#tidy-text" title="Permalink to this heading">#</a></h2>
 <p><em>but first</em>…</p>
-<div class="section" id="tidy-data-review">
-<h3>Tidy Data Review<a class="headerlink" href="#tidy-data-review" title="Permalink to this headline">¶</a></h3>
+<section id="tidy-data-review">
+<h3>Tidy Data Review<a class="headerlink" href="#tidy-data-review" title="Permalink to this heading">#</a></h3>
 <p>Let’s review an incredibly powerful idea from the R community: using <em>tidy data</em>.</p>
 <p>Tidy data is a <em>paradigm</em> to frame your tabular data representation in a <em>consistent</em> and <em>ergonomic</em> way that supports rapid manipulation, visualization, and cleaning. Imagine we had this non-text dataset (from Hadley Wickham’s paper <em>Tidy Data</em>):</p>
 <div class="cell docutils container">
@@ -862,6 +1897,53 @@ The process of breaking strings of text into tokens is called <em>tokenization</
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>treatment_a</th>
+      <th>treatment_b</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>John Smith</th>
+      <td>NaN</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Jane Doe</th>
+      <td>16.0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>Mary Johnson</th>
+      <td>3.0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>We could also represent it another way:</p>
 <div class="cell docutils container">
@@ -870,11 +1952,51 @@ The process of breaking strings of text into tokens is called <em>tokenization</
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>name</th>
+      <th>John Smith</th>
+      <th>Jane Doe</th>
+      <th>Mary Johnson</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>treatment_a</th>
+      <td>NaN</td>
+      <td>16.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>treatment_b</th>
+      <td>2.0</td>
+      <td>11.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>I’m sure these might be equally likely to see in someone’s excel sheet, entering this data. But, say we want to visualize this table? Or start comparing each of the cases? This is going to take a lot of manipulation every time we want a different thing.</p>
 <p>For data to be <em>Tidy Data</em>, we need 3 things:</p>
 <blockquote>
-<div><ol class="simple">
+<div><ol class="arabic simple">
 <li><p>Each variable forms a column.</p></li>
 <li><p>Each observation forms a row.</p></li>
 <li><p>Each type of observational unit forms a table.</p></li>
@@ -887,6 +2009,70 @@ The process of breaking strings of text into tokens is called <em>tokenization</
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>variable</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>John Smith</td>
+      <td>treatment_a</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Jane Doe</td>
+      <td>treatment_a</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mary Johnson</td>
+      <td>treatment_a</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>John Smith</td>
+      <td>treatment_b</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Jane Doe</td>
+      <td>treatment_b</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Mary Johnson</td>
+      <td>treatment_b</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Suddenly things like comparing, plotting, and counting become trivial with simple table operations.</p>
 <blockquote>
@@ -906,10 +2092,16 @@ The process of breaking strings of text into tokens is called <em>tokenization</
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7fa5f2045c30&gt;
+</pre></div>
+</div>
+<img alt="../_images/07a275f83b51e961c4a5b7de26a64d767689be4068625c045e2473aa93ab7a13.png" src="../_images/07a275f83b51e961c4a5b7de26a64d767689be4068625c045e2473aa93ab7a13.png" />
 </div>
 </div>
-<div class="section" id="back-to-tidy-text">
-<h3>Back to Tidy <em>Text</em><a class="headerlink" href="#back-to-tidy-text" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="back-to-tidy-text">
+<h3>Back to Tidy <em>Text</em><a class="headerlink" href="#back-to-tidy-text" title="Permalink to this heading">#</a></h3>
 <p>So, hang on, aren’t <em>documents</em> our observational-level? Wouldn’t that make e.g. the MTGJSON dataset <em>already “tidy”</em>??</p>
 <p>Yes!</p>
 <p>But only if we are observing <em>cards</em>, which, for things like release date or mana cost, maybe that’s true.</p>
@@ -943,6 +2135,36 @@ tidy_df = (
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /home/tbsexton/nltk_data...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Package punkt is already up-to-date!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0                                                   []
+1    [every, tear, shed, is, a, drop, of, immortali...
+2                                                   []
+3    [the, perfect, antidote, for, a, tightly, pack...
+4    [life, is, measured, in, inches, ., to, a, hea...
+5    [the, cave, floods, with, light, ., a, thousan...
+6    [``, we, called, them, &#39;armored, lightning, .,...
+7    [``, we, called, them, &#39;armored, lightning, .,...
+8    [``, mercadia, &#39;s, masks, can, no, longer, hid...
+9    [``, no, doubt, the, arbiters, would, put, you...
+Name: word, dtype: object
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -950,13 +2172,39 @@ tidy_df = (
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>word
+.        38331
+the      30973
+,        23947
+of       14566
+&#39;&#39;       14079
+``       13951
+to       10857
+a         9839
+and       7563
+is        6111
+it        5895
+in        5636
+&#39;s        4994
+i         4053
+you       3877
+for       3541
+as        3185
+are       2921
+that      2921
+their     2644
+Name: count, dtype: int64
+</pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="assumption-review">
-<h2>Assumption Review<a class="headerlink" href="#assumption-review" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="words-stopwords">
-<h3>Words? Stopwords.<a class="headerlink" href="#words-stopwords" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="assumption-review">
+<h2>Assumption Review<a class="headerlink" href="#assumption-review" title="Permalink to this heading">#</a></h2>
+<section id="words-stopwords">
+<h3>Words? Stopwords.<a class="headerlink" href="#words-stopwords" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>The “anti-keyword”</p>
 </div></blockquote>
@@ -966,6 +2214,27 @@ tidy_df = (
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
 <span class="n">stopwords</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;word&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/tbsexton/nltk_data...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Package stopwords is already up-to-date!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;i&#39;, &#39;me&#39;, &#39;my&#39;, &#39;myself&#39;, &#39;we&#39;, &#39;our&#39;, &#39;ours&#39;, &#39;ourselves&#39;, &#39;you&#39;, &quot;you&#39;re&quot;, &quot;you&#39;ve&quot;, &quot;you&#39;ll&quot;, &quot;you&#39;d&quot;, &#39;your&#39;, &#39;yours&#39;, &#39;yourself&#39;, &#39;yourselves&#39;, &#39;he&#39;, &#39;him&#39;, &#39;his&#39;, &#39;himself&#39;, &#39;she&#39;, &quot;she&#39;s&quot;, &#39;her&#39;, &#39;hers&#39;, &#39;herself&#39;, &#39;it&#39;, &quot;it&#39;s&quot;, &#39;its&#39;, &#39;itself&#39;, &#39;they&#39;, &#39;them&#39;, &#39;their&#39;, &#39;theirs&#39;, &#39;themselves&#39;, &#39;what&#39;, &#39;which&#39;, &#39;who&#39;, &#39;whom&#39;, &#39;this&#39;, &#39;that&#39;, &quot;that&#39;ll&quot;, &#39;these&#39;, &#39;those&#39;, &#39;am&#39;, &#39;is&#39;, &#39;are&#39;, &#39;was&#39;, &#39;were&#39;, &#39;be&#39;, &#39;been&#39;, &#39;being&#39;, &#39;have&#39;, &#39;has&#39;, &#39;had&#39;, &#39;having&#39;, &#39;do&#39;, &#39;does&#39;, &#39;did&#39;, &#39;doing&#39;, &#39;a&#39;, &#39;an&#39;, &#39;the&#39;, &#39;and&#39;, &#39;but&#39;, &#39;if&#39;, &#39;or&#39;, &#39;because&#39;, &#39;as&#39;, &#39;until&#39;, &#39;while&#39;, &#39;of&#39;, &#39;at&#39;, &#39;by&#39;, &#39;for&#39;, &#39;with&#39;, &#39;about&#39;, &#39;against&#39;, &#39;between&#39;, &#39;into&#39;, &#39;through&#39;, &#39;during&#39;, &#39;before&#39;, &#39;after&#39;, &#39;above&#39;, &#39;below&#39;, &#39;to&#39;, &#39;from&#39;, &#39;up&#39;, &#39;down&#39;, &#39;in&#39;, &#39;out&#39;, &#39;on&#39;, &#39;off&#39;, &#39;over&#39;, &#39;under&#39;, &#39;again&#39;, &#39;further&#39;, &#39;then&#39;, &#39;once&#39;, &#39;here&#39;, &#39;there&#39;, &#39;when&#39;, &#39;where&#39;, &#39;why&#39;, &#39;how&#39;, &#39;all&#39;, &#39;any&#39;, &#39;both&#39;, &#39;each&#39;, &#39;few&#39;, &#39;more&#39;, &#39;most&#39;, &#39;other&#39;, &#39;some&#39;, &#39;such&#39;, &#39;no&#39;, &#39;nor&#39;, &#39;not&#39;, &#39;only&#39;, &#39;own&#39;, &#39;same&#39;, &#39;so&#39;, &#39;than&#39;, &#39;too&#39;, &#39;very&#39;, &#39;s&#39;, &#39;t&#39;, &#39;can&#39;, &#39;will&#39;, &#39;just&#39;, &#39;don&#39;, &quot;don&#39;t&quot;, &#39;should&#39;, &quot;should&#39;ve&quot;, &#39;now&#39;, &#39;d&#39;, &#39;ll&#39;, &#39;m&#39;, &#39;o&#39;, &#39;re&#39;, &#39;ve&#39;, &#39;y&#39;, &#39;ain&#39;, &#39;aren&#39;, &quot;aren&#39;t&quot;, &#39;couldn&#39;, &quot;couldn&#39;t&quot;, &#39;didn&#39;, &quot;didn&#39;t&quot;, &#39;doesn&#39;, &quot;doesn&#39;t&quot;, &#39;hadn&#39;, &quot;hadn&#39;t&quot;, &#39;hasn&#39;, &quot;hasn&#39;t&quot;, &#39;haven&#39;, &quot;haven&#39;t&quot;, &#39;isn&#39;, &quot;isn&#39;t&quot;, &#39;ma&#39;, &#39;mightn&#39;, &quot;mightn&#39;t&quot;, &#39;mustn&#39;, &quot;mustn&#39;t&quot;, &#39;needn&#39;, &quot;needn&#39;t&quot;, &#39;shan&#39;, &quot;shan&#39;t&quot;, &#39;shouldn&#39;, &quot;shouldn&#39;t&quot;, &#39;wasn&#39;, &quot;wasn&#39;t&quot;, &#39;weren&#39;, &quot;weren&#39;t&quot;, &#39;won&#39;, &quot;won&#39;t&quot;, &#39;wouldn&#39;, &quot;wouldn&#39;t&quot;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -989,15 +2258,51 @@ tidy_df = (
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>word
+.         38331
+,         23947
+&#39;&#39;        14079
+``        13951
+&#39;s         4994
+*          2106
+one        1799
+n&#39;t        1741
+?          1529
+!          1382
+never       980
+life        956
+like        926
+death       902
+world       834
+every       828
+even        821
+would       707
+time        699
+power       677
+&#39;           660
+see         651
+:           643
+us          625
+must        613
+know        609
+many        552
+first       547
+could       535
+always      532
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <p>This seems to have worked <em>ok</em>.</p>
 <p>Now we can see some interesting “content” in terms like “life”, “death”, “world”, “time”, “power”, etc.</p>
 <blockquote>
 <div><p>What might we learn from these keywords? What else could we do to investigate them?</p>
 </div></blockquote>
-</div>
-<div class="section" id="importance-approx-frequency">
-<h3>Importance <span class="math notranslate nohighlight">\(\approx\)</span> Frequency?<a class="headerlink" href="#importance-approx-frequency" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="importance-approx-frequency">
+<h3>Importance <span class="math notranslate nohighlight">\(\approx\)</span> Frequency?<a class="headerlink" href="#importance-approx-frequency" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">coconut</span> 
@@ -1024,12 +2329,24 @@ keywords = (
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;year&#39;, ylabel=&#39;yearly_cnts&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/38f8952ba2261014098a13a86e62b054db53c28a1deb0d1e95993d9df6feb10f.png" src="../_images/38f8952ba2261014098a13a86e62b054db53c28a1deb0d1e95993d9df6feb10f.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">keywords</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;yearly_frac&#39;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;word&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;year&#39;, ylabel=&#39;yearly_frac&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/aa1739c534ec7e082d9f1e3731479df196d3e50524354515e2e19f19112fdc30.png" src="../_images/aa1739c534ec7e082d9f1e3731479df196d3e50524354515e2e19f19112fdc30.png" />
 </div>
 </div>
 <p><strong>Lessons</strong>:</p>
@@ -1038,10 +2355,10 @@ keywords = (
 <li><p>Starting to measure importance? <em>relative</em> comparisons, ranked.</p></li>
 </ul>
 <p>This get’s us part of the way toward information-theoretic measures, and other common weighting schemes. More to come in the <span class="xref myst">Measure &amp; Evaluate</span> chapter.</p>
-</div>
-</div>
-<div class="section" id="aside-how-many-keywords-in-my-corpus">
-<h2>Aside: how many keywords in my corpus?<a class="headerlink" href="#aside-how-many-keywords-in-my-corpus" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="aside-how-many-keywords-in-my-corpus">
+<h2>Aside: how many keywords in my corpus?<a class="headerlink" href="#aside-how-many-keywords-in-my-corpus" title="Permalink to this heading">#</a></h2>
 <blockquote>
 <div><dl class="simple myst">
 <dt><strong>token</strong></dt><dd><p>a piece of text that stands for a word.</p>
@@ -1063,15 +2380,6 @@ keywords = (
 $<span class="math notranslate nohighlight">\( \|V\| = k\|N\|^\beta\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tidy_df.groupby([&#39;card_id&#39;]).word.agg([&#39;cumcount&#39;, lambda s: (~s.duplicated()).cumsum()])</span>
-<span class="c1"># (~tidy_df.word.duplicated()).cumsum()</span>
-<span class="n">tidy_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;card_id&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">word</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rand</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">sample_docs</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">id_col</span><span class="o">=</span><span class="s1">&#39;card_id&#39;</span><span class="p">,</span> <span class="n">shuffles</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">rng</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()):</span>
     <span class="n">samps</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1088,6 +2396,89 @@ $<span class="math notranslate nohighlight">\( \|V\| = k\|N\|^\beta\)</span>$</p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>N</th>
+      <th>V</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>8</th>
+      <td>103.0</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>132.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>160.0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>197.0</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>212.0</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2353349</th>
+      <td>574218.0</td>
+      <td>8170</td>
+    </tr>
+    <tr>
+      <th>2353350</th>
+      <td>574244.0</td>
+      <td>8170</td>
+    </tr>
+    <tr>
+      <th>2353351</th>
+      <td>574245.0</td>
+      <td>8170</td>
+    </tr>
+    <tr>
+      <th>2353352</th>
+      <td>574246.0</td>
+      <td>8170</td>
+    </tr>
+    <tr>
+      <th>2353353</th>
+      <td>574247.0</td>
+      <td>8170</td>
+    </tr>
+  </tbody>
+</table>
+<p>281790 rows × 2 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1119,7 +2510,7 @@ $<span class="math notranslate nohighlight">\( \|V\| = k\|N\|^\beta\)</span>$</p
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_heaps_law</span><span class="p">(</span><span class="n">heaps</span><span class="p">,</span> <span class="n">log_scale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">linearize</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="n">params</span> <span class="o">=</span> <span class="n">fit_heaps</span><span class="p">(</span><span class="n">heaps</span><span class="p">,</span> <span class="n">linearize</span><span class="o">=</span><span class="n">linearize</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;fit: k=</span><span class="si">{</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="se">\t</span><span class="s1">β=</span><span class="si">{</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="se">\t</span><span class="s1">linear-fit=</span><span class="si">{</span><span class="n">linearize</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-    
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">6e5</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">heaps</span><span class="o">.</span><span class="n">N</span><span class="p">,</span> <span class="n">heaps</span><span class="o">.</span><span class="n">V</span><span class="p">,</span> <span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
@@ -1143,6 +2534,15 @@ $<span class="math notranslate nohighlight">\( \|V\| = k\|N\|^\beta\)</span>$</p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit: k=1.89	β=0.63	linear-fit=False
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<img alt="../_images/7814d965514b79e7ba5692e7c6225383c93232792fa55a6bb2cbbd526e4d9051.png" src="../_images/7814d965514b79e7ba5692e7c6225383c93232792fa55a6bb2cbbd526e4d9051.png" />
+</div>
 </div>
 <p>So, our data grows in <em>complexity</em> a lot faster than the square-root of it’s size, but slower than “typical” text.</p>
 <p>Most data-sets in NLP are between 0.67-0.75, so we</p>
@@ -1159,6 +2559,15 @@ $<span class="math notranslate nohighlight">\( \|V\| = k\|N\|^\beta\)</span>$</p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit: k=1.89	β=0.63	linear-fit=False
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<img alt="../_images/c603f6c3b66e4c0ac5108d39a6cd2110320c03a9d8f53db5a372e21865160c16.png" src="../_images/c603f6c3b66e4c0ac5108d39a6cd2110320c03a9d8f53db5a372e21865160c16.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1167,6 +2576,15 @@ $<span class="math notranslate nohighlight">\( \|V\| = k\|N\|^\beta\)</span>$</p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit: k=0.78	β=0.70	linear-fit=True
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<img alt="../_images/c4cb36a2eff2dac03037fc2d9f635f82731111455c4802d209f978953cd50c9c.png" src="../_images/c4cb36a2eff2dac03037fc2d9f635f82731111455c4802d209f978953cd50c9c.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1174,9 +2592,18 @@ $<span class="math notranslate nohighlight">\( \|V\| = k\|N\|^\beta\)</span>$</p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fit: k=0.78	β=0.70	linear-fit=True
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<img alt="../_images/ec2c503fe4ebe07205aa842f1d4fbb6cd3d5be6d164208bed98c47446833bdc6.png" src="../_images/ec2c503fe4ebe07205aa842f1d4fbb6cd3d5be6d164208bed98c47446833bdc6.png" />
 </div>
 </div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1187,55 +2614,135 @@ $<span class="math notranslate nohighlight">\( \|V\| = k\|N\|^\beta\)</span>$</p
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "text-data"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "text-data",
             path: "./01-assumptions"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'text-data'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="intent.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Expressions of Intent</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intent.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Expressions of Intent</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="intent-02-rules-er-nb.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="intent-02-rules-er-nb.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Rules for Entities, Rules for Relations</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Thurston Sexton<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
       </div>
-    </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Keywords</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sanity-check">Sanity-check</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-to-tokenization">Intro to Tokenization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pandas-str">Using Pandas’ <code class="docutils literal notranslate"><span class="pre">.str</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidy-text">Tidy Text</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidy-data-review">Tidy Data Review</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-tidy-text">Back to Tidy <em>Text</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assumption-review">Assumption Review</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#words-stopwords">Words? Stopwords.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-approx-frequency">Importance <span class="math notranslate nohighlight">\(\approx\)</span> Frequency?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aside-how-many-keywords-in-my-corpus">Aside: how many keywords in my corpus?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rachael Sexton
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

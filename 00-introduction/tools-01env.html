@@ -1,443 +1,431 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Setting up a Computing Environment</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mana.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '00-introduction/tools-01env';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Tools for Data Infrastructure" href="tools-02ops.html" />
     <link rel="prev" title="First Tools of the Trade" href="tools.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="syllabus.html">
-   Syllabus (PPOL 628 Spring 2022)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="tools.html">
-   First Tools of the Trade
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Setting up a Computing Environment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="tools-02ops.html">
-     Tools for Data Infrastructure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="tools-03sci.html">
-     Tools for Data Science
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="references.html">
-   Chapter Resources
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus (PPOL 628 Spring 2022)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tools.html">First Tools of the Trade</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Setting up a Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools-02ops.html">Tools for Data Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools-03sci.html">Tools for Data Science</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Assumptions
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../01-assumptions/intent.html">
-   Expressions of Intent
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01-assumptions/intent-01-keywords-nb.html">
-     Keywords
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01-assumptions/intent-02-rules-er-nb.html">
-     Rules for Entities, Rules for Relations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../01-assumptions/data.html">
-   Driving with Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Chapter Resources</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Goals &amp; Approach
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Assumptions</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../02-goals-approach/presentation-test-nb.html">
-   Testing Presentations
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../01-assumptions/overview.html">Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-assumptions/intent.html">Expressions of Intent</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01-assumptions/intent-01-keywords-nb.html">Keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-assumptions/intent-02-rules-er-nb.html">Rules for Entities, Rules for Relations</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Measure &amp; Evaluate
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../03-measure-evaluate/notebooks-nb.html">
-   Content with notebooks
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-assumptions/data.html">Driving with Data</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01-assumptions/data-02-vecsem-nb.html">Vector Semantics</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Validate
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-validation/trouble.html">
-   Trouble in Paradise
-  </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Goals &amp; Approach</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../appendix/datasets.html">
-   Datasets for this Course
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/datasets/mtgjson-nb.html">
-     MTGJSON
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/datasets/tiny-shakespeare-nb.html">
-     “Tiny” Shakespeare
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../02-goals-approach/overview.html">Overview: Supervision (or the lack-thereof)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02-goals-approach/unsupervised.html">Unsupervised Techniques</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02-goals-approach/unsupervised-01-reduction-nb.html">Prelude: On Reduction and High Dimensional Pancakes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-goals-approach/unsupervised-02-clustertopics-nb.html">Let Simmer, Unsupervised</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02-goals-approach/supervised.html">Supervised Machine Learning with Text</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Measure &amp; Evaluate</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03-measure-evaluate/measuring-up.html">Similarities, Distances, and Performance Indication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03-measure-evaluate/overview.html">Overview: <em>Metrics</em> and <em>Metrology</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03-measure-evaluate/translator.html">The Good Translator: how you “win” <em>defines the game</em></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Validate</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04-validation/trouble.html">Trouble in Paradise</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/datasets.html">Datasets for this Course</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/datasets/mtgjson-nb.html">MTGJSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/datasets/tiny-shakespeare-nb.html">“Tiny” Shakespeare</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/tutorials/markovian-shakespeare.html">Markovian Shakespeare</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/00-introduction/tools-01env.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/TLP-COI/text-data-course"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/TLP-COI/text-data-course/issues/new?title=Issue%20on%20page%20%2F00-introduction/tools-01env.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/TLP-COI/text-data-course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/TLP-COI/text-data-course/issues/new?title=Issue%20on%20page%20%2F00-introduction/tools-01env.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/00-introduction/tools-01env.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Setting up a Computing Environment</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ana-conda-but-it-s-mamba">
-   (Ana?)Conda, but it’s Mamba
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modern-literate-programming-with-jupyter">
-   Modern Literate Programming with Jupyter
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#version-veracity-server-sanity-kernel-correctness">
-   Version Veracity, Server Sanity, Kernel Correctness
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#jupytext">
-     Jupytext
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#yaml-environment-specifications">
-     YAML Environment specifications
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nb-conda-kernels">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       nb_conda_kernels
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ana-conda-but-it-s-mamba">(Ana?)Conda, but it’s Mamba</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modern-literate-programming-with-jupyter">Modern Literate Programming with Jupyter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-veracity-server-sanity-kernel-correctness">Version Veracity, Server Sanity, Kernel Correctness</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupytext">Jupytext</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yaml-environment-specifications">YAML Environment specifications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nb-conda-kernels"><code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code></a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Setting up a Computing Environment</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ana-conda-but-it-s-mamba">
-   (Ana?)Conda, but it’s Mamba
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modern-literate-programming-with-jupyter">
-   Modern Literate Programming with Jupyter
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#version-veracity-server-sanity-kernel-correctness">
-   Version Veracity, Server Sanity, Kernel Correctness
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#jupytext">
-     Jupytext
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#yaml-environment-specifications">
-     YAML Environment specifications
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nb-conda-kernels">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       nb_conda_kernels
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="setting-up-a-computing-environment">
-<h1>Setting up a Computing Environment<a class="headerlink" href="#setting-up-a-computing-environment" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="setting-up-a-computing-environment">
+<h1>Setting up a Computing Environment<a class="headerlink" href="#setting-up-a-computing-environment" title="Permalink to this heading">#</a></h1>
 <p><em>Opinionated, (hopefully) sane, defaults to build on</em></p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">TL;DR</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>read background:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.practicaldatascience.org/html/setting_up_your_computer.html">Setting up your computer</a> by Practical Data Science</p></li>
@@ -452,21 +440,23 @@
 </ol>
 </div>
 <p>The material in this course is written primarily using Python.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>On occaision, and especially during in-person lectures or labs, I will also use <a class="reference external" href="https://www.coconut-lang.org">Coconut</a></p>
-</div>
+</aside>
 <p>Python has become somewhat of a “lingua franca” of the data science world, though other languages like R, Julia, or even MatLab are also widely used, loved, and powerful.
 Which you use will likely depend on the community you interact with most.</p>
 <p>With that aside, <em>managing</em> Python as an interpreter and a set of libraries on your computer has historically been, shall we say… labarynthian?</p>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Enter the Labyrinth</p>
-<div class="figure align-default" id="xkcd-python">
+<figure class="align-default" id="xkcd-python">
 <img alt="XKCD Python Environment" src="https://imgs.xkcd.com/comics/python_environment.png" />
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Yes, things are actually <em>better</em> now, than they used to be!
-From Randall Munroe, <a class="reference external" href="https://xkcd.com/1987/"><em>XKCD</em></a></span><a class="headerlink" href="#xkcd-python" title="Permalink to this image">¶</a></p>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Yes, things are actually <em>better</em> now, than they used to be!
+From Randall Munroe, <a class="reference external" href="https://xkcd.com/1987/"><em>XKCD</em></a></span><a class="headerlink" href="#xkcd-python" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</aside>
 <p>How you approach the problem of dependency management for your projects depends on your community, and more specifically whether you lean toward <em>development</em> of python tools (e.g. use <a class="reference external" href="https://python-poetry.org/">Poetry</a>), or more toward <em>using</em> those tools.
 In that case, which is what Data Science (and by extension, text analysis) falls under, the most common tool is <code class="docutils literal notranslate"><span class="pre">conda</span></code>. Either way, the key insight to both is liberal use of <em>environment isolation</em>.</p>
 <div class="admonition hint">
@@ -476,14 +466,14 @@ In that case, which is what Data Science (and by extension, text analysis) falls
 </div>
 <p>If the words you are reading are not familiar, this is an excellent opportunity to check out the <a class="reference external" href="https://www.practicaldatascience.org/html/setting_up_your_computer.html">Practical Data Science</a> guide to setting this up on your machine.
 I will not duplicate Nick’s guide here, but I do have a few additional tips for this course (and years of trial-and-error).</p>
-<div class="section" id="ana-conda-but-it-s-mamba">
-<h2>(Ana?)Conda, but it’s Mamba<a class="headerlink" href="#ana-conda-but-it-s-mamba" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
+<section id="ana-conda-but-it-s-mamba">
+<h2>(Ana?)Conda, but it’s Mamba<a class="headerlink" href="#ana-conda-but-it-s-mamba" title="Permalink to this heading">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>The default way to install <code class="docutils literal notranslate"><span class="pre">conda</span></code> in tutorials and lessons online will likely be the “full” or “large” installation from Anaconda, which contains a huge number of pre-installed packages from the <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> channel.
 <strong>I generally do not recommend this!</strong>
 Often it is much better to install the minimum and spin up environments with use-case specific packages/languages as needed.</p>
-</div>
+</aside>
 <p>First, terminology:</p>
 <ul class="simple">
 <li><p><strong>Anaconda</strong> is a data science corporation that develops a huge amount of open-source software, along with maintaining the “anaconda” repository channel of tools/packages that one could install using:</p></li>
@@ -494,18 +484,18 @@ Apart from installing libraries and versions of Python (or R or Julia or Haskell
 <p>To keep your “base” conda environment clean (and running as fast as possible), look for a small installation like <code class="docutils literal notranslate"><span class="pre">miniconda</span></code>.
 A simple way to get <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed with <em>minimal</em> fluff, as well as a default channel with community-driven package curation, see the installable downlads on the  <a class="reference external" href="https://github.com/conda-forge/miniforge"><code class="docutils literal notranslate"><span class="pre">conda-forge/miniforge</span></code></a> page.
 Pick your OS and get going, <em>much faster than the old-days</em>!</p>
-</div>
-<div class="section" id="modern-literate-programming-with-jupyter">
-<h2>Modern Literate Programming with Jupyter<a class="headerlink" href="#modern-literate-programming-with-jupyter" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="modern-literate-programming-with-jupyter">
+<h2>Modern Literate Programming with Jupyter<a class="headerlink" href="#modern-literate-programming-with-jupyter" title="Permalink to this heading">#</a></h2>
 <p>I remember the first time I encountered a so-called “notebook” for code, was in a calculus class with a professor absolutely <em>obsessed</em> with <a class="reference external" href="https://www.wolfram.com/mathematica/">Mathematica</a>.
 After using these new-fangled “cells” for my code and having results, comments, figures, and functions all interwoven togther in a beautiful tapestry for a semester, I became obsessed too. Alas, for I was but a poor student, and if I’m honest, unduly suspicious of licensed software.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Emacs gets a bad rap for its age and alternative binding schemes, but for the adventurous among you there are <em>modern</em> distributions of emacs that become quite ergonomic and comfortable to use.
 You can even avoid the <code class="docutils literal notranslate"><span class="pre">vim</span></code>-vs-<code class="docutils literal notranslate"><span class="pre">emacs</span></code> holy war entirely by emulating vim-keybindings <em>inside</em> emacs.
 Now both sides can hate you!
 See: <a class="reference external" href="https://github.com/hlissner/doom-emacs">Doom</a> or <a class="reference external" href="https://www.spacemacs.org/">Spacemacs</a> for some cool examples.</p>
-</div>
+</aside>
 <p>This paradigm, of keeping your <strong>code</strong>, <strong>story</strong>, and <strong>results</strong> all interwoven in one file is typically called <em>literate programming</em>.
 It’s a powerful way to both explore your programming ideas, and document them as a cohesive narrative once better defined.
 Literate programming was championed by <a class="reference external" href="https://orgmode.org/">Org-Mode</a> (an <em>extremely powerful</em> plain-text system for note taking, authoring, and knowledge management built on <code class="docutils literal notranslate"><span class="pre">emacs</span></code>)
@@ -516,10 +506,10 @@ By the time I was discovering literate programming through Mathematica, the open
 </div></blockquote>
 <p>Today, that project has absolutely exploded into the de-facto method for data science experimentation, reporting, and communication, now called <strong>Jupyter</strong>.
 Heck, this book is <em>written</em> entirely using <a class="reference external" href="https://jupyterbook.org/intro.html"> Jupyter(-book) </a>!</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Jupyter, as an attempt to unify the statistical language communities, stood for <strong>Ju</strong>(lia)<strong>Py</strong>(thon)<strong>R</strong>.</p>
-</div>
+</aside>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Jupyter is a <em>server</em>-based coding interface.</p>
@@ -528,20 +518,20 @@ Heck, this book is <em>written</em> entirely using <a class="reference external"
 <li><p>Access the running server through your browser: <code class="docutils literal notranslate"><span class="pre">localhos:8888</span></code>, or automatic</p></li>
 </ul>
 </div>
-<p>A common misunderstanding: Jupter is <em>not</em> “python”, and using it isn’t really dependent on your python installation above.
+<p>A common misunderstanding: Jupyter is <em>not</em> “python”, and using it isn’t really dependent on your python installation above.
 Instead, the jupyter server frontend communicates with a programming language/interpreter <em>of your choosing</em> through a jupyter <em>language kernel</em>.
 This architecture lets jupyter operate as a rich interface to <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels"><em>many languages</em></a>, not just python.
 That link has kernels to use anything from R and Julia to Haskell, Common Lisp, Clojure, MatLab, Ruby, or Fortran.</p>
 <p>In addition, being a web-first interface, Jupyter has a <a class="reference external" href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">huge number of extensions</a>, like adding scratchpads, widgets, bibtex citation support, and even live Reveal.js presentation mode through <a class="reference external" href="https://rise.readthedocs.io/en/stable/">RISE</a>, so you can live-demo <em>in style</em>!</p>
-</div>
-<div class="section" id="version-veracity-server-sanity-kernel-correctness">
-<h2>Version Veracity, Server Sanity, Kernel Correctness<a class="headerlink" href="#version-veracity-server-sanity-kernel-correctness" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
+</section>
+<section id="version-veracity-server-sanity-kernel-correctness">
+<h2>Version Veracity, Server Sanity, Kernel Correctness<a class="headerlink" href="#version-veracity-server-sanity-kernel-correctness" title="Permalink to this heading">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <blockquote>
 <div><p><em>with great power, comes great responsibility…</em></p>
 </div></blockquote>
-</div>
+</aside>
 <p>In this course, I have adopted a few popular mechanisms to combat the proliferation of “junk notebooks”.
 Avoid addressing these problems at your peril!</p>
 <p>First, it is helpful to review this <a class="reference external" href="https://ploomber.io/blog/clean-nbs/">guide to writing “Clean Notebooks”</a>:</p>
@@ -561,64 +551,64 @@ But it doesn’t have to be that way.</p>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file format is not human-friendly or easy to diff in version-control… more of a json/hashstring/<em>mess</em>, needing the frontend to interpret. <em>Plain-text is your friend!</em></p></li>
 </ul>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>This textbook repository uses <a class="reference external" href="http://www.python-poetry.org">Poetry</a> to create installable source code for notebooks to import.</p>
-</div>
+</aside>
 <p>I don’t follow everything in this post exactly (for instance, I typically use <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> over <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> to make source-code files for python functions/types, based on the now-standard PEP 518).
 But the advice is generally good and well worth a read-through.</p>
 <p>Additional tools used for this book to help you stay sane in the wonderful journey to productive notebook use are below.</p>
-<div class="section" id="jupytext">
-<h3><a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a><a class="headerlink" href="#jupytext" title="Permalink to this headline">¶</a></h3>
+<section id="jupytext">
+<h3><a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a><a class="headerlink" href="#jupytext" title="Permalink to this heading">#</a></h3>
 <p>Creates and syncs <code class="docutils literal notranslate"><span class="pre">.md</span></code> files (or, script files for each kernel’s language) that can roundtrip to/from <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files. This lets you add <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> to your <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> (see <a class="reference internal" href="tools-02ops.html"><span class="doc std std-doc">DevOps</span></a>) and never deal with unmergeable diff files again. Also great for collaboration, since your colleague only needs to edit a plain text file (e.g. on GitHub) and you will recieve a fresh, edited notebook, locally.</p>
-</div>
-<div class="section" id="yaml-environment-specifications">
-<h3>YAML Environment specifications<a class="headerlink" href="#yaml-environment-specifications" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="yaml-environment-specifications">
+<h3>YAML Environment specifications<a class="headerlink" href="#yaml-environment-specifications" title="Permalink to this heading">#</a></h3>
 <p>Remember:</p>
 <blockquote>
 <div><p><em>1-environment-per-project!</em></p>
 </div></blockquote>
 <p>So, you will have a lot of environments running around, with you and collaborators needing to add or remove dependencies, constantly.
 If only there was a way to make some kind of <em>recipe</em> file, that could read a list of things you want, and then “update” the environment whenever you want…</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Personally, I add <code class="docutils literal notranslate"><span class="pre">.conda_env_base.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">.conda_env_notebooks.yml</span></code> to my <a class="reference external" href="https://gitlab.com/tbsexton/dotfiles"><em>dotfiles</em> repository</a> so every computer can have the same setup, automatically!</p>
-</div>
+</aside>
 <p>In case you didn’t see this in the mountain of conda documentation, <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually">this exists</a>, and should probably be the <em>only way</em> you make environments.</p>
 <p>These <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code> files are incredibly powerful, and <em>will save you time and sanity working with other people</em>.</p>
 <p>```{admonition} Example <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code>
 :class: tip, dropdown</p>
 <p>Here’s an example file that governs a conda/mamba environment named <code class="docutils literal notranslate"><span class="pre">test</span></code>:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
-<span class="nt">channels</span><span class="p">:</span> 
-  <span class="c1"># This is where stuff gets downloaded from</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pyviz</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="nt">channels</span><span class="p">:</span><span class="w"> </span>
+<span class="w">  </span><span class="c1"># This is where stuff gets downloaded from</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pyviz</span>
 
 <span class="nt">dependencies</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">python=3.9</span>  <span class="c1"># can lock version numbers</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ipykernel</span>  <span class="c1"># needed to use &quot;python&quot; from a notebook</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python=3.9</span><span class="w">  </span><span class="c1"># can lock version numbers</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ipykernel</span><span class="w">  </span><span class="c1"># needed to use &quot;python&quot; from a notebook</span>
 <span class="c1">#  - irkernel  # could&#39;ve been &quot;R&quot;</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pandas</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">panel</span>  <span class="c1"># comes from the pyviz channel</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip</span>  <span class="c1"># ALWAYS INSTALL PIP if you want to use `pip install` inside the environment!</span>
-  <span class="p p-Indicator">-</span> <span class="nt">pip</span><span class="p">:</span>  <span class="c1"># now we can tell `pip` to install its own package list automatically</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">textacy</span>
-    <span class="c1"># - -e .  # if we wanted to install local directory (e.g. pyproject.toml/setup.py)</span>
-    <span class="c1"># - frictionless[json]  # can use standard pip syntax for e.g. options</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandas</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">panel</span><span class="w">  </span><span class="c1"># comes from the pyviz channel</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span><span class="w">  </span><span class="c1"># ALWAYS INSTALL PIP if you want to use `pip install` inside the environment!</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pip</span><span class="p">:</span><span class="w">  </span><span class="c1"># now we can tell `pip` to install its own package list automatically</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">textacy</span>
+<span class="w">    </span><span class="c1"># - -e .  # if we wanted to install local directory (e.g. pyproject.toml/setup.py)</span>
+<span class="w">    </span><span class="c1"># - frictionless[json]  # can use standard pip syntax for e.g. options</span>
 </pre></div>
 </div>
 <p>In the directory containing this file, say, <code class="docutils literal notranslate"><span class="pre">test-env.yml</span></code>, you would create/update the environment <code class="docutils literal notranslate"><span class="pre">test</span></code> with the command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env update -f test-env.yml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>update<span class="w"> </span>-f<span class="w"> </span>test-env.yml
 </pre></div>
 </div>
 <p>Now is a good time to try making your own environment for this course… see if you can make a <code class="docutils literal notranslate"><span class="pre">text-data-env.yml</span></code> on your own!</p>
-</div>
-<div class="section" id="nb-conda-kernels">
-<h3><a class="reference external" href="https://github.com/Anaconda-Platform/nb_conda_kernels"><code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code></a><a class="headerlink" href="#nb-conda-kernels" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nb-conda-kernels">
+<h3><a class="reference external" href="https://github.com/Anaconda-Platform/nb_conda_kernels"><code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code></a><a class="headerlink" href="#nb-conda-kernels" title="Permalink to this heading">#</a></h3>
 <p>However, due to being largely implemented <em>in python</em>, the Jupyter server is installed into a base environment, and has no idea about other environments while running.
 In practice, this means everyone ends up re-installing Jupyter into every project’s environment, which is both</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>wasteful of space, and memory, and terminal tabs (running <em>many</em> instances of jupyter at once)</p></li>
 <li><p>loses any extensions/custom settings you might have had in another environment.</p></li>
 </ol>
@@ -627,9 +617,9 @@ This extension gets installed <em>once</em>, alongside a single installation of 
 Then, any time you create an environment with a valid language kernel (<code class="docutils literal notranslate"><span class="pre">ipykernel</span></code>, <code class="docutils literal notranslate"><span class="pre">irkernel</span></code>, <code class="docutils literal notranslate"><span class="pre">coconut[kernel]</span></code>, etc. ), you will see that kernel and be able to run <em>any</em> notebook inside its corresponding environment.
 Switch between kernels from inside the notebook with <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">&gt;</span> <span class="pre">Change</span> <span class="pre">kernel</span></code></p>
 <p><em>Feels good, man.</em></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -643,7 +633,7 @@ Switch between kernels from inside the notebook with <code class="docutils liter
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./00-introduction"
         },
         predefinedOutput: true
@@ -651,44 +641,112 @@ Switch between kernels from inside the notebook with <code class="docutils liter
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="tools.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">First Tools of the Trade</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tools.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">First Tools of the Trade</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="tools-02ops.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="tools-02ops.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Tools for Data Infrastructure</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Thurston Sexton<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
       </div>
-    </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ana-conda-but-it-s-mamba">(Ana?)Conda, but it’s Mamba</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modern-literate-programming-with-jupyter">Modern Literate Programming with Jupyter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-veracity-server-sanity-kernel-correctness">Version Veracity, Server Sanity, Kernel Correctness</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupytext">Jupytext</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yaml-environment-specifications">YAML Environment specifications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nb-conda-kernels"><code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rachael Sexton
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

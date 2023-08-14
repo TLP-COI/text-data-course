@@ -5,14 +5,20 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.14.5
 kernelspec:
-  display_name: Python 3 (ipykernel)
+  display_name: text-data
   language: python
-  name: python3
+  name: text-data
 ---
 
-```{code-cell}
++++ {"slideshow": {"slide_type": "slide"}}
+
+# Keywords 
+
+> "Quality Content" and Where to Find It...
+
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: skip
@@ -21,7 +27,7 @@ tags: [remove-cell]
 %reload_ext coconut
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: skip
@@ -30,12 +36,6 @@ tags: [remove-cell]
 %%HTML
 <link href="//cdn.jsdelivr.net/npm/mana-font@latest/css/mana.min.css" rel="stylesheet" type="text/css" />
 ```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-# Keywords 
-
-> "Quality Content" and Where to Find It...
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -59,7 +59,7 @@ In essence, we are looking for good _content_, the "stuff" that is useful or int
 
 Let's grab one of our course datasets: MTGJson, as documented [in the appendix](content/appendix/datasets/mtgjson). If you're following along, DVC can grab the data, as well: `dvc import...`
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: fragment
@@ -68,7 +68,7 @@ from tlp.data import DataLoader
 df = DataLoader.mtg()
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 hide_input: true
 slideshow:
@@ -79,7 +79,7 @@ from tlp.data import mtg, styleprops_longtext
 (df[['name', 'text','flavor_text']]
  .sample(10, random_state=2).fillna('').style
  .set_properties(**styleprops_longtext(['text','flavor_text']))
- .hide_index()
+ .hide()
 )
 ```
 
@@ -102,7 +102,7 @@ _Magic: The Gathering_ can be a lot to take in, and it's easy to get lost in all
 This is why we use it for TLP! 
 Thankfully, us "lost" folks have a mascot, in old Fblthp, here!
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
@@ -123,7 +123,7 @@ import hvplot.pandas
 
 There's a lot of other data avaliable, as well!
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: '-'
@@ -132,7 +132,7 @@ mtg.style_table(df.sample(10, random_state=2),
                         hide_columns=['text','flavor_text'])
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 hide_input: false
@@ -163,7 +163,7 @@ What are the "subtypes" of cards, and how are they differentiate from "types"?
 
 It looks like this magic is quite anthropocentric!
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 slideshow:
@@ -184,7 +184,7 @@ Here, we have been _told_ what those keywords are, which is nice!
 
 Question... would we always have been able to find them from the text?
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 hide_input: true
@@ -212,8 +212,8 @@ def plot_textual_occurrence(
             textual=lambda df: 
             df.apply(keyword_in_txt, axis=1)
         )
-        .groupby('keywords').mean()
-        .sort_values('textual')
+        .groupby('keywords')['textual'].mean()
+        .sort_values()
         .head(40)
         .hvplot.barh(
             title='Fraction of text containing keyword',
@@ -225,7 +225,7 @@ def plot_textual_occurrence(
 plot_textual_occurrence(df)
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 hide_input: true
@@ -275,7 +275,7 @@ Remember, though, that a "word" is not a known concept to the computer... all it
 Individual characters, or even slices of strings (i.e. _substrings_) don't have any specific meaning to us as concepts (directly). 
 This means there is a fundamental disconnect (and, therefore, a need for _translation_) between strings and words, to allow the assumption above to _work_ in the first place.
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 hide_input: true
 slideshow:
@@ -349,7 +349,7 @@ There's actually a few _special words_ we use in text analysis to refer to meani
 
 There are a number of [very helpful tools](https://pandas.pydata.org/pandas-docs/stable/user_guide/text.html) in the pandas `.str` namespace of the `Series` object. We can return to our card example from before:
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: '-'
@@ -360,7 +360,7 @@ print(f'{card.name.values}:\n\t {flav.values[0]}')
 # df.iloc[51411].flavor_text
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: fragment
@@ -368,7 +368,7 @@ slideshow:
 flav.str.upper()  # upper-case
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: '-'
@@ -380,7 +380,7 @@ flav.str.len()  # how long is the string?
 
 **verify**: the number of tokens and types
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: '-'
@@ -395,7 +395,7 @@ print("no. types: ",len(flav.str.split(' ').explode().unique()))
 
 wait a minute...
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
@@ -409,7 +409,7 @@ This isn't right!
 
 We probably want to split on anything that's not "letters":
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
@@ -442,7 +442,7 @@ Let's review an incredibly powerful idea from the R community: using _tidy data_
 
 Tidy data is a _paradigm_ to frame your tabular data representation in a _consistent_ and _ergonomic_ way that supports rapid manipulation, visualization, and cleaning. Imagine we had this non-text dataset (from Hadley Wickham's paper _Tidy Data_):
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: fragment
@@ -456,7 +456,7 @@ df_untidy
 
 We could also represent it another way:
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: '-'
@@ -474,7 +474,7 @@ For data to be _Tidy Data_, we need 3 things:
 > 2. Each observation forms a row.
 > 3. Each type of observational unit forms a table.
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
@@ -493,7 +493,7 @@ Suddenly things like comparing, plotting, and counting become trivial with simpl
 
 That's excel talking! The "wasted space" is incredibly negligible at this scale, compared to the ergonomic benefit of representing your data **long-form**, with one-observation-per-row. Now you get exactly one column for every variable, and one row for every point of data, making your manipulations much cleaner.
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 hide_input: false
 slideshow:
@@ -529,7 +529,7 @@ Instead, we are trying to find (observe) the occurrences of "interesting content
 > _A token is a meaningful unit of text, such as a word, that we are interested in using for analysis, and tokenization is the process of splitting text into tokens._
 > _This one-token-per-row structure is in contrast to the ways text is often stored in current analyses, perhaps as strings or in a document-term matrix._
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 hide_input: false
@@ -557,7 +557,7 @@ tidy_df = (
     )
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 slideshow:
@@ -578,7 +578,7 @@ tidy_df.word.value_counts().head(20)
 
 Stuff that we say, _a priori_ is uninteresting. Usually articles, pasive being verbs, etc.
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: fragment
@@ -598,7 +598,7 @@ Discussion: stopwords are _very_ context-sensitive decisions.
 
 - When would these terms actually imply interesting "content"?
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 slideshow:
@@ -628,7 +628,7 @@ Now we can see some interesting "content" in terms like "life", "death", "world"
 
 ### Importance $\approx$ Frequency?
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
@@ -649,7 +649,7 @@ keywords = (
 )
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
@@ -657,7 +657,7 @@ slideshow:
 sns.lineplot(data=keywords, x='year', y='yearly_cnts',hue='word')
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 slideshow:
   slide_type: subslide
@@ -695,15 +695,10 @@ So:
 Heap's Law: 
 $$ \|V\| = k\|N\|^\beta$$
 
-```{code-cell}
-# tidy_df.groupby(['card_id']).word.agg(['cumcount', lambda s: (~s.duplicated()).cumsum()])
-# (~tidy_df.word.duplicated()).cumsum()
-tidy_df.groupby(['card_id']).word.size().cumsum()
-```
-
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
+hide_input: true
 slideshow:
   slide_type: subslide
 ---
@@ -722,7 +717,7 @@ heaps = sample_docs(tidy_df)
 heaps
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 slideshow:
@@ -749,16 +744,17 @@ def fit_heaps(data, linearize=False):
     return params
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: center
+hide_input: true
 slideshow:
   slide_type: subslide
 ---
 def plot_heaps_law(heaps, log_scale=False, linearize=False):
     params = fit_heaps(heaps, linearize=linearize)
     print(f'fit: k={params[0]:.2f}\tβ={params[1]:.2f}\tlinear-fit={linearize}')
-    
+    plt.figure()
     x = np.linspace(100,6e5)
     plt.scatter(heaps.N, heaps.V, )
     plt.plot(
@@ -791,7 +787,7 @@ Most data-sets in NLP are between 0.67-0.75, so we
 
 > Pretty typical of "technical", or, _synthetic_ and domain-centric language. Lot's of variety _initially_, but limited in scope compared to casual speech.
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 slideshow:
@@ -800,7 +796,7 @@ slideshow:
 plot_heaps_law(heaps, log_scale=True)
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 cell_style: split
 slideshow:
@@ -810,6 +806,10 @@ plot_heaps_law(heaps, log_scale=True,
                linearize=True)
 ```
 
-```{code-cell}
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: subslide
+---
 plot_heaps_law(heaps, log_scale=False, linearize=True)
 ```
