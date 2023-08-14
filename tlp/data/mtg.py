@@ -12,11 +12,14 @@ except ImportError:
 import janitor as jn
 import gzip, json
 import toolz.curried as tz
-from .utils import get_repository_datafolder
+# from .utils import TLP_DATA_REPO
+# from dvc.api import DVCFileSystem
+MTG_DATA_PATH = 'resources/data/mtg'
 
-
-def loader(data_dir: Path) -> pd.DataFrame:
-    with gzip.open(data_dir / "mtg.json.gz", "rt", encoding="UTF-8") as zipfile:
+def loader() -> pd.DataFrame:
+    print('living in', Path.cwd())
+    # with repo.open("mtg.json.gz", "rt",compression='infer', encoding="UTF-8") as zipfile:
+    with gzip.open('mtg.json.gz', 'rb') as zipfile:  
         df = tz.pipe(
             zipfile,
             json.load,
@@ -133,12 +136,14 @@ def style_table(df, hide_columns=None):
                 "release_date": lambda x: x.strftime("%b '%y"),
             },
         )
-        .hide_index()
-        .hide_columns(hide_columns)
+        .hide()
         .set_table_styles(styles, overwrite=False)
     )
 
 
 def open_mtg() -> pd.DataFrame:
-    mtg_folder = get_repository_datafolder() / "mtg"
-    return pd.read_feather(mtg_folder / "mtg.feather")
+    from dvc import api
+
+    with api.open(Path(MTG_DATA_PATH)/'mtg.feather') as mtg_feather:   
+
+        return pd.read_feather(mtg_feather)

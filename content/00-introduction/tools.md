@@ -3,7 +3,7 @@
 _Tips, Tricks, & Unsolicited Data Science Opinions for the Aspiring Text Analyst_
 
 
-````{panels}
+````{card}
 
 Chapter Contents
 ^^^

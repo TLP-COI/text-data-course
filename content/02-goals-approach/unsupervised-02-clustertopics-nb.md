@@ -5,12 +5,16 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.13.8
+    jupytext_version: 1.14.5
 kernelspec:
-  display_name: Python [conda env:text-data]
+  display_name: text-data
   language: python
-  name: conda-env-text-data-py
+  name: text-data
 ---
+
++++ {"slideshow": {"slide_type": "skip"}}
+
+# Let Simmer, Unsupervised
 
 ```{code-cell} ipython3
 %load_ext coconut
@@ -31,8 +35,8 @@ import holoviews as hv
 from holoviews import opts
 hv.extension('bokeh')
 from bokeh.models import HoverTool
-from holoviews.operation.datashader import datashade, dynspread, rasterize
-import datashader as ds
+# from holoviews.operation.datashader import datashade, dynspread, rasterize
+# import datashader as ds
 
 
 # tooltips = [
@@ -48,10 +52,6 @@ fullwidth=dict(height=450, width=900)
 opts.defaults(opts.Scatter(tools=['hover'], size=8, **fullwidth), 
               opts.Points(tools=['hover'], size=8, **fullwidth))
 ```
-
-+++ {"slideshow": {"slide_type": "skip"}}
-
-# Let Simmer, Unsupervised
 
 ```{code-cell} ipython3
 %%coconut 
@@ -92,7 +92,7 @@ text.str.findall(tokenize).explode().unique()[:100]
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.manifold import TSNE
-import umap, umap.plot
+import umap#, umap.plot
 from sklearn.decomposition import TruncatedSVD
 
 vsm = TfidfVectorizer(

@@ -125,7 +125,7 @@ Statement on Sexual Misconduct
 
    Georgetown has a number of fully confidential professional resources who can provide support and assistance to survivors of sexual assault and other forms of sexual misconduct.  These resources include:
    
-   ````{panels}
+   ````{card}
    Jen Schweer, MA, LPC
    ^^^
    Associate Director of Health Education Services for Sexual Assault Response and Prevention
