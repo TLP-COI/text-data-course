@@ -11,8 +11,8 @@ on:
     #
     paths:
     - content/**
-    - env.yaml
-    - env-deploy.yaml
+    # - env.yaml
+    # - env-deploy.yaml
 
 # This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
@@ -25,30 +25,31 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: add jupyter book build deps
-      uses: mikefarah/yq@master
-      with:
-        cmd: |
-          yq e -i '.dependencies |= . + [
-              "poetry",
-              "rise",
-              "nb_conda_kernels"
-            ]' env.yaml
+    - uses: iterative/setup-dvc@v1
+    # - name: add jupyter book build deps
+    #   uses: mikefarah/yq@master
+    #   with:
+    #     cmd: |
+    #       yq e -i '.dependencies |= . + [
+    #           "poetry",
+    #           "rise",
+    #           "nb_conda_kernels"
+    #         ]' env.yaml
         
-    - uses: conda-incubator/setup-miniconda@v2
-      with:
-        activate-environment: text-data
-        environment-file: env.yaml
-        auto-activate-base: false
+    # - uses: conda-incubator/setup-miniconda@v2
+    #   with:
+    #     activate-environment: text-data
+    #     environment-file: env.yaml
+    #     auto-activate-base: false
 
     # Install dependencies
     - name: Install dependencies
       run: |
         poetry install
         
-    - run: |
-        conda info
-        conda list
+    # - run: |
+    #     conda info
+    #     conda list
         
     - name: Get Data
       run: dvc pull
@@ -58,7 +59,7 @@ jobs:
       run: |
         jupytext --set-kernel - content/**/*nb.md
         jupytext --set-kernel - content/appendix/**/*nb.md
-        jupyter-book build content/
+        poetry run jupyter-book build -W -n -v --keep-going content/ 
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
