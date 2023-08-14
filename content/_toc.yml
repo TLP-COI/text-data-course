@@ -23,6 +23,7 @@ parts:
           - glob: 01-assumptions/data-*-nb
   - caption: Goals & Approach
     chapters:
+      - file: 02-goals-approach/overview
       - file: 02-goals-approach/unsupervised
         sections:
           - glob: 02-goals-approach/unsupervised-*-nb
