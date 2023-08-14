@@ -11,7 +11,6 @@ python = "^3.10"
 toolz = "^0.11.2"
 pandera = "^0.8.0"
 pyjanitor = "^0.22.0"
-dvc = "^2.9.3"
 
 [tool.poetry.group.docs.dependencies]
 jupyter-book = "^0.15.1"
@@ -32,6 +31,7 @@ umap-learn = "^0.5.3"
 scikit-learn = "^1.2.2"
 docutils = "<0.18"
 jupyter-server = "<2"
+dvc = "^3.15.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
