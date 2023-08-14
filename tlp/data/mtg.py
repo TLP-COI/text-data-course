@@ -142,5 +142,8 @@ def style_table(df, hide_columns=None):
 
 
 def open_mtg() -> pd.DataFrame:
-    mtg_folder = TLP_DATA_REPO / "mtg"
-    return pd.read_feather(mtg_folder / "mtg.feather")
+    from dvc import api
+
+    with api.open(Path(MTG_DATA_PATH)/'mtg.feather') as mtg_feather:   
+
+        return pd.read_feather(mtg_feather)
