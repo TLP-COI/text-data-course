@@ -48,6 +48,7 @@ jobs:
     - name: Install Python Dependencies
       run: |
         poetry install
+        poetry run python -m ipykernel install --user --name text-data
         
     # - run: |
     #     conda info
@@ -59,8 +60,6 @@ jobs:
     # Build the book
     - name: Build the Book
       run: |
-        poetry run jupytext --set-kernel - content/**/*nb.md
-        poetry run jupytext --set-kernel - content/appendix/**/*nb.md
         poetry run jupyter-book build -W -n -v --keep-going content/ 
 
     # Push the book's HTML to github-pages
