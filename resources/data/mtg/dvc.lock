@@ -4,7 +4,6 @@ stages:
     cmd: python -m mtg-preprocess
     deps:
     - path: mtg-preprocess.py
-      hash: md5
       md5: 66636bee50553d94cd8b33aa73df30ce
       size: 830
     - path: mtg.json.gz
@@ -12,6 +11,5 @@ stages:
       size: 64113910
     outs:
     - path: mtg.feather
-      hash: md5
       md5: 59f94dd482149f17fa93fb149af8373a
       size: 9412002
