@@ -54,13 +54,13 @@ jobs:
     #     conda list
         
     - name: Get DVC Data
-      run: dvc pull
+      run: poetry run dvc pull
       
     # Build the book
     - name: Build the Book
       run: |
-        jupytext --set-kernel - content/**/*nb.md
-        jupytext --set-kernel - content/appendix/**/*nb.md
+        poetry run jupytext --set-kernel - content/**/*nb.md
+        poetry run jupytext --set-kernel - content/appendix/**/*nb.md
         poetry run jupyter-book build -W -n -v --keep-going content/ 
 
     # Push the book's HTML to github-pages
