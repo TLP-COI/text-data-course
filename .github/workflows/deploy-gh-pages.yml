@@ -25,7 +25,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: iterative/setup-dvc@v1
+    # - uses: iterative/setup-dvc@v1
     - name: Install Poetry
       uses: snok/install-poetry@v1
     # - name: add jupyter book build deps
@@ -45,7 +45,7 @@ jobs:
     #     auto-activate-base: false
 
     # Install dependencies
-    - name: Install dependencies
+    - name: Install Python Dependencies
       run: |
         poetry install
         
@@ -53,11 +53,11 @@ jobs:
     #     conda info
     #     conda list
         
-    - name: Get Data
+    - name: Get DVC Data
       run: dvc pull
       
     # Build the book
-    - name: Build the book
+    - name: Build the Book
       run: |
         jupytext --set-kernel - content/**/*nb.md
         jupytext --set-kernel - content/appendix/**/*nb.md
