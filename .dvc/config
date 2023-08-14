@@ -1,4 +1,5 @@
 [core]
     remote = origin
+    autostage = true
 ['remote "origin"']
-    url = https://dagshub.com/tbsexton/text-data-course.dvc
+    url = https://dagshub.com/rtbs-dev/text-data-course.dvc

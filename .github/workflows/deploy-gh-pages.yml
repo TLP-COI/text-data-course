@@ -53,8 +53,8 @@ jobs:
     #     conda info
     #     conda list
         
-    - name: Get DVC Data
-      run: poetry run dvc pull
+    # - name: Get DVC Data
+      # run: poetry run dvc pull
       
     # Build the book
     - name: Build the Book

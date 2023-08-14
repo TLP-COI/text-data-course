@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  mtg_clean:
+    cmd: python -m mtg-preprocess
+    deps:
+    - path: mtg-preprocess.py
+      md5: 66636bee50553d94cd8b33aa73df30ce
+      size: 830
+    - path: mtg.json.gz
+      md5: b613d3a06d188100a30041489143e055
+      size: 64113910
+    outs:
+    - path: mtg.feather
+      md5: 59f94dd482149f17fa93fb149af8373a
+      size: 9412002
